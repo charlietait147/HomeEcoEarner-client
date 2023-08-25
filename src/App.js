@@ -7,10 +7,10 @@ function App() {
     <BrowserRouter>
     <Routes>
     <Route path = "/" element = {<Landingpage />}/>
-    <Route path = "/qualify" element = {<QualifyFormpage />}/>
-    <Route path = "/admin" element = {<Adminpage />}/>
-    <Route path = "/contact-us" element = {<Contactpage />}/>
-    <Route path = "/news" element = {<Newspage />} />
+    <Route path = "qualify" element = {<QualifyFormpage />}/>
+    <Route path = "admin" element = {<Adminpage />}/>
+    <Route path = "contact-us" element = {<Contactpage />}/>
+    <Route path = "news" element = {<Newspage />} />
     <Route path = "*" element = {<PageNotFound />} /> 
     </Routes>
     </BrowserRouter>
