@@ -1,4 +1,4 @@
-import "./Header.scss";
+import "./NavBar.scss";
 import logo from "../../assets/images/homeecoearner-logo.png";
 function Header() {
     return ( 
