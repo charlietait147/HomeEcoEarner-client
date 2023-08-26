@@ -1,4 +1,5 @@
 import renewableHouse from "../../assets/images/renewable-house.png"
+import "./MainBodyContent.scss";
 function MainBodyContent() {
   return (
     <section className="main-body">
@@ -13,7 +14,7 @@ function MainBodyContent() {
                 your gate-way to cost-free, income-generating renewable energy.
                 </p>
                 <button className = "header__waiting-list-button">
-                Join Waiting List
+                JOIN WAITING LIST
                 </button>
           </div>
           <div className="header__image-container">
