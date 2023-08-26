@@ -30,7 +30,7 @@ function MainBodyContent() {
           </div>
         </header>
         <section className="benefits">
-          <h2 className="benefits__header">What are the benefits?</h2>
+          <h2 className="benefits__header">Whats In It For you?</h2>
           <div className="benefits__card-container">
             <article className="benefits__card">
               <img
@@ -54,32 +54,35 @@ function MainBodyContent() {
                 No More Electricity Bills
               </h3>
               <p className="benefits__card-description">
-                You can enjoy cost-free electricity
+                With no up-front cost and free installation, you get your
+                electricity cost-free, no more electricity bills to pay.
                 {/* ICON REFERENCE */}
                 {/* <a href="https://www.freepik.com/icon/invoice_1956804#fromView=search&term=cross+out+electricity+bills&page=1&position=9">Icon by Icongeek26</a> */}
               </p>
             </article>
             <article className="benefits__card">
-              <img src={upgradeIcon} alt="upgrade icon" className="benefits__card-icon benefits__card-icon--modified" />
+              <img
+                src={upgradeIcon}
+                alt="upgrade icon"
+                className="benefits__card-icon benefits__card-icon--modified"
+              />
               <h3 className="benefits__card-title">
                 Upgrade for Additional Earnings
               </h3>
               <p className="benefits__card-description">
                 You can opt for a cost-free upgrade after 2 years to transform
-                your home electricity system into an income stream.
+                your home electricity system into an income stream with our Home
+                EcoEarner Power Booster.
               </p>
               {/* ICON REFERENCE */}
               {/* <a href="https://www.freepik.com/icon/top_8020016#fromView=search&term=upgrade+&page=1&position=0">Icon by Pavani TLN</a> */}
             </article>
             <article className="benefits__card">
-            <img
-                src={""}
-                alt="cash in pocket icon"
-                className="benefits__card-icon"
-              />
-              <h3 className="benefits__card-title">Cash in Your Pocket</h3>
+              <img src={""} alt="icon" className="benefits__card-icon" />
+              <h3 className="benefits__card-title"> Generate Income </h3>
               <p className="benefits__card-description">
-              After the upgrade, instead of you paying us, we’ll be paying you.
+                With our Power Booster upgrade, you could earn an average of
+                £9,403 per year by selling renewable energy. 
               </p>
             </article>
           </div>
