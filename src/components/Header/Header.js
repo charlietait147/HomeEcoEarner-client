@@ -1,5 +1,5 @@
 import "./Header.scss";
-import logo from "../../assets/images/HomeEcoEarner-logo.png";
+import logo from "../../assets/images/homeecoearner-logo.png";
 function Header() {
     return ( 
         <header className="header">
