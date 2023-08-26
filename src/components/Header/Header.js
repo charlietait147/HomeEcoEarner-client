@@ -7,8 +7,8 @@ function Header() {
                 <img src={logo} alt="Home Eco Earner logo" className="header__logo" />
                 <nav className="navigation">
                 <ul className="navigation__list">
-                    <li className="navigation__link">News</li>
-                    <li className="navigation__link">Contact Us</li>
+                    <li className="navigation__link">NEWS</li>
+                    <li className="navigation__link">CONTACT US</li>
                 </ul>
                 </nav>
             </div>
