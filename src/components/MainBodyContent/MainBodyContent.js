@@ -3,7 +3,16 @@ import cutCostIcon from "../../assets/icons/cut-cost-icon.png";
 import electricityBillIcon from "../../assets/icons/electricity-bill-icon.png";
 import upgradeIcon from "../../assets/icons/upgrade-icon.png";
 import "./MainBodyContent.scss";
+
 function MainBodyContent() {
+    //STATE TO HANDLE MODAL
+    const [isModalClicked, setIsModalClicked] = useState(false);
+
+    //FUNCTION TO HANDLE OPENING THE MODAL
+    const openModal = () => {
+        setIsModalClicked(true);
+    }
+
   return (
     <section className="main-body">
       <div className="main-body__wrapper">
@@ -17,9 +26,11 @@ function MainBodyContent() {
               System, your gate-way to cost-free, income-generating renewable
               energy.
             </p>
-            <button className="header__waiting-list-button">
+            <button onClick = {openModal} className="header__waiting-list-button">
               JOIN WAITING LIST
-            </button>
+            </button> 
+            {/* When isModalClicked is true, return the WaitingListForm component*/}
+            {isModalClicked && <WaitingListForm />}
           </div>
           <div className="header__image-container">
             <img
