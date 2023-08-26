@@ -47,5 +47,51 @@
         filter: grayscale(0%);
     }
 
-    
+}
+
+.benefits {
+    padding-top: 2rem;
+    &__header {
+        font-size: 2rem;
+        line-height: 3.2rem;
+        color: $base-main;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        border: 2px dotted black;
+        border-radius: 4px;
+        padding: 1.5rem;
+       
+    }
+
+    &__card:hover {
+        border: 2px solid $text-main;
+    }
+
+    &__card-title{
+        font-size: 1.6rem;
+    }
+
+    &__card-icon{
+        height: 5rem;
+        width: 5rem;
+        align-self: center;
+        margin-bottom: 1rem;
+        &--modified{
+            height: 4rem;
+            width: 4rem;
+        }
+    }
+
+    &__card-description{
+       font-size: 1.2rem;
+       padding-top: 0.5rem;
+    }
+
+
 }

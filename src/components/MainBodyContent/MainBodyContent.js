@@ -60,7 +60,7 @@ function MainBodyContent() {
               </p>
             </article>
             <article className="benefits__card">
-              <img src={upgradeIcon} alt="upgrade icon" className="benefits__card-icon" />
+              <img src={upgradeIcon} alt="upgrade icon" className="benefits__card-icon benefits__card-icon--modified" />
               <h3 className="benefits__card-title">
                 Upgrade for Additional Earnings
               </h3>
