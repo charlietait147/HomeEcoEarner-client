@@ -1,0 +1,83 @@
+@use "../../styles/partials/variables" as *;
+.waiting-list{
+    background-color: #FFF;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+
+    &__wrapper{
+        padding: 2rem;
+    }
+
+    &__title{
+        text-align: center;
+        font-size: 2.8rem;
+        padding-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    &__banner{
+        padding-bottom: 1.5rem;
+    }
+
+    &__image-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image{
+        height: 8rem;
+        width: 8rem;
+        padding-bottom: 0.5rem;
+    }
+
+    &__progress-bar{
+        width: 100%;
+    }
+
+    &__progress-bar-value{
+        font-size: 1.1rem;
+    }
+
+    &__form-container{
+        background-color: #FFFFFF;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 6px 0px;
+        padding: 1.5rem;
+    }
+
+    &__form{
+        width: 100%;
+    }
+
+    &__form-name-input,
+    &__form-email-input,
+    &__form-postcode-input{
+        margin-bottom: 1.5rem;
+    }
+
+    &__join {
+        width: 100%;
+        border-radius: 20px;
+        background-color: #323232;
+        color: #FFFFFF;
+        border: none;
+        padding: 1.5rem;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    &__join:hover{
+        background-color: $base-main;
+    }
+
+}
+
+.form-label{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
