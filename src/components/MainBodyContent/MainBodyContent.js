@@ -11,7 +11,7 @@ function MainBodyContent() {
     const [isModalClicked, setIsModalClicked] = useState(false);
 
     //FUNCTION TO HANDLE OPENING THE MODAL
-    const openModal = () => {
+    const showModal = () => {
         setIsModalClicked(true);
     }
 
@@ -28,7 +28,7 @@ function MainBodyContent() {
               System, your gate-way to cost-free, income-generating renewable
               energy.
             </p>
-            <button onClick = {openModal} className="header__waiting-list-button">
+            <button onClick = {showModal} className="header__waiting-list-button">
               JOIN WAITING LIST
             </button> 
             {/* When isModalClicked is true, return the WaitingListForm component*/}
