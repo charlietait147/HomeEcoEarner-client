@@ -9,13 +9,20 @@ import {
 import peopleTick from "../../assets/images/people-tick.png";
 import "./WaitingListForm.scss";
 import { useState } from "react";
+import axios from "axios";
 
-function WaitingListForm( {onClose}) {
+function WaitingListForm({ onClose }) {
     //SET VALIDATION STATES
+    const [name, setName] = useState("")
     const [postcode, setPostcode] = useState("");
     const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
     const [postcodeError, setPostcodeError] = useState("");
+
+    const handleChangeName = (event) => {
+        setName(event.target.value);
+        
+    }
 
     const handleChangePostcode = (event) => {
         setPostcode(event.target.value);
@@ -34,19 +41,32 @@ function WaitingListForm( {onClose}) {
 
         if (postcode.length !== 8 || !postcode.includes(' ')) {
             setPostcodeError('Please enter a valid UK postcode.');
+            return;
         }
 
         if (!email.includes('@')) {
             setEmailError('Please enter a valid email.');
+            return;
         }
+        
+        //AXIOS REQUEST
 
+        axios
+            .post(`${process.env.REACT_APP_API_URL}/users/add-user`, {
+                first_name: name,
+                email: email,
+                postcode: postcode
+            })
+            .catch((error) => {
+                console.log("Unable to add user" + error)
+            });
     };
 
     return (
         <aside className="waiting-list">
             <div className="waiting-list__wrapper">
                 <div className="waiting-list__banner">
-                    <CCloseButton onClick = {onClose} className = "waiting-list__close" />
+                    <CCloseButton onClick={onClose} className="waiting-list__close" />
                     <h3 className="waiting-list__title">
                         Join The Queue Today
                     </h3>
@@ -79,6 +99,8 @@ function WaitingListForm( {onClose}) {
                             id="name"
                             placeholder="First name"
                             required
+                            onChange={handleChangeName}
+                            value={name}
                         />
                         <CFormLabel className="waiting-list__form-label" htmlFor="email">Your email</CFormLabel>
                         <CFormInput
