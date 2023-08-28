@@ -1,7 +1,10 @@
+import AdminLoginForm from "../../components/AdminLoginForm/AdminLoginForm";
 import "./AdminLoginPage.scss";
 function AdminLoginPage() {
     return ( 
-        <div>This is the Admin Login Page</div>
+        <div className="admin-login__mainpage">
+            <AdminLoginForm />
+        </div>
      );
 }
 
