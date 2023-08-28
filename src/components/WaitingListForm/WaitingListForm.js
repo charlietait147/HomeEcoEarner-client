@@ -1,50 +1,116 @@
-import { CProgress, CProgressBar, CForm, CFormInput } from '@coreui/react/';
+import {
+    CProgress,
+    CProgressBar,
+    CForm,
+    CFormInput,
+    CFormLabel,
+    CCloseButton
+} from "@coreui/react/";
 import peopleTick from "../../assets/images/people-tick.png";
 import "./WaitingListForm.scss";
+import { useState } from "react";
 
+function WaitingListForm( {onClose}) {
+    //SET VALIDATION STATES
+    const [postcode, setPostcode] = useState("");
+    const [email, setEmail] = useState("");
+    const [emailError, setEmailError] = useState("");
+    const [postcodeError, setPostcodeError] = useState("");
 
-function WaitingListForm() {
+    const handleChangePostcode = (event) => {
+        setPostcode(event.target.value);
+        setPostcodeError("");
+    };
+
+    const handleChangeEmail = (event) => {
+        setEmail(event.target.value);
+        setEmailError("");
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        //SET FORM VALIDATION CONDITIONAL STATEMENTS
+
+        if (postcode.length !== 8 || !postcode.includes(' ')) {
+            setPostcodeError('Please enter a valid UK postcode.');
+        }
+
+        if (!email.includes('@')) {
+            setEmailError('Please enter a valid email.');
+        }
+
+    };
+
     return (
         <aside className="waiting-list">
             <div className="waiting-list__wrapper">
                 <div className="waiting-list__banner">
-                    <h3 className="waiting-list__title">Let's get you on the Waiting List Today</h3>
-                    <CProgress className="waiting-list__progress-bar" color="info" variant="striped" value={50} height={25}>
-                        <CProgressBar className="waiting-list__progress-bar-value">50%</CProgressBar>
+                    <CCloseButton onClick = {onClose} className = "waiting-list__close" />
+                    <h3 className="waiting-list__title">
+                        Join The Queue Today
+                    </h3>
+                    <CProgress
+                        className="waiting-list__progress-bar"
+                        color="info"
+                        variant="striped"
+                        value={50}
+                        height={25}
+                    >
+                        <CProgressBar className="waiting-list__progress-bar-value">
+                            50%
+                        </CProgressBar>
                     </CProgress>
                 </div>
                 <div className="waiting-list__image-container">
-                    <img src={peopleTick} alt="3 people with tick sign" className="waiting-list__image" />
+                    <img
+                        src={peopleTick}
+                        alt="3 people with tick sign"
+                        className="waiting-list__image"
+                    />
                 </div>
                 <div className="waiting-list__form-container">
-                    <CForm className="waiting-list__form">
+                    <CForm className="waiting-list__form" onSubmit={handleSubmit}>
+                        <CFormLabel className="waiting-list__form-label" htmlFor="name">Your first name</CFormLabel>
                         <CFormInput
                             type="text"
                             size="lg"
-                            className="waiting-list__form-name-input"
-                            placeholder='First name'
-                            label="Your first name"
-
+                            className="waiting-list__form-input"
+                            id="name"
+                            placeholder="First name"
+                            required
                         />
-                        <CFormInput
-                            type="email"
-                            size="lg"
-                            className="waiting-list__form-email-input"
-                            placeholder='Email'
-                            label="Your email"
-
-                        />
+                        <CFormLabel className="waiting-list__form-label" htmlFor="email">Your email</CFormLabel>
                         <CFormInput
                             type="text"
                             size="lg"
-                            className="waiting-list__form-postcode-input"
-                            placeholder='Postcode'
-                            label="Your postcode"
-
+                            className="waiting-list__form-input"
+                            id="email"
+                            placeholder="Email"
+                            required
+                            onChange={handleChangeEmail}
+                            value={email}
                         />
-                        <button type="submit" className="waiting-list__join">JOIN WAITING LIST</button>
+                        {emailError && <p className="waiting-list__error-message">{emailError}</p>}
+                        <CFormLabel className="waiting-list__form-label" htmlFor="postcode">Your postcode</CFormLabel>
+                        <CFormInput
+                            type="text"
+                            size="lg"
+                            className="waiting-list__form-input"
+                            id="postcode"
+                            placeholder="Postcode"
+                            required
+                            onChange={handleChangePostcode}
+                            value={postcode}
+                        />
+                        {postcodeError && <p className="waiting-list__error-message">{postcodeError}</p>}
+                        <button type="submit" className="waiting-list__join">
+                            JOIN WAITING LIST
+                        </button>
                     </CForm>
-                    <small className="waiting-list__policy">Private Policy: We promise to keep your email address safe</small>
+                    <small className="waiting-list__policy">
+                        Private Policy: We promise to keep your email address safe
+                    </small>
                 </div>
             </div>
         </aside>

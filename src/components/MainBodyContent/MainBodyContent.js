@@ -14,6 +14,11 @@ function MainBodyContent() {
     const showModal = () => {
         setIsModalClicked(true);
     }
+    
+    //FUNCTION TO HANDLE CLOSING THE MODAL
+    const hideModal = () => {
+        setIsModalClicked(false)
+    }
 
   return (
     <section className="main-body">
@@ -32,7 +37,7 @@ function MainBodyContent() {
               JOIN WAITING LIST
             </button> 
             {/* When isModalClicked is true, return the WaitingListForm component*/}
-            {isModalClicked && <WaitingListForm />}
+            {isModalClicked && <WaitingListForm onClose = {hideModal} />}
           </div>
           <div className="header__image-container">
             <img
