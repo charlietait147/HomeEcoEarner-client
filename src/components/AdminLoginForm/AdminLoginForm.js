@@ -1,15 +1,22 @@
 import "./AdminLoginForm.scss";
+import logo from "../../assets/images/homeecoearner-logo.png";
 function AdminLoginForm() {
     return ( 
-        <form className="admin-login">
+            <section className = "admin-login">
             <div className="admin-login__wrapper">
-                <img src="" alt="" className="admin-login__logo" />
-                <h3 className="admin-login__title">Log In</h3>
-                <input type="text" className="admin-login__input" placeholder = "Username" />
-                <input type="text" className="admin-login__input" placeholder= "Password" />
+                <div className="admin-login__logo-container">
+                    <img src={logo} alt="home eco earner logo" className="admin-login__logo" />
+                </div>
+                <h3 className="admin-login__title">Sign In</h3>
+                <form className="admin-login__form">
+                <div className="admin-login__input-container">
+                    <input type="text" className="admin-login__input" placeholder = "Username" />
+                    <input type="password" className="admin-login__input" placeholder= "Password" />
+                </div>
                 <button className="admin-login__log-in">Log In</button>
+                </form>
             </div>
-        </form>
+         </section>
      );
 }
 

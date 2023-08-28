@@ -1,8 +1,13 @@
 .admin-login{
     &__mainpage{
-        // background-color: #32414B; COLOUR FOR FORM
         height: 100vh;
-        background-color: #282D37; 
+        background: url("../../assets/images/abstract-energy-background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        //REFERENCE:
+        //<a href="https://www.freepik.com/free-vector/abstract-futuristic-digital-particles-glowing-background-design_8152374.htm#query=energy%20background&position=20&from_view=search&track=ais">Image by starline</a> on Freepik
+        padding: 3rem;
 
     }
+
 }

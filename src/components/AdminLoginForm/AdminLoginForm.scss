@@ -1,0 +1,48 @@
+@use "../../styles/partials/variables" as *;
+.admin-login{
+    background-color: 	 #2D3741; 
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 6px 0px;
+
+    &__wrapper{
+        padding: 3rem 3.2rem;
+    }
+    &__logo-container{
+        display: flex;
+        justify-content: center;
+    }
+    &__logo{
+        height: 4rem;
+    }
+
+    &__title{
+        text-align: center;
+        color: grey;
+        padding: 1.5rem 0;
+        font-size: 1.3rem;
+    }
+
+    &__input-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input{
+        display:block;
+        margin-bottom: 1rem;
+        border-radius: 0px;
+        border: 0.5px solid #414B5F;
+        padding:0.25rem 1rem;
+        background-color: #37414B;
+        color: white;
+    }
+
+    &__log-in{
+        width: 100%;
+        padding: 0.5rem;
+        border: none;
+        background-color: $base-main;
+        color: white;
+        margin-top: 1.5rem;
+
+    }
+}
