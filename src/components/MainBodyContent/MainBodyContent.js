@@ -10,14 +10,16 @@ function MainBodyContent() {
     //STATE TO HANDLE MODAL
     const [isModalClicked, setIsModalClicked] = useState(false);
 
-    //FUNCTION TO HANDLE OPENING THE MODAL
+    //FUNCTION TO HANDLE OPENING THE MODAL, ADD SCROLLING ON MODAL
     const showModal = () => {
         setIsModalClicked(true);
+        document.body.classList.add("disable-scroll");
     }
     
-    //FUNCTION TO HANDLE CLOSING THE MODAL
+    //FUNCTION TO HANDLE CLOSING THE MODAL, REMOVE SCROLLING ON MODAL
     const hideModal = () => {
         setIsModalClicked(false)
+        document.body.classList.remove("disable-scroll");
     }
 
   return (
