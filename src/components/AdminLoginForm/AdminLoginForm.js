@@ -2,12 +2,15 @@ import "./AdminLoginForm.scss";
 import logo from "../../assets/images/homeecoearner-logo.png";
 import { useState } from "react";
 import axios from "axios";
+import AdminDatabase from "../AdminDatabase/AdminDatabase";
+
 function AdminLoginForm() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [usernameError, setUsernameError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
     const [errorMessage, setErrorMessage] = useState(false);
+    const [directToDatabase, setDirectToDatabase] = useState(false);
 
     const handleChangeUsername = (event) => {
         setUsername(event.target.value);
@@ -17,6 +20,10 @@ function AdminLoginForm() {
     const handleChangePassword= (event) => {
         setPassword(event.target.value);
         setErrorMessage(false);
+    }
+
+    if (directToDatabase) {
+        return (<AdminDatabase/>);
     }
 
     const submitHandler = async (event) => {
@@ -41,6 +48,9 @@ function AdminLoginForm() {
                 username: username, 
                 password: password
             })
+
+            setDirectToDatabase(true);
+
         } catch (error) {
             setErrorMessage("Invalid username or password.")
         }
