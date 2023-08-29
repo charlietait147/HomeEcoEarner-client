@@ -1,5 +1,6 @@
 import logo from "../../assets/images/homeecoearner-logo.png";
 import searchIcon from "../../assets/icons/search-24px.svg";
+import "./AdminDatabase.scss";
 
 function AdminDatabase() {
     return (
@@ -12,7 +13,7 @@ function AdminDatabase() {
                     <h2 className="admin-database__title">
                         Users
                     </h2>
-                    <div className="admin-database__input-container">
+                    <div className="admin-database__search-container">
                         <input type="text" className="admin-database__search" placeholder="Search..." />
                         <img src={searchIcon} alt="search icon" className="admin-database__search-icon" />
                     </div>
@@ -24,26 +25,26 @@ function AdminDatabase() {
                         </ul>
                     </nav>
                     <div className="admin-database__user-content-container admin-database__user-content-container--left">
-                        <div className="admin-database__item-left">
+                        <div className="admin-database__item">
                             <span className="admin-database__categories">
-                                FIRST NAME:
+                                FIRST NAME
                             </span>
-                            <p className="admin-database__content admin-database__content--item">
+                            <p className="admin-database__user-content">
                                 Charlie</p>
                         </div>
-                        <div className="inventoryBody__item-left">
-                            <span className="inventoryBody__categories">POSTCODE</span>
-                            <p className="inventoryBody__content">
+                        <div className="admin-database__item--right">
+                            <span className="admin-database__categories">POSTCODE</span>
+                            <p className="admin-database__user-content">
                                 TW12 5D6
                             </p>
                         </div>
                     </div>
-                    <div className="admin-database__user-content-container admin-database__user-content-container--right">
-                        <div className="admin-database__item-right">
+                    <div className="admin-database__user-content-container">
+                        <div className="admin-database__item">
                             <span className="admin-database__categories">
                                 EMAIL
                             </span>
-                            <p className="admin-database__content admin-database__content--item">
+                            <p className="admin-database__user-content">
                                 charlietait147@gmail.com</p>
                         </div>
                     </div>
