@@ -6,6 +6,7 @@ import "./MainBodyContent.scss";
 import WaitingListForm from "../WaitingListForm/WaitingListForm";
 import { useState } from "react";
 
+
 function MainBodyContent() {
     //STATE TO HANDLE MODAL
     const [isModalClicked, setIsModalClicked] = useState(false);
