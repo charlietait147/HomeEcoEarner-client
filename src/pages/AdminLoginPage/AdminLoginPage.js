@@ -5,7 +5,7 @@ function AdminLoginPage() {
     return ( 
         <div className="admin-login__mainpage">
             <AdminLoginForm />
-        </div>
+         </div>
      );
 }
 

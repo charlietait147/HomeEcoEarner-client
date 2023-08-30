@@ -2,17 +2,14 @@
 
 .admin-database{
     background-color: lightgray;
-    max-width: 500px;
+    max-width: 550px;
     margin: auto;
     border-radius: 10px;
-
-    &__wrapper{
-        padding: 2rem 1rem;
-        @include large-mobile{
-            padding: 2rem 4rem;
-        }
+    padding: 2rem 1.5rem;
+    @include large-mobile{
+        padding: 2rem 3rem;
     }
-
+    
     &__logo-container{
         display: flex;
         justify-content: center;
@@ -90,6 +87,9 @@
         @include large-mobile{
             padding-left: 4rem;
         }
+        @include tablet{
+            padding-bottom: 1rem;
+        }
         &--left{
             display: flex;
             padding-top: 1rem;
@@ -99,6 +99,9 @@
             @include large-mobile{
                 padding-left: 4rem;
             }
+            @include tablet{
+                padding-top: 2rem;
+            }
         }
 
         &--right{
@@ -106,38 +109,14 @@
         }
     }
 
-    &__nav{
-        display: none;
-    }
-
-    &__nav-list{
-        display: flex;
-        justify-content: space-around;
-        padding: 0;
-    }
-
-    &__nav-item{
-        font-size: 1rem;
-    }
-
     &__user-content {
         display: flex;
         line-height: 2.4rem ;
         font-size: 1.1rem;
+        @include tablet{
+            font-size: 1.2rem;
+        }
     }
-
-    // &__item-left,
-    // &__item-right{
-    //     display: flex;
-    //     flex-direction: column;
-    //     width: 50%;
-    // }
-
-    // &__item-left{
-    //     &--right{
-    //         padding-top: 0.4rem;
-    //     }
-    // }
 
     &__item{
         display: flex;
@@ -156,5 +135,8 @@
         font-size: 1rem;
         line-height: 1.6rem;
         font-weight: 700;
+        @include tablet{
+            font-size: 1.3rem
+        }
     }
 }
