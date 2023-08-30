@@ -1,57 +1,58 @@
 import renewableHouse from "../../assets/images/renewable-house.png";
+import familyPhoto from "../../assets/images/green-family-photo.png";
 import cutCostIcon from "../../assets/icons/cut-cost-icon.png";
 import electricityBillIcon from "../../assets/icons/electricity-bill-icon.png";
 import upgradeIcon from "../../assets/icons/upgrade-icon.png";
+import saveMoneyIcon from "../../assets/icons/save-money.png";
 import "./MainBodyContent.scss";
 import WaitingListForm from "../WaitingListForm/WaitingListForm";
 import { useState } from "react";
 
-
 function MainBodyContent() {
-    //STATE TO HANDLE MODAL
-    const [isModalClicked, setIsModalClicked] = useState(false);
+  //STATE TO HANDLE MODAL
+  const [isModalClicked, setIsModalClicked] = useState(false);
 
-    //FUNCTION TO HANDLE OPENING THE MODAL, ADD SCROLLING ON MODAL
-    const showModal = () => {
-        setIsModalClicked(true);
-        document.body.classList.add("disable-scroll");
-    }
-    
-    //FUNCTION TO HANDLE CLOSING THE MODAL, REMOVE SCROLLING ON MODAL
-    const hideModal = () => {
-        setIsModalClicked(false)
-        document.body.classList.remove("disable-scroll");
-    }
+  //FUNCTION TO HANDLE OPENING THE MODAL, ADD SCROLLING ON MODAL
+  const showModal = () => {
+    setIsModalClicked(true);
+    document.body.classList.add("disable-scroll");
+  };
+
+  //FUNCTION TO HANDLE CLOSING THE MODAL, REMOVE SCROLLING ON MODAL
+  const hideModal = () => {
+    setIsModalClicked(false);
+    document.body.classList.remove("disable-scroll");
+  };
 
   return (
     <section className="main-body">
       <div className="main-body__wrapper">
-        <header className="header">
-          <div className="header__heading-container">
-            <h1 className="header__heading">
+        <header className="header-section">
+          <div className="header-section__heading-container">
+            <h1 className="header-section__heading">
               Convert Your Electricity Costs Into Earnings
             </h1>
-            <p className="header__tag-line">
+            <p className="header-section__tag-line">
               To make money from renewable energy, join the Home EcoEarner
               System, your gate-way to cost-free, income-generating renewable
               energy.
             </p>
-            <button onClick = {showModal} className="header__waiting-list-button">
+            <button onClick={showModal} className="header-section__waiting-list-button">
               JOIN WAITING LIST
-            </button> 
+            </button>
             {/* When isModalClicked is true, return the WaitingListForm component*/}
-            {isModalClicked && <WaitingListForm onClose = {hideModal} />}
+            {isModalClicked && <WaitingListForm onClose={hideModal} />}
           </div>
-          <div className="header__image-container">
+          <div className="header-section__image-container">
             <img
-              src={renewableHouse}
-              alt="house with renewable energy"
-              className="header__image"
+              src={familyPhoto}
+              alt="Happy family on green grass "
+              className="header-section__image"
             />
           </div>
         </header>
         <section className="benefits">
-          <h2 className="benefits__header">Whats In It For you?</h2>
+          <h2 className="benefits__header">What's in it for You?</h2>
           <div className="benefits__card-container">
             <article className="benefits__card">
               <img
@@ -99,15 +100,44 @@ function MainBodyContent() {
               {/* <a href="https://www.freepik.com/icon/top_8020016#fromView=search&term=upgrade+&page=1&position=0">Icon by Pavani TLN</a> */}
             </article>
             <article className="benefits__card">
-              <img src={""} alt="icon" className="benefits__card-icon" />
+              <img
+                src={saveMoneyIcon}
+                alt="save money icon"
+                className="benefits__card-icon"
+              />
+              {/* REFERENCE:  <a href="https://www.freepik.com/icon/save-money_1611179#fromView=search&term=income&page=1&position=2">Icon by Kiranshastry</a> */}
               <h3 className="benefits__card-title"> Generate Income </h3>
               <p className="benefits__card-description">
                 With our Power Booster upgrade, you could earn an average of
-                £9,403 per year by selling renewable energy. 
+                £9,403 per year by selling renewable energy.
               </p>
             </article>
           </div>
         </section>
+        <section className="join-waiting-list">
+          <div className="join-waiting-list-claimer-container">
+            <h3 className = "join-waiting-list__claimer">
+            By joining our waiting list, you'll be first to hear about our
+            launch. 
+            </h3>
+            <h3 className = "join-waiting-list__claimer">
+            Benefit from early access as installations will be limited
+            at launch.
+            </h3>
+            <h3 className = "join-waiting-list__claimer"><span className = "join-waiting-list__claimer--bold">PLUS</span>, you will get priority ranking for the cost-free
+            upgrade as soon as its available.</h3>
+          </div>
+            <button onClick={showModal} className="join-waiting-list__waiting-list-button">
+              JOIN WAITING LIST
+            </button>
+        </section>
+        {/* <div className="header-section__house-image-container">
+            <img
+              src={renewableHouse}
+              alt="house with renewable energy"
+              className="header-section__house-image"
+            />
+          </div> */}
       </div>
     </section>
   );
