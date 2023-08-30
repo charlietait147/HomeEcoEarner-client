@@ -31,20 +31,15 @@ function AdminDatabase() {
                     <img src={logo} alt="home eco earner logo" className="admin-login__logo" />
                 </div>
                 <div className="admin-database__users-container">
-                    <h2 className="admin-database__title">
+                    <div className="admin-database__title-container">
+                        <h2 className="admin-database__title">
                         Users
-                    </h2>
-                    <div className="admin-database__search-container">
-                        <input type="text" className="admin-database__search" placeholder="Search..." />
-                        <img src={searchIcon} alt="search icon" className="admin-database__search-icon" />
+                        </h2>
+                        <div className="admin-database__search-container">
+                            <input type="text" className="admin-database__search" placeholder="Search..." />
+                            <img src={searchIcon} alt="search icon" className="admin-database__search-icon" />
+                         </div>
                     </div>
-                    <nav className="admin-database__nav">
-                        <ul className="admin-database__nav-list">
-                            <li className="admin-database__nav-item">FIRST NAME</li>
-                            <li className="admin-database__nav-item">EMAIL</li>
-                            <li className="admin-database__nav-item">POSTCODE</li>
-                        </ul>
-                    </nav>
                     {userList.map((user) => {
                         return (
 

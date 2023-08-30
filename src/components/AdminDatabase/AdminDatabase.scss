@@ -1,22 +1,42 @@
+@use "../../styles/partials/mixins" as *;
+
 .admin-database{
     background-color: lightgray;
-    max-width: 350px;
+    max-width: 500px;
     margin: auto;
+    border-radius: 10px;
 
     &__wrapper{
         padding: 2rem 1rem;
+        @include tablet{
+            padding: 2rem 4rem;
+        }
     }
 
     &__logo-container{
         display: flex;
         justify-content: center;
         padding-bottom: 2rem;
+        @include tablet{
+            justify-content: flex-start;
+        }
+    }
+
+    &__title-container{
+        @include tablet{
+            display: flex;
+        }
     }
 
     &__title{
         font-size: 2.2rem;
-        padding: 1rem 1.5rem;
+        padding: 1.5rem;
         font-weight: 600;
+        margin-bottom: 0;
+        @include tablet{
+            padding: 2rem 4rem;
+            width: 50%;
+        }
     }
 
     &__search-container{
@@ -24,6 +44,10 @@
         padding-bottom: 1.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
+        @include tablet{
+            padding-top: 2rem;
+            
+        }
     }
 
     &__search{
@@ -46,23 +70,35 @@
         right: 2rem;
         width: 2.2rem;
         height: 2.2rem;
+        @include tablet{
+            top: 2.75rem;
+        }
     }
 
     &__users-container{
         background-color: white;
         border-radius: 4px;
+        @include tablet{
+            border-radius: 10px;
+        }
 
     }
 
     &__user-content-container {
         padding-left: 1rem;
         padding-right: 1rem;
+        @include tablet{
+            padding-left: 4rem;
+        }
         &--left{
             display: flex;
             padding-top: 1rem;
             padding-left: 1rem;
             padding-right: 1rem;
-            border-top: 1px solid black;
+            border-top: 1px solid  #BDC5D5;
+            @include tablet{
+                padding-left: 4rem;
+            }
         }
 
         &--right{
