@@ -8,7 +8,7 @@
 
     &__wrapper{
         padding: 2rem 1rem;
-        @include tablet{
+        @include large-mobile{
             padding: 2rem 4rem;
         }
     }
@@ -17,13 +17,13 @@
         display: flex;
         justify-content: center;
         padding-bottom: 2rem;
-        @include tablet{
+        @include large-mobile{
             justify-content: flex-start;
         }
     }
 
     &__title-container{
-        @include tablet{
+        @include large-mobile{
             display: flex;
         }
     }
@@ -33,7 +33,7 @@
         padding: 1.5rem;
         font-weight: 600;
         margin-bottom: 0;
-        @include tablet{
+        @include large-mobile{
             padding: 2rem 4rem;
             width: 50%;
         }
@@ -44,7 +44,7 @@
         padding-bottom: 1.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
-        @include tablet{
+        @include large-mobile{
             padding-top: 2rem;
             
         }
@@ -70,7 +70,7 @@
         right: 2rem;
         width: 2.2rem;
         height: 2.2rem;
-        @include tablet{
+        @include large-mobile{
             top: 2.75rem;
         }
     }
@@ -78,7 +78,7 @@
     &__users-container{
         background-color: white;
         border-radius: 4px;
-        @include tablet{
+        @include large-mobile{
             border-radius: 10px;
         }
 
@@ -87,7 +87,7 @@
     &__user-content-container {
         padding-left: 1rem;
         padding-right: 1rem;
-        @include tablet{
+        @include large-mobile{
             padding-left: 4rem;
         }
         &--left{
@@ -96,7 +96,7 @@
             padding-left: 1rem;
             padding-right: 1rem;
             border-top: 1px solid  #BDC5D5;
-            @include tablet{
+            @include large-mobile{
                 padding-left: 4rem;
             }
         }
