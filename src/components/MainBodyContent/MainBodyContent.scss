@@ -130,7 +130,6 @@
         align-self: center;
         margin-bottom: 1rem;
         @include tablet{
-            // align-self: flex-start;
             margin-bottom: 2rem;
         }
         &--modified{
@@ -182,6 +181,9 @@
         cursor: pointer;
         margin: 2rem 0;
         font-size: 1.3rem;
+        @include tablet{
+            width: 25%;
+        }
     }
 
     &__waiting-list-button:hover{
@@ -191,18 +193,36 @@
 }
 
 .trusted-provider{
+    @include tablet{
+        display: flex;
+    }
     &__home-image-container{
         padding-top: 1rem;
+        @include tablet{
+            flex-basis: 50%;
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__home-image{
         width: 100%;
         filter: grayscale(100%);
         border-radius: 20px;
+        @include tablet{
+            margin-bottom: 3rem
+        }
     }
 
     &__home-image:hover{
         filter:grayscale(0%);
+    }
+
+    &__text-container{
+        @include tablet{
+        flex-basis: 50%;
+        padding: 1rem;
+        }
     }
 
     &__headline{

@@ -148,20 +148,22 @@ function MainBodyContent() {
             className="trusted-provider__home-image"
             />
           </div>
-          <h4 className="trusted-provider__headline">
+          <div className="trusted-provider__text-container">
+            <h4 className="trusted-provider__headline">
             We are your <span className = "trusted-provider__headline--highlighted">Trusted Provider</span> of Green Energy Innovation
-          </h4>
-          <p className="trusted-provider__details">
+            </h4>
+            <p className="trusted-provider__details">
             We understand the complete spectrum of clean green renewable energy
             technologies from solar through to nuclear fusion. <span className = "trusted-provider__details--underlined"> Our comprehensive
             expertise </span> allows us to provide you with the most effective and
             efficient energy solutions tailored to your needs.
-          </p>
-          <p className="trusted-provider__details">
+            </p>
+            <p className="trusted-provider__details">
             We are not only committed to advancing clean technology and
             renewable energy, but also to empowering you to become a part of the
             sustainable energy revolution
-          </p>
+            </p>
+          </div>
         </section>
         {/* <div className="header-section__house-image-container">
             <img
