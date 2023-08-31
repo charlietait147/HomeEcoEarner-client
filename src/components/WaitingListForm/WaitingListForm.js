@@ -21,7 +21,7 @@ function WaitingListForm({ onClose }) {
 
     const handleChangeName = (event) => {
         setName(event.target.value);
-        
+
     }
 
     const handleChangePostcode = (event) => {
@@ -39,16 +39,18 @@ function WaitingListForm({ onClose }) {
 
         //SET FORM VALIDATION CONDITIONAL STATEMENTS
 
+        if (!email.includes('@')) {
+            setEmailError('Please enter a valid email.');
+            return;
+        }
+
         if (postcode.length !== 8 || !postcode.includes(' ')) {
             setPostcodeError('Please enter a valid UK postcode.');
             return;
         }
 
-        if (!email.includes('@')) {
-            setEmailError('Please enter a valid email.');
-            return;
-        }
-        
+
+
         //AXIOS REQUEST
 
         axios
@@ -82,57 +84,59 @@ function WaitingListForm({ onClose }) {
                         </CProgressBar>
                     </CProgress>
                 </div>
-                <div className="waiting-list__image-container">
-                    <img
-                        src={peopleTick}
-                        alt="3 people with tick sign"
-                        className="waiting-list__image"
-                    />
-                </div>
-                <div className="waiting-list__form-container">
-                    <CForm className="waiting-list__form" onSubmit={handleSubmit}>
-                        <CFormLabel className="waiting-list__form-label" htmlFor="name">Your first name</CFormLabel>
-                        <CFormInput
-                            type="text"
-                            size="lg"
-                            className="waiting-list__form-input"
-                            id="name"
-                            placeholder="First name"
-                            required
-                            onChange={handleChangeName}
-                            value={name}
+                <div className="waiting-list__main-form-container">
+                    <div className="waiting-list__image-container">
+                        <img
+                            src={peopleTick}
+                            alt="3 people with tick sign"
+                            className="waiting-list__image"
                         />
-                        <CFormLabel className="waiting-list__form-label" htmlFor="email">Your email</CFormLabel>
-                        <CFormInput
-                            type="text"
-                            size="lg"
-                            className="waiting-list__form-input"
-                            id="email"
-                            placeholder="Email"
-                            required
-                            onChange={handleChangeEmail}
-                            value={email}
-                        />
-                        {emailError && <p className="waiting-list__error-message">{emailError}</p>}
-                        <CFormLabel className="waiting-list__form-label" htmlFor="postcode">Your postcode</CFormLabel>
-                        <CFormInput
-                            type="text"
-                            size="lg"
-                            className="waiting-list__form-input"
-                            id="postcode"
-                            placeholder="Postcode"
-                            required
-                            onChange={handleChangePostcode}
-                            value={postcode}
-                        />
-                        {postcodeError && <p className="waiting-list__error-message">{postcodeError}</p>}
-                        <button type="submit" className="waiting-list__join">
-                            JOIN WAITING LIST
-                        </button>
-                    </CForm>
-                    <small className="waiting-list__policy">
-                        Private Policy: We promise to keep your email address safe
-                    </small>
+                    </div>
+                    <div className="waiting-list__form-container">
+                        <CForm className="waiting-list__form" onSubmit={handleSubmit}>
+                            <CFormLabel className="waiting-list__form-label" htmlFor="name">Your first name</CFormLabel>
+                            <CFormInput
+                                type="text"
+                                size="lg"
+                                className="waiting-list__form-input border-highlighted"
+                                id="name"
+                                placeholder="First name"
+                                required
+                                onChange={handleChangeName}
+                                value={name}
+                            />
+                            <CFormLabel className="waiting-list__form-label" htmlFor="email">Your email</CFormLabel>
+                            <CFormInput
+                                type="text"
+                                size="lg"
+                                className="waiting-list__form-input border-highlighted"
+                                id="email"
+                                placeholder="Email"
+                                required
+                                onChange={handleChangeEmail}
+                                value={email}
+                            />
+                            {emailError && <p className="waiting-list__error-message">{emailError}</p>}
+                            <CFormLabel className="waiting-list__form-label" htmlFor="postcode">Your postcode</CFormLabel>
+                            <CFormInput
+                                type="text"
+                                size="lg"
+                                className="waiting-list__form-input border-highlighted"
+                                id="postcode"
+                                placeholder="Postcode"
+                                required
+                                onChange={handleChangePostcode}
+                                value={postcode}
+                            />
+                            {postcodeError && <p className="waiting-list__error-message">{postcodeError}</p>}
+                            <button type="submit" className="waiting-list__join">
+                                JOIN WAITING LIST
+                            </button>
+                        </CForm>
+                        <small className="waiting-list__policy">
+                            Private Policy: We promise to keep your email address safe
+                        </small>
+                    </div>
                 </div>
             </div>
         </aside>
