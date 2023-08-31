@@ -1,21 +1,95 @@
 @use "../../styles/partials/variables" as *;
-.nav {
-    &__wrapper{
-        padding: 1.5rem 1.6rem;
+@use "../../styles/partials//mixins" as *;
+.nav-bar {
+  background-color: #f3f3f1;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 4px 0px;
+
+  &__wrapper {
+    padding: 1.6rem 1.6rem 0.5rem;
+    @include tablet{
+        padding: 2rem 3.2rem;
         display: flex;
     }
-    &__logo{
-        width: 13rem;
+    @include desktop{
+        max-width: 1020px;
+        margin: auto;
     }
+  }
 
-    &__list{
-        display: flex;
-        padding-left: 1rem;
-        padding-top: 0.5rem;
+  &__logo-tagline-container {
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+      flex-basis: 100%;
     }
+  }
 
-    &__link{
-        color: $link-text;
-        font-size: 1.2rem;
+  &__tagline {
+    display: none;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 700;
+    
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    
+    @include tablet {
+      display:block;
+      letter-spacing: 0.05rem;
+      line-height: 1.4rem;
+      font-size: 1.6rem;
+      width: 30%;
+      padding-left: 1rem;
+      padding-top: 0.75rem;
     }
+    &--green {
+      color: green;
+    }
+  }
+  &__logo {
+    padding-left: 4rem;
+    height: 4rem;
+    @include tablet{
+    padding: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    padding-top: 1rem;
+    justify-content: space-evenly;
+    display: flex;
+    padding-left: 3.5rem;
+    margin-bottom: 0;
+    @include tablet{
+        padding-left: 0;
+        flex-basis: 40%;
+        justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    color: $link-text;
+    font-size: 1.2rem;
+    margin-right: 3rem;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+    @include tablet{
+        font-size: 1.4rem;
+    }
+  }
+
+  &__item:hover {
+    border-bottom: 2px solid darkgreen;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $link-text;
+  }
+
+  &__link:hover{
+    color: darkgreen;
+  }
 }
