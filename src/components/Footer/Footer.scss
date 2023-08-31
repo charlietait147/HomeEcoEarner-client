@@ -1,0 +1,36 @@
+.footer-section{
+    background-color: black;
+    &__wrapper{
+        padding: 2rem;
+    }
+
+    &__list{
+        padding-bottom: 0.5rem;
+        padding-left: 0;
+    }
+
+    &__link{
+        text-decoration:none;
+    }
+
+    &__item{
+        color: white;
+        margin: 1rem 0;
+        font-size: 1.3rem;
+    }
+
+    &__copyright-container{
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        border-top: 1px solid;
+        border-image: linear-gradient( 90deg, rgba(255, 255, 255, 0.9),  rgba(83, 60, 64, 0) ) 1;  
+
+    }
+
+    &__copyright{
+        color: white;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+}
