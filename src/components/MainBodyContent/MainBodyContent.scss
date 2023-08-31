@@ -20,6 +20,7 @@
     }
 
     &__heading-container{
+        padding-top: 2rem;
         @include tablet{
         flex-basis: 50%;
         padding-top: 8rem;

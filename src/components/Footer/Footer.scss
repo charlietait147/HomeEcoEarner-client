@@ -35,6 +35,9 @@
         color: white;
         margin: 1rem 0;
         font-size: 1.3rem;
+        @include tablet{
+            padding-right: 3rem;
+        }
     }
 
     &__copyright-container{

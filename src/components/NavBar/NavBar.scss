@@ -6,9 +6,12 @@
 
   &__wrapper {
     padding: 1.6rem 1.6rem 0.5rem;
+    @include large-mobile{
+        display: flex;
+        padding: 2rem 0;
+    }
     @include tablet{
         padding: 2rem 3.2rem;
-        display: flex;
     }
     @include desktop{
         max-width: 1020px;
@@ -48,7 +51,6 @@
     }
   }
   &__logo {
-    padding-left: 4rem;
     height: 4rem;
     @include tablet{
     padding: 0;
@@ -62,10 +64,13 @@
     display: flex;
     padding-left: 3.5rem;
     margin-bottom: 0;
+    @include large-mobile{
+      flex-basis: 100%;
+      justify-content: flex-end;
+    }
     @include tablet{
         padding-left: 0;
         flex-basis: 40%;
-        justify-content: flex-end;
     }
   }
 
