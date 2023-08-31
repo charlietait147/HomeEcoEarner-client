@@ -1,12 +1,30 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .main-body{
     &__wrapper{
         padding: 0rem 1.6rem;
+        @include tablet{
+            padding: 0rem 3.2rem;
+        }
+        @include desktop{
+            max-width: 1020px;
+            margin: auto;
+        }
     }
 }
 
 .header-section{
+    @include tablet{
+        display: flex;
+    }
+
+    &__heading-container{
+        @include tablet{
+        flex-basis: 50%;
+        padding-top: 8rem;
+        }
+    }
     &__heading,
     &__tag-line{
         color: $link-text;
@@ -34,27 +52,25 @@
         cursor: pointer;
         margin-bottom: 2rem;
         font-size: 1.3rem;
+        @include tablet{
+            width: 50%;
+        }
     }
 
     &__waiting-list-button:hover{
         background-color: $base-main;
     }
 
-    // &__image{
-    //     width: 100%;
-    //     filter: grayscale(100%);
-        
-    // }
-
-    // &__image:hover{
-    //     filter: grayscale(0%);
-    // }
-
     &__image-container{
         height: 30rem;
         display: flex;
         justify-content: center;
         padding: 1rem 0;
+        @include tablet{
+            height: 40rem;
+            flex-basis: 50%;
+            padding-top:3rem;
+        }
     }
 
     &__image{
@@ -76,6 +92,10 @@
 
     &__card-container{
         padding-bottom: 2rem;
+        @include tablet{
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 
     &__card {
@@ -85,6 +105,10 @@
         border: 2px dotted black;
         border-radius: 4px;
         padding: 1.5rem;
+        @include tablet{
+            width: 50%;
+            border: none;
+        }
        
     }
 
@@ -95,6 +119,9 @@
     &__card-title{
         font-size: 1.6rem;
         color: $base-main;
+        @include tablet{
+            text-align: center;
+        }
     }
 
     &__card-icon{
@@ -102,15 +129,25 @@
         width: 5rem;
         align-self: center;
         margin-bottom: 1rem;
+        @include tablet{
+            // align-self: flex-start;
+            margin-bottom: 2rem;
+        }
         &--modified{
             height: 4rem;
             width: 4rem;
+            @include tablet{
+                margin-top: 1rem;
+            }
         }
     }
 
     &__card-description{
        font-size: 1.2rem;
        padding-top: 0.5rem;
+       @include tablet{
+        text-align: center;
+       }
     }
 
 
