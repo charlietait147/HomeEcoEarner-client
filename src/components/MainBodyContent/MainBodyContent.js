@@ -37,7 +37,10 @@ function MainBodyContent() {
               System, your gate-way to cost-free, income-generating renewable
               energy.
             </p>
-            <button onClick={showModal} className="header-section__waiting-list-button">
+            <button
+              onClick={showModal}
+              className="header-section__waiting-list-button"
+            >
               JOIN WAITING LIST
             </button>
             {/* When isModalClicked is true, return the WaitingListForm component*/}
@@ -116,20 +119,49 @@ function MainBodyContent() {
         </section>
         <section className="join-waiting-list">
           <div className="join-waiting-list-claimer-container">
-            <h3 className = "join-waiting-list__claimer">
-            By joining our waiting list, you'll be first to hear about our
-            launch. 
+            <h3 className="join-waiting-list__claimer">
+              By joining our waiting list, you'll be first to hear about our
+              launch.
             </h3>
-            <h3 className = "join-waiting-list__claimer">
-            Benefit from early access as installations will be limited
-            at launch.
+            <h3 className="join-waiting-list__claimer">
+              Benefit from early access as installations will be limited at
+              launch.
             </h3>
-            <h3 className = "join-waiting-list__claimer"><span className = "join-waiting-list__claimer--bold">PLUS</span>, you will get priority ranking for the cost-free
-            upgrade as soon as its available.</h3>
+            <h3 className="join-waiting-list__claimer">
+              <span className="join-waiting-list__claimer--bold">PLUS</span>,
+              you will get priority ranking for the cost-free upgrade as soon as
+              its available.
+            </h3>
           </div>
-            <button onClick={showModal} className="join-waiting-list__waiting-list-button">
-              JOIN WAITING LIST
-            </button>
+          <button
+            onClick={showModal}
+            className="join-waiting-list__waiting-list-button"
+          >
+            JOIN WAITING LIST
+          </button>
+        </section>
+        <section className="trusted-provider">
+          <div className="trusted-provider__home-image-container">
+            <img
+            src={renewableHouse}
+            alt="house with renewable energy"
+            className="trusted-provider__home-image"
+            />
+          </div>
+          <h4 className="trusted-provider__headline">
+            We are your <span className = "trusted-provider__headline--highlighted">Trusted Provider</span> of Green Energy Innovation
+          </h4>
+          <p className="trusted-provider__details">
+            We understand the complete spectrum of clean green renewable energy
+            technologies from solar through to nuclear fusion. <span className = "trusted-provider__details--underlined"> Our comprehensive
+            expertise </span> allows us to provide you with the most effective and
+            efficient energy solutions tailored to your needs.
+          </p>
+          <p className="trusted-provider__details">
+            We are not only committed to advancing clean technology and
+            renewable energy, but also to empowering you to become a part of the
+            sustainable energy revolution
+          </p>
         </section>
         {/* <div className="header-section__house-image-container">
             <img
