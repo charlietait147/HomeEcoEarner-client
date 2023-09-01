@@ -92,13 +92,16 @@
   &__link {
     text-decoration: none;
     color: $link-text;
+
+  }
+
+  &__link-active{
+    color: darkgreen;
+    text-decoration: none;
+
   }
 
   &__link:hover{
     color: darkgreen;
   }
-}
-
-.active-link {
-  border: 3px solid red;
 }
