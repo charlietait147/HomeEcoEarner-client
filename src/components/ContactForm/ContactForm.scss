@@ -1,0 +1,16 @@
+.contact-form{
+    &__banner{
+        height: 18rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(110deg, #0b498f 50%, #2a6ab3 60%);
+    }
+
+    &__header{
+        font-size: 2.8rem;
+        letter-spacing: 0.2rem;
+        font-weight: 300;
+        color: white; 
+    }
+}

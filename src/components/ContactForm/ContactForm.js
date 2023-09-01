@@ -1,6 +1,11 @@
+import "./ContactForm.scss";
 function ContactForm() {
     return (
-        <div>This is the Contact Form Page</div>
+        <section className="contact-form">
+            <div className="contact-form__banner">
+                <span className="contact-form__header">CONTACT US</span>
+            </div>
+        </section>
      );
 }
 
