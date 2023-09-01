@@ -6,7 +6,7 @@ function Header() {
         <nav className="nav-bar">
             <div className="nav-bar__wrapper">
                 <div className="nav-bar__logo-tagline-container">
-                    <img src={logo} alt="Home Eco Earner logo" className="nav-bar__logo" />
+                    <Link to = "/"><img src={logo} alt="Home Eco Earner logo" className="nav-bar__logo" /></Link>
                     <p className = "nav-bar__tagline" >Trusted Provider <span className = "nav-bar__tagline--green">of Green Energy</span></p>
                 </div>
                 <ul className="nav-bar__list">
