@@ -1,7 +1,14 @@
+import ContactForm from "../../components/ContactForm/ContactForm";
+import Footer from "../../components/Footer/Footer";
+import NavBar from "../../components/NavBar/NavBar";
 import "./ContactPage.scss";
 function ContactPage() {
     return (  
-        <div>This is the Contact Page</div>
+        <>
+       <NavBar />
+       <ContactForm />
+       <Footer />
+        </>
     );
 }
 
