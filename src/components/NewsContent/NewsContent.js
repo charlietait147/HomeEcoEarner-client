@@ -1,6 +1,14 @@
+import "./NewsContent.scss"
 function NewsContent() {
     return ( 
-        <div className="news-content">This is the news content page</div>
+        <section className="news-content">
+            <div className="news-content__wrapper">
+                <div className="news-content__banner">
+                    <span className = "news-content__header">NEWS</span>
+                </div>
+            </div>
+        </section>
+
      );
 }
 

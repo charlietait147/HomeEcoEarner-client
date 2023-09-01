@@ -1,0 +1,15 @@
+.news-content{
+    &__banner{
+        height: 18rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(110deg, #0d741b 50%, #3ba335 60%);;
+    }
+
+    &__header{
+        font-size: 2.8rem;
+        letter-spacing: 0.3rem;
+        font-weight: 300;
+    }
+}
