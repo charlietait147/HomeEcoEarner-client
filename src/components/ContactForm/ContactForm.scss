@@ -12,5 +12,45 @@
         letter-spacing: 0.2rem;
         font-weight: 300;
         color: white; 
+       
     }
+
+    &__wrapper{
+        padding: 1.6rem;
+    }
+
+    &__title{
+        font-size: 1.1rem;
+        padding: 1rem ;
+    }
+
+    &__form{
+        padding: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 6px 0px;
+    }
+
+    &__form-label{
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
+
+    &__form-description{
+        resize: none;
+    }
+
+    &__submit-button{
+        width: 100%;
+        border-radius: 20px;
+        background-color:  #0b498f;
+        color: #ffffff;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+
+
 }
