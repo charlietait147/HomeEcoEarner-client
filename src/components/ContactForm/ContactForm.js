@@ -8,10 +8,12 @@ function ContactForm() {
         <span className="contact-form__header">CONTACT US</span>
       </div>
       <div className="contact-form__wrapper">
+        <div className="contact-form__title-container">
         <p className="contact-form__title">
           Need to get in touch with us? Fill out the form with your
           enquiry.
         </p>
+        </div>
         <div className="contact-form__form-container">
           <CForm action="" className="contact-form__form">
             <CFormLabel className="contact-form__form-label" htmlFor="name">
