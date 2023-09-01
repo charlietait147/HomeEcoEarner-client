@@ -1,5 +1,6 @@
 import logo from "../../assets/images/homeecoearner-logo.png";
 import searchIcon from "../../assets/icons/search-24px.svg";
+import errorIcon from "../../assets/icons/error-24px.png";
 import "./AdminDatabase.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -7,8 +8,10 @@ import { useEffect, useState } from "react";
 function AdminDatabase() {
     const [userList, setUserList] = useState([]);
     const [defaultUserList, setDefaultUserList] = useState([]);
+    const [inputValue, setInputValue] = useState("");
     const handleChange = (event) => {
-        const inputValue = event.target.value;
+
+        setInputValue(event.target.value);
 
         const filteredUsers = userList.filter((user) => {
             return user.first_name.includes(inputValue) || user.postcode.includes(inputValue) || user.email.includes(inputValue)
@@ -17,18 +20,17 @@ function AdminDatabase() {
         setUserList(filteredUsers);
 
 
-        if (inputValue === "") {
+        if (event.target.value === "") {
             setUserList(defaultUserList);
 
         }
-    
+
     }
 
     const getUsersAll = async () => {
         try {
             const response = await axios(`${process.env.REACT_APP_API_URL}/users`);
             const fetchUsers = response.data
-            console.log(fetchUsers);
             setUserList(fetchUsers);
             setDefaultUserList(fetchUsers);
         } catch (error) {
@@ -39,6 +41,8 @@ function AdminDatabase() {
     useEffect(() => {
         getUsersAll();
     }, [])
+
+   
 
 
     return (
@@ -57,6 +61,7 @@ function AdminDatabase() {
                         <img src={searchIcon} alt="search icon" className="admin-database__search-icon" />
                     </div>
                 </div>
+
                 {userList.map((user) => {
                     return (
 
@@ -93,8 +98,14 @@ function AdminDatabase() {
                 }
 
                 )}
-                 {!userList && <p className = "admin-database__no-user-message">No users have been found</p>}
-                
+                {/* {(inputValue && userList.length === 0) && <p className="admin-database__no-user-message">No users have been found in your search.</p>} */}
+
+                {(inputValue && userList.length === 0) && <div className = "admin-database__no-user-container">
+                    <img src = {errorIcon} alt = "error icon" className = "admin-database__no-user-error-icon"></img>
+                    <p className = "admin-database__no-user-message">No users have been found in your search.</p>
+                </div>
+
+                }
 
             </div>
 
