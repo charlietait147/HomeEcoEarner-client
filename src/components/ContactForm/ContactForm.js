@@ -4,6 +4,8 @@ import { CForm, CFormInput, CFormTextarea, CFormLabel } from "@coreui/react";
 
 function ContactForm() {
     const [isLoading, setIsLoading] = useState(false);
+
+    
   return (
     <section className="contact-form">
       <div className="contact-form__banner">
@@ -17,7 +19,7 @@ function ContactForm() {
             </p>
         </div>
         <div className="contact-form__form-container">
-          <CForm action="https://formsubmit.co/charlietait1@gmail.com" method="POST" className="contact-form__form">
+          <CForm action="https://formsubmit.co/charlietait1@gmail.com" method="POST" className="contact-form__form" >
             <CFormLabel className="contact-form__form-label" htmlFor="name">
               First name*
             </CFormLabel>
@@ -39,6 +41,7 @@ function ContactForm() {
               id="email"
               name="email"
               required
+           
             />
             <CFormLabel
               className="contact-form__form-label"
@@ -54,11 +57,13 @@ function ContactForm() {
               name="description"
               required
             />
-            <button
+            <div className="contact-form__submit-button-container">
+              <button
               type="submit"
               className="contact-form__submit-button"
               onClick={() => setIsLoading(true)}
-            >{isLoading ? "Loading..." : "Submit"}</button>
+              > {isLoading ? "Loading..." : "Submit"}</button>
+            </div>
           </CForm>
         </div>
       </div>
