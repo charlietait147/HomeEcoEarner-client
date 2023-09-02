@@ -6,10 +6,10 @@ function NewsContent() {
     const [newsArticleList, setNewsArticleList] = useState([]);
 
     const getNewsArticles = async () => {
-        try{
+        try {
             const response = await axios(`${process.env.REACT_APP_API_URL}/news`);
             const fetchNewsArticles = response.data
-            console.log(fetchNewsArticles);
+            setNewsArticleList(fetchNewsArticles)
         } catch (error) {
             console.log("Unable to retrieve users" + error);
         }
@@ -29,20 +29,25 @@ function NewsContent() {
                         <input type="text" className="news-content__filter-search" />
                         <button className="news-content__filter-button">FILTER NOW</button>
                     </div>
-                    <div className="news-content__news-container">
-                        <p className="news-content__results"> 6 Results </p>
-                        <div className="news-content__card-container">
-                            <article className="news-content__card">
-                                <img src="" alt="" className="news-content__image" />
-                                <p className="news-content__article-release-date">
-                                    SEPTEMBER 1, 2023
-                                </p>
-                                <h3 className="news-content__article-title">
-                                    Why Solar Panels are becoming more important than ever
-                                </h3>
-                            </article>
-                        </div>
-                    </div>
+                    {newsArticleList.map((newsArticle) => {
+                        return (
+                            <div className="news-content__news-container" key ={newsArticle.id}>
+                                <p className="news-content__results"> 6 Results </p>
+                                <div className="news-content__card-container">
+                                    <article className="news-content__card">
+                                        <img src={newsArticle.image} alt="" className="news-content__image" />
+                                        <p className="news-content__article-release-date">
+                                            {newsArticle.release_date}
+                                        </p>
+                                        <h3 className="news-content__article-title">
+                                           {newsArticle.title}
+                                        </h3>
+                                    </article>
+                                </div>
+                            </div>
+                        )
+                    }
+                    )}
                 </div>
             </div>
         </section>
