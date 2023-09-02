@@ -1,5 +1,22 @@
 import "./NewsContent.scss"
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 function NewsContent() {
+    const [newsArticleList, setNewsArticleList] = useState([]);
+
+    const getNewsArticles = async () => {
+        try{
+            const response = await axios(`${process.env.REACT_APP_API_URL}/news`);
+            const fetchNewsArticles = response.data
+            console.log(fetchNewsArticles);
+        } catch (error) {
+            console.log("Unable to retrieve users" + error);
+        }
+    }
+    useEffect(() => {
+        getNewsArticles();
+    }, [])
     return (
         <section className="news-content">
             <div className="news-content__banner">
