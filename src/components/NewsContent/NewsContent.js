@@ -26,7 +26,7 @@ function NewsContent() {
                 <div className="news-content__news-article-container">
                     <p className="news-content__search-title">FILTER/SEARCH:</p>
                     <div className="news-content__search-container">
-                        <input type="text" className="news-content__filter-search" />
+                        <input type="text" className="news-content__filter-search" id="search" />
                         <button className="news-content__filter-button">FILTER NOW</button>
                     </div>
                     <div className="news-content__news-container" >
