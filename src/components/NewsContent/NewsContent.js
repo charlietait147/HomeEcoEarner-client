@@ -3,20 +3,41 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function NewsContent() {
-    const [newsArticleList, setNewsArticleList] = useState([]);
+    const [newsList, setNewsList] = useState([]);
+    const [defaultNewsList, setDefaultNewsList] = useState([]);
+    const [inputValue, setInputValue] = useState("");
 
-    const getNewsArticles = async () => {
+    const handleChange = (event) => {
+        setInputValue(event.target.value);
+    }
+
+    const getNewsList = async () => {
         try {
             const response = await axios(`${process.env.REACT_APP_API_URL}/news`);
-            const fetchNewsArticles = response.data
-            setNewsArticleList(fetchNewsArticles)
+            const fetchNews = response.data
+            setNewsList(fetchNews)
+            setDefaultNewsList(fetchNews);
         } catch (error) {
             console.log("Unable to retrieve users" + error);
         }
     }
     useEffect(() => {
-        getNewsArticles();
+        getNewsList();
     }, [])
+
+    const clickHandler = () => {
+
+        const filteredNewsList = newsList.filter((news) => {
+            return news.release_date.includes(inputValue) || news.title.includes(inputValue)
+        })
+
+        setNewsList(filteredNewsList)
+
+        if ( inputValue === "") {
+            setNewsList(defaultNewsList);
+        }
+    }
+
     return (
         <section className="news-content">
             <div className="news-content__banner">
@@ -26,22 +47,22 @@ function NewsContent() {
                 <div className="news-content__news-article-container">
                     <p className="news-content__search-title">FILTER/SEARCH:</p>
                     <div className="news-content__search-container">
-                        <input type="text" className="news-content__filter-search" id="search" />
-                        <button className="news-content__filter-button">FILTER NOW</button>
+                        <input type="text" className="news-content__filter-search" id="search" onChange = {handleChange} />
+                        <button type = "submit" className="news-content__filter-button" onClick = {clickHandler}>FILTER NOW</button>
                     </div>
                     <div className="news-content__news-container" >
-                        <p className="news-content__results"> 6 Results </p>
+                        <p className="news-content__results"> ({newsList.length} Results) </p>
                         <div className="news-content__cards-container">
-                            {newsArticleList.map((newsArticle) => {
+                            {newsList.map((news) => {
                                 return (
-                                    <div className="news-content__card-container" key={newsArticle.id}>
+                                    <div className="news-content__card-container" key={news.id}>
                                         <article className="news-content__card">
-                                            <img src={newsArticle.image} alt="" className="news-content__article-image" />
+                                            <img src={news.image} alt="" className="news-content__article-image" />
                                             <p className="news-content__article-release-date">
-                                                {newsArticle.release_date}
+                                                {news.release_date}
                                             </p>
                                             <h3 className="news-content__article-title">
-                                                {newsArticle.title}
+                                                {news.title}
                                             </h3>
                                         </article>
                                     </div>

@@ -70,6 +70,12 @@
 
     &__results{
         font-size: 1.2rem;
+        @include tablet{
+            font-size: 1.4rem;
+        }
+        @include desktop{
+            font-size: 1.6rem;
+        }
     }
 
     &__cards-container{
