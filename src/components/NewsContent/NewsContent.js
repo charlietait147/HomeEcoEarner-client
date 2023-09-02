@@ -29,11 +29,11 @@ function NewsContent() {
                         <input type="text" className="news-content__filter-search" />
                         <button className="news-content__filter-button">FILTER NOW</button>
                     </div>
-                    {newsArticleList.map((newsArticle) => {
-                        return (
-                            <div className="news-content__news-container" key ={newsArticle.id}>
+                            <div className="news-content__news-container" >
                                 <p className="news-content__results"> 6 Results </p>
-                                <div className="news-content__card-container">
+                                {newsArticleList.map((newsArticle) => {
+                                    return (
+                                <div className="news-content__card-container" key ={newsArticle.id}>
                                     <article className="news-content__card">
                                         <img src={newsArticle.image} alt="" className="news-content__image" />
                                         <p className="news-content__article-release-date">
@@ -44,10 +44,10 @@ function NewsContent() {
                                         </h3>
                                     </article>
                                 </div>
+                                  )
+                                }
+                                )}
                             </div>
-                        )
-                    }
-                    )}
                 </div>
             </div>
         </section>
