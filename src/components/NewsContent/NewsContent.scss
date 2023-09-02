@@ -1,14 +1,26 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 .news-content{
     &__banner{
         height: 18rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(110deg, #0d741b 50%, #3ba335 60%);;
+        background: linear-gradient(110deg, #0d741b 50%, #3ba335 60%);
+        @include tablet{
+            height: 30rem;
+        }
     }
 
     &__wrapper{
         padding: 1.6rem;
+        @include tablet{
+            padding: 2rem 3.2rem;
+        }
+        @include desktop{
+            max-width: 1020px;
+            margin: auto;
+        }
     }
 
     &__header{
@@ -16,6 +28,15 @@
         letter-spacing: 0.3rem;
         font-weight: 300;
         color: white;
+        @include tablet{
+            font-size: 4.8rem;
+        }
+    }
+
+    &__search-container{
+        @include tablet{
+            display: flex;
+        }
     }
 
     &__search-title{
@@ -30,6 +51,9 @@
         color: white;
         font-size: 1.4rem;
         padding: 0.5rem;
+        @include tablet{
+            margin-left: 2rem;
+        }
     }
 
     &__news-container{
