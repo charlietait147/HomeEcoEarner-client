@@ -1,7 +1,22 @@
 import "./SuccessResponse.scss";
-function SuccessResponse() {
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import { CCloseButton } from '@coreui/react';
+function SuccessResponse({onClose}) {
+    
     return (
-        <div>THis is the Success Response Page</div>
+
+          <aside className="success-response">
+            <div className="success-response__banner">
+              <p className = "success-response__banner-text">Thank you</p>
+              <CCloseButton onClick = {onClose} className = "success-response__close" />
+            </div>
+            <div className="success-response__wrapper">
+                <TaskAltIcon style={{ fontSize: "8rem" }}/>
+              <p className="success-response__info">Your submission has been received.</p>
+              <button className = "success-response__button" onClick = {onClose}>Return to Home</button>
+            </div>
+          </aside>
+         
       );
 }
 

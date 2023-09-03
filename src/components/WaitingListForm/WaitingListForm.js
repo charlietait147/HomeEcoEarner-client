@@ -10,6 +10,9 @@ import peopleTick from "../../assets/images/people-tick.png";
 import "./WaitingListForm.scss";
 import { useState } from "react";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
+import SuccessResponse from "../SuccessResponse/SuccessResponse";
+
 
 function WaitingListForm({ onClose }) {
     //SET VALIDATION STATES
@@ -18,10 +21,11 @@ function WaitingListForm({ onClose }) {
     const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
     const [postcodeError, setPostcodeError] = useState("");
-
+    // const [navigateToSuccessPage, setNavigateToSuccessPage] = useState(false)
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+    
     const handleChangeName = (event) => {
         setName(event.target.value);
-
     }
 
     const handleChangePostcode = (event) => {
@@ -33,6 +37,11 @@ function WaitingListForm({ onClose }) {
         setEmail(event.target.value);
         setEmailError("");
     };
+
+    // if (navigateToSuccessPage) {
+    //     return <Navigate to = "/success" />
+    // }
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -59,9 +68,16 @@ function WaitingListForm({ onClose }) {
                 email: email,
                 postcode: postcode
             })
+            .then(() => {
+                // setNavigateToSuccessPage(true);
+                setIsFormSubmitted(true);
+            })
             .catch((error) => {
                 console.log("Unable to add user" + error)
             });
+
+
+
     };
 
     return (
@@ -139,6 +155,7 @@ function WaitingListForm({ onClose }) {
                     </div>
                 </div>
             </div>
+            {isFormSubmitted && <SuccessResponse onClose = {onClose} />}
         </aside>
     );
 }
