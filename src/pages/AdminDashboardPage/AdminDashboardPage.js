@@ -1,6 +1,10 @@
+import AdminDatabase from "../../components/AdminDatabase/AdminDatabase";
+
 function AdminDashboardPage() {
     return ( 
-        <div>This is the Admin Dashboard Page</div>
+        <div className="admin-dashboard__main-page">
+            <AdminDatabase />
+        </div>
      );
 }
 

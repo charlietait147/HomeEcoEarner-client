@@ -2,8 +2,7 @@ import "./AdminLoginForm.scss";
 import logo from "../../assets/images/homeecoearner-logo.png";
 import { useState } from "react";
 import axios from "axios";
-import AdminDatabase from "../AdminDatabase/AdminDatabase";
-
+import { Navigate } from "react-router-dom";
 
 
 function AdminLoginForm() {
@@ -25,7 +24,7 @@ function AdminLoginForm() {
     }
 
     if (directToDatabase) {
-        return (<AdminDatabase />);
+        return <Navigate to = "/admin/database"/>;
     }
 
     const submitHandler = async (event) => {
@@ -63,7 +62,6 @@ function AdminLoginForm() {
 
     return (
         <section className="admin-login">
-            {/* <div className="admin-login__container"> */}
             <div className="admin-login__wrapper">
                 <div className="admin-login__logo-container">
                     <img src={logo} alt="home eco earner logo" className="admin-login__logo" />
@@ -78,7 +76,6 @@ function AdminLoginForm() {
                     {errorMessage && <p className="admin-login__error-message">{errorMessage}</p>}
                 </form>
             </div>
-            {/* </div> */}
         </section>
     );
 }
