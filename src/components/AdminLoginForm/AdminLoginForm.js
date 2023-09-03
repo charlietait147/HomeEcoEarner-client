@@ -24,7 +24,7 @@ function AdminLoginForm() {
     }
 
     if (directToDatabase) {
-        return <Navigate to = "/admin/database"/>;
+        return <Navigate to="/admin/database" />;
     }
 
     const submitHandler = async (event) => {
@@ -45,13 +45,14 @@ function AdminLoginForm() {
         }
 
         try {
-            await axios.post(`${process.env.REACT_APP_API_URL}/admin`, {
+            await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, {
                 username: username,
                 password: password
             })
-
-            setDirectToDatabase(true);
-
+                .then((response) => {
+                    localStorage.setItem("token", response.data.token);
+                    setDirectToDatabase(true);
+                })
         } catch (error) {
             setErrorMessage("Invalid username or password.")
         }

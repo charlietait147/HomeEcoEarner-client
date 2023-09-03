@@ -4,6 +4,7 @@ import errorIcon from "../../assets/icons/error-24px.png";
 import "./AdminDatabase.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 
 function AdminDatabase() {
     const [userList, setUserList] = useState([]);
@@ -39,6 +40,10 @@ function AdminDatabase() {
     }
 
     useEffect(() => {
+        const token = localStorage.getItem("token");
+        if (!token) {
+            return <Navigate to = "/admin/login" />
+        }
         getUsersAll();
     }, [])
 
