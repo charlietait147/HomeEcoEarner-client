@@ -6,7 +6,7 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import NewsPage from "./pages/NewsPage/NewsPage";
 import NotFound from "./pages/NotFound/NotFound";
 import QualifyForm from './pages/QualifyForm/QualifyForm';
-// import SuccessResponse from './pages/SuccessResponse/SuccessResponse';
+import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';
 
 function App() {
   return (
@@ -16,9 +16,9 @@ function App() {
     <Route path = "/" element = {<LandingPage />}/>
     <Route path = "qualify" element = {<QualifyForm />}/>
     <Route path = "admin/login" element = {<AdminLoginPage />}/>
+    <Route path = "admin/dashboard" element = {<AdminDashboardPage />}/>
     <Route path = "contact-us" element = {<ContactPage />}/>
     <Route path = "news" element = {<NewsPage />} />
-    {/* <Route path = "success" render={() => (isFormSubmitted ? <SuccessResponse/> : <Redirect to = "/" />)} /> */}
     <Route path = "*" element = {<NotFound />} /> 
     </Routes>
     </BrowserRouter>
