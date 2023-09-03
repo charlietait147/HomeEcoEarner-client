@@ -8,7 +8,7 @@ function SuccessResponse({onClose}) {
           <aside className="success-response">
             <div className="success-response__banner">
               <p className = "success-response__banner-text">Thank you</p>
-              <CCloseButton onClick = {onClose} className = "success-response__close" />
+              <CCloseButton onClick = {onClose} className = "success-response__close background-color" />
             </div>
             <div className="success-response__wrapper">
                 <TaskAltIcon style={{ fontSize: "8rem" }}/>
