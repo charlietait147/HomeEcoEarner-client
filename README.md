@@ -1,70 +1,91 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# HomeEcoEarner
 
-## Available Scripts
+It is a development landing page and website of a renewal energy installation company that helps individuals to acquire renewable energy assets at low or no cost like solar panels and batteries. 
 
-In the project directory, you can run:
+To join the waiting list at HomeEcoEarner, in advance of the company being launched, a user a directed to a waiting list form where they input their first name, email and postcode. This information is added to a database, which can be viewed through logging in on the admin login page. The admin signs in with their correct username and password and in turn receives a JWT token to access the dashboard of users.
 
-### `npm start`
+![Screenshot](https://drive.google.com/uc?id=1Vz-WZ6nnm9iw0fbAD6WCk8BnrMA4SVS6)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The front-end was built with 
+- Create-react-app
+- SASS 
+- Material UI Icons
+- CoreUI progress bar, form and close button
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Installation
+Follow these steps to run a local instance of HomeEcoEarner. You will need (node, npm and MySQL) installed before following these next steps.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the front-end and back-end repository:
 
-### `npm run build`
+```bash
+   $ git clone https://github.com/charlietait147/HomeEcoEarner-client
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   $ git clone https://github.com/charlietait147/HomeEcoEarner-server
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To set up the back-end first:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Create a new database in MySQL called HomeEcoEarner
 
-### `npm run eject`
+- Install server dependencies. Run:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+   $ npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Run migrations:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  $ npm run migrate
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-  Run seeds:
 
-## Learn More
+```bash
+  $ npm run seed
+```
+-  Set environment variables and change placeholders values with your own values
+    
+    Rename 
+    `.env_sample` to `.env`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+    PORT=<PORT_NUMER>
+    JWT_KEY=<SECRET KEY>
+    DB_HOST=<HOST ADDRESS>
+    DB_USER=<YOUR DB USERNAME>
+    DB_PASSWORD=<YOUR DB PASSWORD> 
+```
 
-### Code Splitting
+- Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+  $ node server.js
+```
 
-### Analyzing the Bundle Size
+To set up the front-end:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Install client dependencies
 
-### Making a Progressive Web App
+```bash
+  $ npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Set environment variables
 
-### Advanced Configuration
+Rename 
+    `.env_sample` to `.env` and change the placeholder of the port you set for the server. The admin and password can be used on the admin login page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Start the React App:
 
-### Deployment
+```bash
+  $ npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    
