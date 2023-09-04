@@ -1,0 +1,86 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.not-found{
+    &__wrapper{
+        padding: 15rem $padding-mobile;
+        @include tablet{
+            padding: 15rem $padding-tablet;
+        }
+        @include desktop{
+            @include max-width;
+            padding: 15rem
+            
+        }
+    }
+
+    &__header{
+        font-size: 6.2rem;
+        text-align: center;
+        font-weight: 700;
+        color: transparent;
+
+        background-image: url("../../assets/images/green-yellow-background.jpg");
+        background-size: cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        padding-left: 1rem;
+        @include tablet{
+            font-size: 8.6rem;
+        }
+        @include desktop{
+            font-size: 15.6rem;
+        }
+
+    }
+
+    &__page-info{
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+        @include tablet{
+            font-size: 1.5rem;
+        }
+        @include desktop{
+            font-size: 1.7rem;
+        }
+    }
+
+    &__page-description{
+        text-align: center;
+        font-size: 1.1rem;
+        @include tablet{
+            font-size: 1.3rem;
+        }
+        @include desktop{
+            font-size: 1.5rem;
+        }
+    }
+
+    &__home-button-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__home-button{
+        border:none;
+        background: url("../../assets/images/green-yellow-background.jpg");
+        background-size: cover;
+        width: 50%;
+        text-align: center;
+        font-size: 1.2rem;
+        color: $contrast;
+        border-radius: 10px;
+        padding: 1rem;
+        @include tablet{
+            width: 25%;
+        }
+        @include desktop{
+            width: 20%;
+            margin-top: 1rem;
+        }
+        
+    }
+
+    
+}
