@@ -45,6 +45,7 @@ function AdminLoginForm() {
 
         }
 
+
         try {
             await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, {
                 username: username,
@@ -55,7 +56,7 @@ function AdminLoginForm() {
                     setDirectToDatabase(true);
                 })
         } catch (error) {
-            console.log(error);
+            setErrorMessage("Invalid username or password");
         }
 
 

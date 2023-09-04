@@ -23,6 +23,7 @@
     border-image: linear-gradient( 90deg, rgba(255, 255, 255, 0.9),  rgba(83, 60, 64, 0) ) 1;  
     padding-bottom: 1rem;
   }
+
   &__logo {
     height: 4rem;
   }
@@ -82,5 +83,13 @@
   &__error-message {
     color: red;
     padding-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    @include tablet{
+      font-size: 1.3rem;
+    }
+    @include desktop{
+      font-size: 1.4rem;
+    }
   }
 }
