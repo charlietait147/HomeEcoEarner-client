@@ -150,6 +150,13 @@
        }
     }
 
+    &__icon-attribution{
+        font-size: 1.2rem;
+        @include tablet{
+            text-align: right;
+        }
+    }
+
 
 }
 
@@ -165,7 +172,6 @@
         padding: 3rem 1rem;
         border-bottom: 1px solid darkgreen;
         font-size: 1.8rem;
-        font-family: "Futura";
 
         &--bold{
             font-weight: 700;

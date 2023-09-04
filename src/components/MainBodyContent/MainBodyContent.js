@@ -2,7 +2,7 @@ import renewableHouse from "../../assets/images/renewable-house.png";
 import familyPhoto from "../../assets/images/green-family-photo.png";
 import cutCostIcon from "../../assets/icons/cut-cost-icon.png";
 import electricityBillIcon from "../../assets/icons/electricity-bill-icon.png";
-import upgradeIcon from "../../assets/icons/upgrade-icon.png";
+import upgradeIcon from "../../assets/icons/upgrade-icon.svg";
 import saveMoneyIcon from "../../assets/icons/save-money.png";
 import "./MainBodyContent.scss";
 import WaitingListForm from "../WaitingListForm/WaitingListForm";
@@ -55,7 +55,7 @@ function MainBodyContent() {
           </div>
         </header>
         <section className="benefits">
-          <h2 className="benefits__header">What's in it for You?</h2>
+          <h2 className="benefits__header">What's in it for you?</h2>
           <div className="benefits__card-container">
             <article className="benefits__card">
               <img
@@ -99,8 +99,6 @@ function MainBodyContent() {
                 your home electricity system into an income stream with our Home
                 EcoEarner Power Booster.
               </p>
-              {/* ICON REFERENCE */}
-              {/* <a href="https://www.freepik.com/icon/top_8020016#fromView=search&term=upgrade+&page=1&position=0">Icon by Pavani TLN</a> */}
             </article>
             <article className="benefits__card">
               <img
@@ -116,6 +114,7 @@ function MainBodyContent() {
               </p>
             </article>
           </div>
+          <p className = "benefits__icon-attribution">Icons designed by <a target = "_blank" href = "https://www.freepik.com" className = "benefits__freepik-link"> Freepik</a></p>
         </section>
         <section className="join-waiting-list">
           <div className="join-waiting-list-claimer-container">
@@ -165,13 +164,6 @@ function MainBodyContent() {
             </p>
           </div>
         </section>
-        {/* <div className="header-section__house-image-container">
-            <img
-              src={renewableHouse}
-              alt="house with renewable energy"
-              className="header-section__house-image"
-            />
-          </div> */}
       </div>
     </section>
   );
