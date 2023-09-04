@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import AdminLoginPage from "./pages/AdminLoginPage/AdminLoginPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
@@ -27,4 +27,3 @@ function App() {
 
 export default App;
 
-// element =  {<SuccessResponse isFormSubmitted={true} />} />
