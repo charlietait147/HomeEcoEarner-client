@@ -10,7 +10,6 @@ import peopleTick from "../../assets/images/people-tick.png";
 import "./WaitingListForm.scss";
 import { useState } from "react";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
 import SuccessResponse from "../SuccessResponse/SuccessResponse";
 
 

@@ -9,16 +9,13 @@ import WaitingListForm from "../WaitingListForm/WaitingListForm";
 import { useState } from "react";
 
 function MainBodyContent() {
-  //STATE TO HANDLE MODAL
   const [isModalClicked, setIsModalClicked] = useState(false);
 
-  //FUNCTION TO HANDLE OPENING THE MODAL, ADD SCROLLING ON MODAL
   const showModal = () => {
     setIsModalClicked(true);
     document.body.classList.add("disable-scroll");
   };
 
-  //FUNCTION TO HANDLE CLOSING THE MODAL, REMOVE SCROLLING ON MODAL
   const hideModal = () => {
     setIsModalClicked(false);
     document.body.classList.remove("disable-scroll");
@@ -81,8 +78,6 @@ function MainBodyContent() {
               <p className="benefits__card-description">
                 With no up-front cost and free installation, you get your
                 electricity cost-free - no more electricity bills to pay.
-                {/* ICON REFERENCE */}
-                {/* <a href="https://www.freepik.com/icon/invoice_1956804#fromView=search&term=cross+out+electricity+bills&page=1&position=9">Icon by Icongeek26</a> */}
               </p>
             </article>
             <article className="benefits__card">
@@ -106,7 +101,6 @@ function MainBodyContent() {
                 alt="save money icon"
                 className="benefits__card-icon"
               />
-              {/* REFERENCE:  <a href="https://www.freepik.com/icon/save-money_1611179#fromView=search&term=income&page=1&position=2">Icon by Kiranshastry</a> */}
               <h3 className="benefits__card-title"> Generate Income </h3>
               <p className="benefits__card-description">
                 With our Power Booster upgrade, you could earn an average of
@@ -114,7 +108,16 @@ function MainBodyContent() {
               </p>
             </article>
           </div>
-          <p className = "benefits__icon-attribution">Icons designed by <a target = "_blank" href = "https://www.freepik.com" className = "benefits__freepik-link"> Freepik</a></p>
+          <p className="benefits__icon-attribution">
+            Icons designed by{" "}
+            <a
+              href="https://www.freepik.com"
+              className="benefits__freepik-link"
+            >
+              {" "}
+              Freepik
+            </a>
+          </p>
         </section>
         <section className="join-waiting-list">
           <div className="join-waiting-list-claimer-container">
@@ -142,25 +145,33 @@ function MainBodyContent() {
         <section className="trusted-provider">
           <div className="trusted-provider__home-image-container">
             <img
-            src={renewableHouse}
-            alt="house with renewable energy"
-            className="trusted-provider__home-image"
+              src={renewableHouse}
+              alt="house with renewable energy"
+              className="trusted-provider__home-image"
             />
           </div>
           <div className="trusted-provider__text-container">
             <h4 className="trusted-provider__headline">
-            We are your <span className = "trusted-provider__headline--highlighted">Trusted Provider</span> of Green Energy Innovation
+              We are your{" "}
+              <span className="trusted-provider__headline--highlighted">
+                Trusted Provider
+              </span>{" "}
+              of Green Energy Innovation
             </h4>
             <p className="trusted-provider__details">
-            We understand the complete spectrum of clean green renewable energy
-            technologies from solar through to nuclear fusion. <span className = "trusted-provider__details--underlined"> Our comprehensive
-            expertise </span> allows us to provide you with the most effective and
-            efficient energy solutions tailored to your needs.
+              We understand the complete spectrum of clean green renewable
+              energy technologies from solar through to nuclear fusion.{" "}
+              <span className="trusted-provider__details--underlined">
+                {" "}
+                Our comprehensive expertise{" "}
+              </span>{" "}
+              allows us to provide you with the most effective and efficient
+              energy solutions tailored to your needs.
             </p>
             <p className="trusted-provider__details">
-            We are not only committed to advancing clean technology and
-            renewable energy, but also to empowering you to become a part of the
-            sustainable energy revolution.
+              We are not only committed to advancing clean technology and
+              renewable energy, but also to empowering you to become a part of
+              the sustainable energy revolution.
             </p>
           </div>
         </section>
