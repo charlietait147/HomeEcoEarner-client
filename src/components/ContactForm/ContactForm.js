@@ -3,9 +3,9 @@ import "./ContactForm.scss";
 import { CForm, CFormInput, CFormTextarea, CFormLabel } from "@coreui/react";
 
 function ContactForm() {
-    const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-    
+
   return (
     <section className="contact-form">
       <div className="contact-form__banner">
@@ -13,10 +13,10 @@ function ContactForm() {
       </div>
       <div className="contact-form__wrapper">
         <div className="contact-form__title-container">
-            <p className="contact-form__title">
-          Need to get in touch with us? Fill out the form with your
-          enquiry.
-            </p>
+          <p className="contact-form__title">
+            Need to get in touch with us? Fill out the form with your
+            enquiry.
+          </p>
         </div>
         <div className="contact-form__form-container">
           <CForm action="https://formsubmit.co/charlietait1@gmail.com" method="POST" className="contact-form__form" >
@@ -41,7 +41,7 @@ function ContactForm() {
               id="email"
               name="email"
               required
-           
+
             />
             <CFormLabel
               className="contact-form__form-label"
@@ -59,9 +59,9 @@ function ContactForm() {
             />
             <div className="contact-form__submit-button-container">
               <button
-              type="submit"
-              className="contact-form__submit-button"
-              onClick={() => setIsLoading(true)}
+                type="submit"
+                className="contact-form__submit-button"
+                onClick={() => setIsLoading(true)}
               > {isLoading ? "Loading..." : "Submit"}</button>
             </div>
           </CForm>

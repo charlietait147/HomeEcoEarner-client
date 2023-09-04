@@ -14,13 +14,11 @@ import SuccessResponse from "../SuccessResponse/SuccessResponse";
 
 
 function WaitingListForm({ onClose }) {
-    //SET VALIDATION STATES
     const [name, setName] = useState("")
     const [postcode, setPostcode] = useState("");
     const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
     const [postcodeError, setPostcodeError] = useState("");
-    // const [navigateToSuccessPage, setNavigateToSuccessPage] = useState(false)
     const [isFormSubmitted, setIsFormSubmitted] = useState(false)
     
     const handleChangeName = (event) => {
@@ -37,15 +35,8 @@ function WaitingListForm({ onClose }) {
         setEmailError("");
     };
 
-    // if (navigateToSuccessPage) {
-    //     return <Navigate to = "/success" />
-    // }
-
-
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        //SET FORM VALIDATION CONDITIONAL STATEMENTS
 
         if (!email.includes('@')) {
             setEmailError('Please enter a valid email.');
@@ -57,10 +48,6 @@ function WaitingListForm({ onClose }) {
             return;
         }
 
-
-
-        //AXIOS REQUEST
-
         axios
             .post(`${process.env.REACT_APP_API_URL}/users/add-user`, {
                 first_name: name,
@@ -68,7 +55,6 @@ function WaitingListForm({ onClose }) {
                 postcode: postcode
             })
             .then(() => {
-                // setNavigateToSuccessPage(true);
                 setIsFormSubmitted(true);
             })
             .catch((error) => {
