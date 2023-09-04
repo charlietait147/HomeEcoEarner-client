@@ -24,7 +24,7 @@ function AdminLoginForm() {
     }
 
     if (directToDatabase) {
-        return <Navigate to="/admin/database" />;
+        return <Navigate to="/admin/dashboard" />;
     }
 
     const submitHandler = async (event) => {
