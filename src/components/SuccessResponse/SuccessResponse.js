@@ -12,7 +12,7 @@ function SuccessResponse({onClose}) {
             </div>
             <div className="success-response__wrapper">
                 <TaskAltIcon style={{ fontSize: "8rem" }}/>
-              <p className="success-response__info">Your submission has been received.</p>
+              <p className="success-response__info">Your application has been received.</p>
               <button className = "success-response__button" onClick = {onClose}>Return to Home</button>
             </div>
           </aside>
