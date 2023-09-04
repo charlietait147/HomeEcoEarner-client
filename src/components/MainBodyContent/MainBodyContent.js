@@ -30,7 +30,7 @@ function MainBodyContent() {
         <header className="header-section">
           <div className="header-section__heading-container">
             <h1 className="header-section__heading">
-              Convert Your Electricity Costs Into Earnings
+              Convert Your Renewable Energy Costs Into Income
             </h1>
             <p className="header-section__tag-line">
               To make money from renewable energy, join the Home EcoEarner
@@ -80,7 +80,7 @@ function MainBodyContent() {
               </h3>
               <p className="benefits__card-description">
                 With no up-front cost and free installation, you get your
-                electricity cost-free, no more electricity bills to pay.
+                electricity cost-free - no more electricity bills to pay.
                 {/* ICON REFERENCE */}
                 {/* <a href="https://www.freepik.com/icon/invoice_1956804#fromView=search&term=cross+out+electricity+bills&page=1&position=9">Icon by Icongeek26</a> */}
               </p>
@@ -160,7 +160,7 @@ function MainBodyContent() {
             <p className="trusted-provider__details">
             We are not only committed to advancing clean technology and
             renewable energy, but also to empowering you to become a part of the
-            sustainable energy revolution
+            sustainable energy revolution.
             </p>
           </div>
         </section>
