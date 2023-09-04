@@ -8,7 +8,7 @@
         }
         @include desktop{
             @include max-width;
-            padding: 15rem
+            padding: 15rem 0;
             
         }
     }
