@@ -4,12 +4,13 @@ import errorIcon from "../../assets/icons/error-24px.png";
 import "./AdminDatabase.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function AdminDatabase() {
     const [userList, setUserList] = useState([]);
     const [defaultUserList, setDefaultUserList] = useState([]);
     const [inputValue, setInputValue] = useState("");
+    const navigate = useNavigate();
     const handleChange = (event) => {
 
         setInputValue(event.target.value);
@@ -30,7 +31,8 @@ function AdminDatabase() {
 
     const getUsersAll = async () => {
         try {
-            const response = await axios(`${process.env.REACT_APP_API_URL}/users`);
+            const response = await axios(`${process.env.REACT_APP_API_URL}/users`, {
+            });
             const fetchUsers = response.data
             setUserList(fetchUsers);
             setDefaultUserList(fetchUsers);
@@ -39,22 +41,45 @@ function AdminDatabase() {
         }
     }
 
+
     useEffect(() => {
-        const token = localStorage.getItem("token");
-        if (!token) {
-            return <Navigate to = "/admin/login" />
-        }
+        getAuthorisation();
         getUsersAll();
     }, [])
 
+    const handleLogout = ()  => {
+        localStorage.removeItem('token');
+        navigate("/admin/login");
+        
+    }
    
+    const getAuthorisation = () => {
 
+        const token = localStorage.getItem("token");
+        if (!token) {
+            navigate("/admin/login");
+        }
+
+        axios.get(`${process.env.REACT_APP_API_URL}/admin`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+        .then((response) => {
+            console.log(response.data);
+        })
+            .catch((error) => {
+                console.error(error);
+            })
+
+    }
 
     return (
 
         <section className="admin-database">
             <div className="admin-database__logo-container">
                 <img src={logo} alt="home eco earner logo" className="admin-login__logo" />
+                <button onClick = {handleLogout}>Log Out</button>
             </div>
             <div className="admin-database__users-container">
                 <div className="admin-database__title-container">
@@ -105,9 +130,9 @@ function AdminDatabase() {
                 )}
                 {/* {(inputValue && userList.length === 0) && <p className="admin-database__no-user-message">No users have been found in your search.</p>} */}
 
-                {(inputValue && userList.length === 0) && <div className = "admin-database__no-user-container">
-                    <img src = {errorIcon} alt = "error icon" className = "admin-database__no-user-error-icon"></img>
-                    <p className = "admin-database__no-user-message">No users have been found in your search.</p>
+                {(inputValue && userList.length === 0) && <div className="admin-database__no-user-container">
+                    <img src={errorIcon} alt="error icon" className="admin-database__no-user-error-icon"></img>
+                    <p className="admin-database__no-user-message">No users have been found in your search.</p>
                 </div>
 
                 }

@@ -2,7 +2,7 @@ import "./AdminLoginForm.scss";
 import logo from "../../assets/images/homeecoearner-logo.png";
 import { useState } from "react";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function AdminLoginForm() {
@@ -12,6 +12,7 @@ function AdminLoginForm() {
     const [passwordError, setPasswordError] = useState(false);
     const [errorMessage, setErrorMessage] = useState(false);
     const [directToDatabase, setDirectToDatabase] = useState(false);
+    const navigate = useNavigate();
 
     const handleChangeUsername = (event) => {
         setUsername(event.target.value);
@@ -24,7 +25,7 @@ function AdminLoginForm() {
     }
 
     if (directToDatabase) {
-        return <Navigate to="/admin/dashboard" />;
+        navigate("/admin/dashboard");
     }
 
     const submitHandler = async (event) => {
@@ -54,7 +55,7 @@ function AdminLoginForm() {
                     setDirectToDatabase(true);
                 })
         } catch (error) {
-            setErrorMessage("Invalid username or password.")
+            console.log(error);
         }
 
 
