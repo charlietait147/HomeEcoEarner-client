@@ -9,6 +9,10 @@
     @include large-mobile{
         padding: 2rem 3rem;
     }
+
+    &__header-container{
+        display: flex;
+    }
     
     &__logo-container{
         display: flex;
@@ -19,11 +23,27 @@
         }
     }
 
+    &__logout-container{
+        display: flex;
+        flex-basis: 100%;
+        justify-content: end;
+    }
+
+    &__logout-text{
+        font-size: 1.1rem;
+        padding-top: 0.75rem;
+        @include tablet{
+            font-size: 1.3rem;
+            padding-top: 0.6rem;
+        }
+    }
+
     &__title-container{
         @include large-mobile{
             display: flex;
         }
     }
+
 
     &__title{
         font-size: 2.2rem;

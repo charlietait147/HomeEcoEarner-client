@@ -1,6 +1,7 @@
 import logo from "../../assets/images/homeecoearner-logo.png";
 import searchIcon from "../../assets/icons/search-24px.svg";
 import errorIcon from "../../assets/icons/error-24px.png";
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import "./AdminDatabase.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -77,9 +78,14 @@ function AdminDatabase() {
     return (
 
         <section className="admin-database">
-            <div className="admin-database__logo-container">
-                <img src={logo} alt="home eco earner logo" className="admin-login__logo" />
-                <button onClick = {handleLogout}>Log Out</button>
+            <div className="admin-database__header-container">
+                <div className="admin-database__logo-container">
+                    <img src={logo} alt="home eco earner logo" className="admin-login__logo" />
+                </div>
+                <div className="admin-database__logout-container">
+                    <h3 className = "admin-database__logout-text">Log out </h3>
+                    <ExitToAppIcon style={{ fontSize : "3rem", marginLeft: "0.5rem"}} onClick = {handleLogout}  />
+                </div>
             </div>
             <div className="admin-database__users-container">
                 <div className="admin-database__title-container">
