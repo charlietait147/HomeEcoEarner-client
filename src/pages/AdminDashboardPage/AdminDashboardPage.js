@@ -1,4 +1,5 @@
 import AdminDatabase from "../../components/AdminDatabase/AdminDatabase";
+import "./AdminDashboardPage.scss";
 
 function AdminDashboardPage() {
     return ( 

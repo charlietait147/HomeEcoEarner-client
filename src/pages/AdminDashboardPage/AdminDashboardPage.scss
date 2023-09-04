@@ -1,0 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+.admin-dashboard{
+    &__main-page{
+        background:url("../../assets/images/star-background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100vh;
+        @include large-mobile{
+        padding: 3rem;
+        }
+        @include tablet{
+        padding: 5rem;
+        }
+    }
+}
