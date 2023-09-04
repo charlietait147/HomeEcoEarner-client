@@ -16,6 +16,7 @@
     @include desktop{
         max-width: 1020px;
         margin: auto;
+        padding: 2rem 0;
     }
   }
 
@@ -98,6 +99,7 @@
   &__link-active{
     color: darkgreen;
     text-decoration: none;
+    font-weight: 600;
 
   }
 
