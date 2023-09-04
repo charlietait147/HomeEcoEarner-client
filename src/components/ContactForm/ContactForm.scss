@@ -1,4 +1,5 @@
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 .contact-form{
     &__banner{
         height: 18rem;
@@ -15,7 +16,7 @@
         font-size: 2.8rem;
         letter-spacing: 0.2rem;
         font-weight: 300;
-        color: white; 
+        color: $contrast;
         @include tablet{
             font-size: 4.8rem;
         }
@@ -26,7 +27,7 @@
         padding: 1.6rem;
         @include tablet{
             display: flex;
-            padding: 2rem 3.2rem;
+            padding: 2rem $padding-tablet;
         }
         @include desktop{
             @include max-width;
@@ -91,7 +92,7 @@
         width: 100%;
         border-radius: 20px;
         background-color:  #0b498f;
-        color: #ffffff;
+        color: $contrast;
         border: none;
         padding: 1rem;
         cursor: pointer;

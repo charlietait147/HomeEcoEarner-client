@@ -14,13 +14,13 @@
     }
 
   &__wrapper {
-    padding: 3rem 3.2rem;
+    padding: 3rem $padding-tablet;
   }
   &__logo-container {
     display: flex;
     justify-content: center;
     border-bottom: 2px solid;
-    border-image: linear-gradient( 90deg, rgba(255, 255, 255, 0.9),  rgba(83, 60, 64, 0) ) 1;  
+    border-image: $border-image;
     padding-bottom: 1rem;
   }
 
@@ -46,11 +46,11 @@
     border: 0.5px solid #414b5f;
     padding: 0.25rem 1rem;
     background-color: #37414b;
-    color: white;
+    color: $contrast;
     font-size: 1.1rem;
 
     &--error {
-      border: red 0.1rem solid;
+      border: $error 0.1rem solid;
       animation: shake 0.5s;
 
       @keyframes shake {
@@ -74,14 +74,14 @@
     width: 100%;
     padding: 0.5rem;
     border: none;
-    background-color: $base-main;
-    color: white;
+    background-color: $hover-main;
+    color: $contrast;
     margin-top: 1.5rem;
     font-size: 1.2rem;
   }
 
   &__error-message {
-    color: red;
+    color: $error;
     padding-top: 1rem;
     font-size: 1.2rem;
     font-weight: 300;

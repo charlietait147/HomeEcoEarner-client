@@ -13,9 +13,9 @@
     }
 
     &__wrapper{
-        padding: 1.6rem;
+        padding: $padding-mobile;
         @include tablet{
-            padding: 2rem 3.2rem;
+            padding: 2rem $padding-tablet;
         }
         @include desktop{
             @include max-width;
@@ -27,7 +27,7 @@
         font-size: 2.8rem;
         letter-spacing: 0.3rem;
         font-weight: 300;
-        color: white;
+        color: $contrast;
         @include tablet{
             font-size: 4.8rem;
         }
@@ -112,13 +112,13 @@
         font-size: 1.3rem;
         padding-left: 0.5rem;
         padding-top: 0.5rem;
-        color: gray;
+        color: $small-text;
     }
 
     &__article-title{
         font-size: 2.2rem;
         padding-bottom: 1.5rem;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid $secondary-main;
     }
 
 

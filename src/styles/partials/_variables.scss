@@ -1,18 +1,40 @@
-// BASE
-$base-main: #2A7F41;
-$base-dark: #004011;
+
+// MAIN
+$primary-main: #006400;
+$secondary-main: #000000;
+
+//BACKGROUND
+$primary-background: #FFF;
+$secondary-background: #000000;
+$tertiary-background: #6E9B34; 
 
 // TEXT
-$text-main: #7FBF90;
-$text-dark: #4F9464;
+$small-text: #777777;
+$contrast: #FFFFFF;
 
 // LINKS
 $link-text: #2F3749;
-$link-hover: #60f0f8;
+
 
 // BUTTON
 $button-background: #323232; 
 $button-text: #FFFFFF;
+$hover-main: #2A7F41;
+
+//ERROR
+$error: red;
+
+//PADDING
+$padding-mobile: 1.6rem;
+$padding-tablet: 3.2rem;
+
+//BORDER:
+$border-image: linear-gradient( 90deg, rgba(255, 255, 255, 0.9),  rgba(83, 60, 64, 0) ) 1;  
+
+
+
+
+
 
 
 

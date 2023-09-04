@@ -1,4 +1,5 @@
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 .success-response{
     @include modal;
 
@@ -6,7 +7,7 @@
         display: flex;
         justify-content: center;
         padding: 1.5rem;
-        background-color: #6E9B34;
+        background-color: $tertiary-background;
         position: relative;
         @include desktop{
             @include max-width;
@@ -14,7 +15,7 @@
     }
 
     &__banner-text{
-        color: white;
+        color: $contrast;
         margin-bottom: 0;
         @include tablet{
             font-size: 1.8rem;
@@ -23,7 +24,7 @@
 
     &__close{
         &.background-color{
-            background-color: white;
+            background-color: $primary-background;
             padding: 0.5rem;
             position: absolute;
             right: 1rem;
@@ -54,8 +55,8 @@
     }
 
     &__button{
-        background-color: #6E9B34;
-        color: white;
+        background-color:$tertiary-background;
+        color: $contrast;
         border-radius: 4px;
         border: none;
         font-size: 1.5rem;
