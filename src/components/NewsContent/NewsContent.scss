@@ -47,22 +47,8 @@
 
     &__filter-search{
         border: 1px solid #0d741b;
+        height: 3.6rem;
     }
-
-    &__filter-button{
-        border: none;
-        display: block;
-        background-color: #3ba335;
-        color: white;
-        font-size: 1.4rem;
-        padding: 0.5rem;
-        @include tablet{
-            padding: 1rem;
-            margin-left: 2rem;
-        }
-    }
-
-    
 
     &__news-container{
         padding-top: 4rem;

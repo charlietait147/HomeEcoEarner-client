@@ -33,10 +33,14 @@ function NewsContent() {
 
         setNewsList(filteredNewsList)
 
-        if ( inputValue === "") {
+        if (inputValue === "") {
             setNewsList(defaultNewsList);
         }
     }
+
+    useEffect(() => {
+        clickHandler();
+    }, [inputValue])
 
     return (
         <section className="news-content">
@@ -48,7 +52,6 @@ function NewsContent() {
                     <p className="news-content__search-title">FILTER/SEARCH:</p>
                     <div className="news-content__search-container">
                         <input type="text" className="news-content__filter-search" id="search" onChange = {handleChange} />
-                        <button type = "submit" className="news-content__filter-button" onClick = {clickHandler}>FILTER NOW</button>
                     </div>
                     <div className="news-content__news-container" >
                         <p className="news-content__results"> ({newsList.length} Results) </p>
