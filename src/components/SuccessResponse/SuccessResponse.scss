@@ -1,12 +1,6 @@
 @use "../../styles/partials/mixins" as *;
 .success-response{
-    background-color: #fff;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+    @include modal;
 
     &__banner{
         display: flex;
@@ -15,8 +9,7 @@
         background-color: #6E9B34;
         position: relative;
         @include desktop{
-            max-width: 1020px;
-            margin: auto;
+            @include max-width;
         }
     }
 

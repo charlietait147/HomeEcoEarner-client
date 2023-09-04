@@ -2,13 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .waiting-list {
-  background-color: #fff;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  @include modal;
 
   &__wrapper {
     padding: 2rem;
@@ -17,8 +11,7 @@
       padding: 3.2rem;
     }
     @include desktop {
-      max-width: 1020px;
-      margin: auto;
+     @include max-width;
     }
   }
 
@@ -108,11 +101,8 @@
   }
 
   &__join {
+    @include primary-btn;
     width: 100%;
-    border-radius: 20px;
-    background-color: #323232;
-    color: #ffffff;
-    border: none;
     padding: 1rem;
     cursor: pointer;
     margin-bottom: 0.5rem;

@@ -2,10 +2,8 @@
 .admin-login{
     &__mainpage{
         background: url("../../assets/images/star-background.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include background-cover;
         padding: 2rem;
-        min-height: 100vh;
 
         @include large-mobile{
             padding: 4rem 2rem;

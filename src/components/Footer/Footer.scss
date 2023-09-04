@@ -10,8 +10,7 @@
         }
 
         @include desktop{
-            max-width: 1020px;
-            margin: auto;
+           @include max-width;
         }
     }
 

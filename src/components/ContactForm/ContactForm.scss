@@ -29,8 +29,7 @@
             padding: 2rem 3.2rem;
         }
         @include desktop{
-            max-width: 1020px;
-            margin: auto;
+            @include max-width;
             padding: 0;
         }
     }

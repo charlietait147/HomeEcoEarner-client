@@ -8,8 +8,7 @@
             padding: 0rem 3.2rem;
         }
         @include desktop{
-            max-width: 1020px;
-            margin: auto;
+           @include max-width;
         }
     }
 }
@@ -44,11 +43,8 @@
     }
 
     &__waiting-list-button{
+        @include primary-btn;
         width: 100%;
-        border-radius: 20px;
-        background-color: $button-background;
-        color: $button-text;
-        border: none;
         padding: 1.5rem;
         cursor: pointer;
         margin-bottom: 2rem;
@@ -179,11 +175,8 @@
     }
 
     &__waiting-list-button{
+        @include primary-btn;
         width: 100%;
-        border-radius: 20px;
-        background-color: $button-background;
-        color: $button-text;
-        border: none;
         padding: 1.5rem;
         cursor: pointer;
         margin: 2rem 0;
