@@ -34,6 +34,18 @@ To set up the back-end first:
 ```bash
    $ npm install
 ```
+-  Set environment variables and change placeholders values with your own values
+    
+    Rename 
+    `.env_sample` to `.env`
+
+```bash
+    PORT=<PORT_NUMER>
+    JWT_KEY=<SECRET KEY>
+    DB_HOST=<HOST ADDRESS>
+    DB_USER=<YOUR DB USERNAME>
+    DB_PASSWORD=<YOUR DB PASSWORD> 
+```
 
 - Run migrations:
 
@@ -46,20 +58,7 @@ To set up the back-end first:
 ```bash
   $ npm run seed
 ```
--  Set environment variables and change placeholders values with your own values
-    
-    Rename 
-    `.env_sample` to `.env`
 
-    
-
-```bash
-    PORT=<PORT_NUMER>
-    JWT_KEY=<SECRET KEY>
-    DB_HOST=<HOST ADDRESS>
-    DB_USER=<YOUR DB USERNAME>
-    DB_PASSWORD=<YOUR DB PASSWORD> 
-```
 
 - Start the server
 

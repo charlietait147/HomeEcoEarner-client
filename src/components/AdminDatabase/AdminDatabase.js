@@ -130,7 +130,7 @@ function AdminDatabase() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="admin-database__user-content-container">
+                            <div className="admin-database__user-content-container" >
                                 <div className="admin-database__item">
                                     <span className="admin-database__categories">EMAIL</span>
                                     <p className="admin-database__user-content">{user.email}</p>
