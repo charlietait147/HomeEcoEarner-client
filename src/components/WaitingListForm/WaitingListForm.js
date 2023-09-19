@@ -42,7 +42,7 @@ function WaitingListForm({ onClose }) {
       return;
     }
 
-    if (postcode.length !== 8 || !postcode.includes(" ")) {
+    if ((postcode.length !== 6 && postcode.length !== 7 && postcode.length !== 8 ) || !postcode.includes(" ") || /[a-z]/.test(postcode)) {
       setPostcodeError("Please enter a valid UK postcode.");
       return;
     }
