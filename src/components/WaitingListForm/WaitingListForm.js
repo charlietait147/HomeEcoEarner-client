@@ -42,32 +42,38 @@ function WaitingListForm({ onClose }) {
       return;
     }
 
-    if ((postcode.length !== 6 && postcode.length !== 7 && postcode.length !== 8 ) || !postcode.includes(" ") || /[a-z]/.test(postcode)) {
+    if (
+      (postcode.length !== 6 &&
+        postcode.length !== 7 &&
+        postcode.length !== 8) ||
+      !postcode.includes(" ") ||
+      /[a-z]/.test(postcode)
+    ) {
       setPostcodeError("Please enter a valid UK postcode.");
       return;
     }
 
-    axios.get(`https://api.postcodes.io/postcodes/${postcode}`)
-    .then((response) => {
-      console.log(response.data);
-    })
-    .catch((error) => {
-      console.log("Unable to find postcode" + error);
-      setPostcodeError("Please enter a valid UK postcode.");
-      return;
-    })
-
     axios
-      .post(`${process.env.REACT_APP_API_URL}/users/add-user`, {
-        first_name: name,
-        email: email,
-        postcode: postcode,
-      })
+      .get(`https://api.postcodes.io/postcodes/${postcode}`)
       .then(() => {
-        setIsFormSubmitted(true);
+        axios
+          .post(`${process.env.REACT_APP_API_URL}/users/add-user`, {
+            first_name: name,
+            email: email,
+            postcode: postcode,
+          })
+          .then(() => {
+            setIsFormSubmitted(true);
+          })
+          .catch((error) => {
+            console.log("Unable to add user" + error);
+          });
+
+          console.log("Postcode valid: " + postcode);
       })
       .catch((error) => {
-        console.log("Unable to add user" + error);
+        console.log("Error validating postcode " + error);
+        setPostcodeError("Please enter a valid postcode");
       });
   };
 
@@ -163,3 +169,5 @@ function WaitingListForm({ onClose }) {
 }
 
 export default WaitingListForm;
+
+
