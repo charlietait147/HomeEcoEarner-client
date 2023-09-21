@@ -52,29 +52,35 @@ function WaitingListForm({ onClose }) {
       setPostcodeError("Please enter a valid UK postcode.");
       return;
     }
+   
 
-    axios
-      .get(`https://api.postcodes.io/postcodes/${postcode}`)
-      .then(() => {
+    
+
         axios
-          .post(`${process.env.REACT_APP_API_URL}/users/add-user`, {
-            first_name: name,
-            email: email,
-            postcode: postcode,
-          })
+          .get(`https://api.postcodes.io/postcodes/${postcode}`)
           .then(() => {
-            setIsFormSubmitted(true);
+            axios
+              .post(`${process.env.REACT_APP_API_URL}/users/add-user`, {
+                first_name: name,
+                email: email,
+                postcode: postcode,
+              })
+              .then(() => {
+                setIsFormSubmitted(true);
+              })
+              .catch((error) => {
+                console.log("Unable to add user " + error);
+              });
+
+            console.log("Postcode valid: " + postcode);
           })
           .catch((error) => {
-            console.log("Unable to add user" + error);
+            console.log("Error validating postcode " + error);
+            setPostcodeError("Please enter a valid postcode");
           });
 
-          console.log("Postcode valid: " + postcode);
-      })
-      .catch((error) => {
-        console.log("Error validating postcode " + error);
-        setPostcodeError("Please enter a valid postcode");
-      });
+     
+
   };
 
   return (
@@ -170,4 +176,4 @@ function WaitingListForm({ onClose }) {
 
 export default WaitingListForm;
 
-
+ 
