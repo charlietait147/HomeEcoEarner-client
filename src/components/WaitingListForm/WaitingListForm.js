@@ -52,9 +52,17 @@ function WaitingListForm({ onClose }) {
       setPostcodeError("Please enter a valid UK postcode.");
       return;
     }
-   
 
-    
+    axios.get(`https://emailvalidation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_API_KEY}&email=${email}`)
+      .then((response) => {
+        if (response.data.deliverability !== "DELIVERABLE") {
+          setEmailError("Invalid Email");
+          return;
+        }
+
+        console.log(response.data);
+
+
 
         axios
           .get(`https://api.postcodes.io/postcodes/${postcode}`)
@@ -79,7 +87,11 @@ function WaitingListForm({ onClose }) {
             setPostcodeError("Please enter a valid postcode");
           });
 
-     
+      })
+      .catch((error) => {
+        console.log(error)
+        setEmailError("Invalid Email");
+      })
 
   };
 
@@ -176,4 +188,5 @@ function WaitingListForm({ onClose }) {
 
 export default WaitingListForm;
 
- 
+
+
