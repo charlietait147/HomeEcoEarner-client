@@ -11,7 +11,7 @@
       padding: $padding-tablet;
     }
     @include desktop {
-     @include max-width;
+      @include max-width;
     }
   }
 
@@ -108,11 +108,18 @@
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     margin-top: 1rem;
+    &--disabled {
+      cursor: none;
+      opacity: 0.5;
+      pointer-events: none;
+    }
   }
+
 
   &__join:hover {
     background-color: $hover-main;
   }
+
 
   &__policy {
     color: $small-text;
@@ -120,4 +127,3 @@
     font-size: 0.9rem;
   }
 }
-
