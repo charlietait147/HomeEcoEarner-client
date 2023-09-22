@@ -20,7 +20,7 @@ function WaitingListForm({ onClose }) {
   const [postcodeError, setPostcodeError] = useState("");
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [loadingText, setLoadingText] = useState('JOINING');
+  const [loadingText, setLoadingText] = useState("JOINING");
 
   const handleChangeName = (event) => {
     setName(event.target.value);
@@ -38,12 +38,6 @@ function WaitingListForm({ onClose }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    if (!name || !email || !postcode) {
-      setPostcodeError("These fields cannot be empty");
-      return;
-    }
-
 
     if (!email.includes("@")) {
       setEmailError("Please enter a valid email.");
@@ -63,19 +57,19 @@ function WaitingListForm({ onClose }) {
       return;
     }
 
-    axios.get(`https://emailvalidation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_API_KEY}&email=${email}`)
+    axios
+      .get(
+        `https://emailvalidation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_API_KEY}&email=${email}`
+      )
       .then((response) => {
         if (response.data.deliverability !== "DELIVERABLE") {
           setIsLoading(false);
           setEmailError("Invalid Email");
           return;
-
         }
         setLoadingText("JOINING");
         animateLoading();
         console.log(response.data);
-
-
 
         axios
           .get(`https://api.postcodes.io/postcodes/${postcode}`)
@@ -102,47 +96,41 @@ function WaitingListForm({ onClose }) {
           });
 
         setIsLoading(false);
-
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
         setEmailError("Invalid Email");
         setIsLoading(false);
-      })
-
+      });
   };
 
   const animateLoading = () => {
-
     setLoadingText((prevText) => {
       if (prevText === "JOINING...") {
-        return "JOINING"
+        return "JOINING";
       }
-      return prevText + '.'
-
-    })
-  }
+      return prevText + ".";
+    });
+  };
 
   useEffect(() => {
     let interval;
     if (isLoading) {
       interval = setInterval(animateLoading, 500);
     }
-    setLoadingText('JOINING');
+    setLoadingText("JOINING");
 
     return () => {
       clearInterval(interval);
     };
   }, [isLoading]);
 
-
   const handleClick = () => {
     setIsLoading(true);
-  }
+  };
 
-  const isButtonDisabled = name.trim() === '' || postcode.trim() === '' || email.trim() === '';
-
-
+  const isButtonDisabled =
+    name.trim() === "" || postcode.trim() === "" || email.trim() === "";
 
   return (
     <aside className="waiting-list">
@@ -220,7 +208,16 @@ function WaitingListForm({ onClose }) {
               {postcodeError && (
                 <p className="waiting-list__error-message">{postcodeError}</p>
               )}
-              <button onClick={handleClick} disabled={isButtonDisabled} type="submit" className={isButtonDisabled ? "waiting-list__join waiting-list__join--disabled" : "waiting-list__join"}>
+              <button
+                onClick={handleClick}
+                disabled={isButtonDisabled}
+                type="submit"
+                className={
+                  isButtonDisabled
+                    ? "waiting-list__join waiting-list__join--disabled"
+                    : "waiting-list__join"
+                }
+              >
                 {isLoading ? loadingText : "JOIN WAITING LIST"}
               </button>
             </CForm>
@@ -236,6 +233,3 @@ function WaitingListForm({ onClose }) {
 }
 
 export default WaitingListForm;
-
-
-
