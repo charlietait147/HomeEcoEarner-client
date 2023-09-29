@@ -4,6 +4,24 @@ import { CForm, CFormInput, CFormTextarea, CFormLabel } from "@coreui/react";
 
 function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
+  
+  const handleChangeName = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleChangeEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleChangeDescription = (event) => {
+    setDescription(event.target.value);
+  }
+
+
+  const isButtonDisabled = name.trim() === "" || email.trim() === "" || description.trim() === "";
 
 
   return (
@@ -30,6 +48,8 @@ function ContactForm() {
               id="name"
               name="name"
               required
+              onChange={handleChangeName}
+              value={name}
             />
             <CFormLabel className="contact-form__form-label" htmlFor="email">
               Email*
@@ -41,6 +61,8 @@ function ContactForm() {
               id="email"
               name="email"
               required
+              onChange={handleChangeEmail}
+              value={email}
 
             />
             <CFormLabel
@@ -56,12 +78,15 @@ function ContactForm() {
               id="description"
               name="description"
               required
+              onChange={handleChangeDescription}
+              value={description}
             />
             <div className="contact-form__submit-button-container">
               <button
                 type="submit"
-                className="contact-form__submit-button"
+                className= { isButtonDisabled ? "contact-form__submit-button contact-form__submit-button--disabled" : "contact-form__submit-button"}
                 onClick={() => setIsLoading(true)}
+                disabled = {isButtonDisabled}
               > {isLoading ? "Loading..." : "Submit"}</button>
             </div>
           </CForm>
