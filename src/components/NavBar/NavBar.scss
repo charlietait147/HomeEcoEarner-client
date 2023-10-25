@@ -3,25 +3,28 @@
 .nav-bar {
   background-color: #f3f3f1;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 4px 0px;
+  position: sticky;
+  top: 0rem;
+  z-index: 3;
 
   &__wrapper {
     padding: $padding-mobile $padding-mobile 0.5rem;
     @include large-mobile{
         display: flex;
-        padding: 2rem 0;
+        padding: 2rem 1.6rem;
     }
     @include tablet{
         padding: 2rem $padding-tablet;
     }
     @include desktop{
         @include max-width;
-        padding: 2rem 0;
     }
   }
 
   &__logo-tagline-container {
+    display: flex;
+    justify-content: center;
     @include tablet {
-      display: flex;
       justify-content: flex-start;
       flex-basis: 100%;
     }
@@ -62,7 +65,7 @@
     padding-top: 1rem;
     justify-content: space-evenly;
     display: flex;
-    padding-left: 3.5rem;
+    padding-left: 0;
     margin-bottom: 0;
     @include large-mobile{
       flex-basis: 100%;
@@ -104,5 +107,12 @@
 
   &__link:hover{
     color: $primary-main;
+  }
+
+  &__email-link{
+    font-size: 1.2rem;
+    @include tablet{
+      font-size: 1.4rem;
+    }
   }
 }

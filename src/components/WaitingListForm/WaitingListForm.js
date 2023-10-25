@@ -57,19 +57,19 @@ function WaitingListForm({ onClose }) {
       return;
     }
 
-    axios
-      .get(
-        `https://emailvalidation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_API_KEY}&email=${email}`
-      )
-      .then((response) => {
-        if (response.data.deliverability !== "DELIVERABLE") {
-          setIsLoading(false);
-          setEmailError("Invalid Email");
-          return;
-        }
-        setLoadingText("JOINING");
-        animateLoading();
-        console.log(response.data);
+    // axios
+    //   .get(
+    //     `https://emailvalidation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_API_KEY}&email=${email}`
+    //   )
+    //   .then((response) => {
+    //     if (response.data.deliverability !== "DELIVERABLE") {
+    //       setIsLoading(false);
+    //       setEmailError("Invalid Email");
+    //       return;
+    //     }
+    //     setLoadingText("JOINING");
+    //     animateLoading();
+    //     console.log(response.data);
 
         axios
           .get(`https://api.postcodes.io/postcodes/${postcode}`)
@@ -96,12 +96,12 @@ function WaitingListForm({ onClose }) {
           });
 
         setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setEmailError("Invalid Email");
-        setIsLoading(false);
-      });
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+      //   setEmailError("Invalid Email");
+      //   setIsLoading(false);
+      // });
   };
 
   const animateLoading = () => {
