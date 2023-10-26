@@ -34,18 +34,18 @@ function MainBodyContent() {
               System, your gate-way to cost-free, income-generating renewable
               energy.
             </p>
-            <button
+            {/* <button
               onClick={showModal}
               className="header-section__waiting-list-button"
             >
               JOIN WAITING LIST
-            </button>
+            </button> */}
             {/* When isModalClicked is true, return the WaitingListForm component*/}
             {isModalClicked && <WaitingListForm onClose={hideModal} />}
           </div>
           <div className="header-section__image-container">
             <img
-              src={familyPhoto}
+              src={renewableHouse}
               alt="Happy family on green grass "
               className="header-section__image"
             />
@@ -135,17 +135,17 @@ function MainBodyContent() {
               its available.
             </h3>
           </div>
-          <button
+          {/* <button
             onClick={showModal}
             className="join-waiting-list__waiting-list-button"
           >
             JOIN WAITING LIST
-          </button>
+          </button> */}
         </section>
         <section className="trusted-provider">
           <div className="trusted-provider__home-image-container">
             <img
-              src={renewableHouse}
+              src={familyPhoto}
               alt="house with renewable energy"
               className="trusted-provider__home-image"
             />
