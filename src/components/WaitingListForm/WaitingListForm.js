@@ -12,12 +12,31 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import SuccessResponse from "../SuccessResponse/SuccessResponse";
 
-function WaitingListForm({ onClose }) {
+
+function WaitingListForm() {
+  const [isModalClicked, setIsModalClicked] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  // const showModal = () => {
+  //   setIsModalClicked(true);
+  //   document.body.classList.add("disable-scroll");
+  // };
+
+  // const hideModal = () => {
+  //   setIsModalClicked(false);
+  //   document.body.classList.remove("disable-scroll");
+  // };
+
+
+
   const [name, setName] = useState("");
   const [postcode, setPostcode] = useState("");
   const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [address, setAddress] = useState("");
   const [emailError, setEmailError] = useState("");
   const [postcodeError, setPostcodeError] = useState("");
+  const [numberError, setNumberError] = useState("");
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingText, setLoadingText] = useState("JOINING");
@@ -35,6 +54,15 @@ function WaitingListForm({ onClose }) {
     setEmail(event.target.value);
     setEmailError("");
   };
+
+  const handleChangeNumber = (event) => {
+    setNumber(event.target.value)
+    setNumberError("");
+  }
+
+  const handleChangeAddress  = (event) => {
+    setAddress(event.target.value)
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -57,6 +85,13 @@ function WaitingListForm({ onClose }) {
       return;
     }
 
+    if (number.length === 11 || number.length === 12)  {
+        setNumberError("")
+    } else {
+      setNumberError("Please enter a valid number")
+      setIsLoading(false)
+    }
+
     // axios
     //   .get(
     //     `https://emailvalidation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_API_KEY}&email=${email}`
@@ -71,37 +106,43 @@ function WaitingListForm({ onClose }) {
     //     animateLoading();
     //     console.log(response.data);
 
+    axios
+      .get(`https://api.postcodes.io/postcodes/${postcode}`)
+      .then(() => {
         axios
-          .get(`https://api.postcodes.io/postcodes/${postcode}`)
+          .post(`${process.env.REACT_APP_API_URL}/users/add-user`, {
+            first_name: name,
+            email: email,
+            postcode: postcode,
+          })
           .then(() => {
-            axios
-              .post(`${process.env.REACT_APP_API_URL}/users/add-user`, {
-                first_name: name,
-                email: email,
-                postcode: postcode,
-              })
-              .then(() => {
-                setIsFormSubmitted(true);
-              })
-              .catch((error) => {
-                console.log("Unable to add user " + error);
-              });
-
-            console.log("Postcode valid: " + postcode);
-            setIsLoading(false);
+            setIsFormSubmitted(true);
           })
           .catch((error) => {
-            console.log("Error validating postcode " + error);
-            setPostcodeError("Please enter a valid postcode");
+            console.log("Unable to add user " + error);
           });
 
+        console.log("Postcode valid: " + postcode);
         setIsLoading(false);
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      //   setEmailError("Invalid Email");
-      //   setIsLoading(false);
-      // });
+      })
+      .catch((error) => {
+        console.log("Error validating postcode " + error);
+        setPostcodeError("Please enter a valid postcode");
+      });
+
+    setIsLoading(false);
+    setShowModal(true);
+    setName("");
+    setEmail("");
+    setNumber("");
+    setPostcode("")
+    setAddress("")
+    // })
+    // .catch((error) => {
+    //   console.log(error);
+    //   setEmailError("Invalid Email");
+    //   setIsLoading(false);
+    // });
   };
 
   const animateLoading = () => {
@@ -130,15 +171,15 @@ function WaitingListForm({ onClose }) {
   };
 
   const isButtonDisabled =
-    name.trim() === "" || postcode.trim() === "" || email.trim() === "";
+    name.trim() === "" || postcode.trim() === "" || email.trim() === "" || number.trim() === "" || address.trim() === "";
 
   return (
     <aside className="waiting-list">
       <div className="waiting-list__wrapper">
         <div className="waiting-list__banner">
-          <CCloseButton onClick={onClose} className="waiting-list__close" />
+          {/* <CCloseButton onClick={onClose} className="waiting-list__close" /> */}
           <h3 className="waiting-list__title">Join The Queue Today</h3>
-          <CProgress
+          {/* <CProgress
             className="waiting-list__progress-bar"
             color="info"
             variant="striped"
@@ -148,7 +189,7 @@ function WaitingListForm({ onClose }) {
             <CProgressBar className="waiting-list__progress-bar-value">
               50%
             </CProgressBar>
-          </CProgress>
+          </CProgress> */}
         </div>
         <div className="waiting-list__main-form-container">
           <div className="waiting-list__image-container">
@@ -191,6 +232,41 @@ function WaitingListForm({ onClose }) {
               )}
               <CFormLabel
                 className="waiting-list__form-label"
+                htmlFor="number"
+              >
+                Your phone number
+              </CFormLabel>
+              <CFormInput
+                type="number"
+                size="lg"
+                className="waiting-list__form-input border-highlighted"
+                id="number"
+                placeholder="Phone number"
+                required
+                onChange={handleChangeNumber}
+                value={number}
+              />
+              {numberError && (
+                <p className="waiting-list__error-message">{numberError}</p>
+              )}
+              <CFormLabel
+                className="waiting-list__form-label"
+                htmlFor="address"
+                >
+                  Your address
+                </CFormLabel>
+              <CFormInput
+                type="text"
+                size="lg"
+                className="waiting-list__form-input border-highlighted"
+                id="address"
+                placeholder="Address"
+                onChange={handleChangeAddress}
+                value={address}
+                required
+              />
+              <CFormLabel
+                className="waiting-list__form-label"
                 htmlFor="postcode"
               >
                 Your postcode
@@ -227,7 +303,7 @@ function WaitingListForm({ onClose }) {
           </div>
         </div>
       </div>
-      {isFormSubmitted && <SuccessResponse onClose={onClose} />}
+      {isFormSubmitted && showModal && <SuccessResponse onClose={() => setShowModal(false)} />}
     </aside>
   );
 }

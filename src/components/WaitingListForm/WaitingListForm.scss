@@ -2,17 +2,21 @@
 @use "../../styles/partials/mixins" as *;
 
 .waiting-list {
-  @include modal;
+  // @include modal;
 
   &__wrapper {
-    padding: 2rem;
-    position: relative;
-    @include tablet {
-      padding: $padding-tablet;
+    padding: 3rem 0;
+    @include large-mobile{
+      padding: 5rem 0;
     }
-    @include desktop {
-      @include max-width;
-    }
+  //   padding: 2rem;
+  //   position: relative;
+  //   @include tablet {
+  //     padding: $padding-tablet;
+  //   }
+  //   @include desktop {
+  //     @include max-width;
+  //   }
   }
 
   &__close {
@@ -23,12 +27,12 @@
   &__title {
     text-align: center;
     font-size: 2.8rem;
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
     font-weight: 700;
     padding-top: 2rem;
-    @include tablet {
-      padding-bottom: 2rem;
-    }
+    // @include tablet {
+    //   padding-bottom: 2rem;
+    // }
   }
 
   &__banner {
@@ -52,12 +56,16 @@
   }
 
   &__image {
-    height: 10rem;
-    width: 10rem;
+    height: 12rem;
+    width: 12rem;
     padding-bottom: 0.5rem;
     @include tablet {
       height: 20rem;
       width: 20rem;
+    }
+    @include desktop{
+      height: 25rem;
+      width: 25rem;
     }
   }
 

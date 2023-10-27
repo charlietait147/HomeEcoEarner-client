@@ -6,20 +6,24 @@ import upgradeIcon from "../../assets/icons/upgrade-icon.svg";
 import saveMoneyIcon from "../../assets/icons/save-money.png";
 import "./MainBodyContent.scss";
 import WaitingListForm from "../WaitingListForm/WaitingListForm";
-import { useState } from "react";
+// import { useState } from "react";
+import { useEffect } from "react";
 
 function MainBodyContent() {
-  const [isModalClicked, setIsModalClicked] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  // const [isModalClicked, setIsModalClicked] = useState(false);
 
-  const showModal = () => {
-    setIsModalClicked(true);
-    document.body.classList.add("disable-scroll");
-  };
+  // const showModal = () => {
+  //   setIsModalClicked(true);
+  //   document.body.classList.add("disable-scroll");
+  // };
 
-  const hideModal = () => {
-    setIsModalClicked(false);
-    document.body.classList.remove("disable-scroll");
-  };
+  // const hideModal = () => {
+  //   setIsModalClicked(false);
+  //   document.body.classList.remove("disable-scroll");
+  // };
 
   return (
     <section className="main-body">
@@ -41,7 +45,7 @@ function MainBodyContent() {
               JOIN WAITING LIST
             </button> */}
             {/* When isModalClicked is true, return the WaitingListForm component*/}
-            {isModalClicked && <WaitingListForm onClose={hideModal} />}
+            {/* {isModalClicked && <WaitingListForm onClose={hideModal} />} */}
           </div>
           <div className="header-section__image-container">
             <img
@@ -51,6 +55,7 @@ function MainBodyContent() {
             />
           </div>
         </header>
+        <WaitingListForm />
         <section className="benefits">
           <h2 className="benefits__header">What's in it for you?</h2>
           <div className="benefits__card-container">
