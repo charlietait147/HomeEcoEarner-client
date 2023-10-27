@@ -2,13 +2,13 @@
 @use "../../styles/partials/mixins" as *;
 .news-content{
     &__banner{
-        height: 18rem;
+        height: 10rem;
         display: flex;
         justify-content: center;
         align-items: center;
         background: linear-gradient(110deg, #0d741b 50%, #3ba335 60%);
         @include tablet{
-            height: 30rem;
+            height: 15rem;
         }
     }
 
@@ -49,9 +49,9 @@
         height: 3.6rem;
     }
 
-    &__news-container{
-        padding-top: 4rem;
-    }
+    // &__news-container{
+    //     // padding-top: 2rem;
+    // }
 
     &__results{
         font-size: 1.2rem;

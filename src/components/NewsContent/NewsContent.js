@@ -49,10 +49,10 @@ function NewsContent() {
             </div>
             <div className="news-content__wrapper">
                 <div className="news-content__news-article-container">
-                    <p className="news-content__search-title">FILTER/SEARCH:</p>
+                    {/* <p className="news-content__search-title">FILTER/SEARCH:</p>
                     <div className="news-content__search-container">
                         <input type="text" className="news-content__filter-search" id="search" onChange={handleChange} />
-                    </div>
+                    </div> */}
                     <div className="news-content__news-container" >
                         <p className="news-content__results"> ({newsList.length} Results) </p>
                         <div className="news-content__cards-container">
