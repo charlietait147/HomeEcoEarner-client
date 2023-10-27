@@ -31,6 +31,14 @@
        
     }
 
+    &__email-link{
+        color: white;
+    }
+
+    &__email-link:hover{
+        color: blue;
+    }
+
     &__item{
         color: $contrast;
         margin: 1rem 0;

@@ -5,9 +5,10 @@ function Footer() {
         <footer className = "footer-section">
             <div className="footer-section__wrapper">
                 <ul className="footer-section__list">
-                    <li className="footer-section__item">
-                    <Link to = "/contact-us" className = "footer-section__link">Contact Us
+                    <li className="footer-section__item ">
+                    <Link to = "mailto:rory.tait@homeecoearner.com" className = "footer-section__email-link ">rory.tait@homeecoearner.com
                     </Link></li>
+                    {/* </a> */}
                     <li className="footer-section__item">
                     <Link to = "/news" className = "footer-section__link">News
                     </Link></li>
