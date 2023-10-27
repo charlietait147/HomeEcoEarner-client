@@ -10,6 +10,9 @@
         @include tablet{
             height: 15rem;
         }
+        @include desktop{
+            height: 20rem;
+        }
     }
 
     &__wrapper{
