@@ -3,12 +3,14 @@
 .nav-bar {
   background-color: #f3f3f1;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 4px 0px;
-  position: sticky;
-  top: 0rem;
-  z-index: 3;
+  // position: sticky;
+  // top: 0rem;
+  // z-index: 3;
 
   &__wrapper {
-    padding: $padding-mobile $padding-mobile 0.5rem;
+    padding: $padding-mobile $padding-mobile 1rem;
+    display: flex;
+    justify-content: space-between;
     @include large-mobile{
         display: flex;
         padding: 2rem 1.6rem;
@@ -62,10 +64,10 @@
 
   &__list {
     display: flex;
-    padding-top: 1rem;
+    // padding-top: 1rem;
     justify-content: space-evenly;
     display: flex;
-    padding-left: 0;
+    // padding-left: 0;
     margin-bottom: 0;
     @include large-mobile{
       flex-basis: 100%;
@@ -74,27 +76,52 @@
     @include tablet{
         padding-left: 0;
         flex-basis: 40%;
+        padding-top: 1rem;
     }
+
+    &--mobile{
+      @include tablet{
+        display: none;
+      }
+    }
+
+    &--tablet{
+      display: none;
+      @include tablet{
+        display: flex;
+      }
+    }
+  }
+
+  &__item-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+  }
+
+  &__icon{
+    font-size: 2.5rem;
+    align-self: center;
   }
 
   &__item {
     color: $link-text;
     font-size: 1.2rem;
-    margin-right: 3rem;
-    margin-left: 1rem;
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
     @include tablet{
         font-size: 1.4rem;
+        margin-right: 3rem;
     }
   }
 
   &__item:hover {
-    border-bottom: 2px solid $primary-main;
+    border-bottom: 1px solid $primary-main;
   }
 
   &__link {
     text-decoration: none;
     color: $link-text;
+    font-size: 1.4rem;
 
   }
 
@@ -110,9 +137,14 @@
   }
 
   &__email-link{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    text-decoration: none;
     @include tablet{
       font-size: 1.4rem;
     }
+  }
+
+  &__email-link:hover{
+    border-bottom: 1px solid blue;
   }
 }

@@ -15,7 +15,7 @@ function App() {
     <Route path = "/" element = {<LandingPage />}/>
     <Route path = "admin/login" element = {<AdminLoginPage />}/>
     <Route path = "admin/dashboard" element = {<AdminDashboardPage />}/>
-    <Route path = "contact-us" element = {<ContactPage />}/>
+    {/* <Route path = "contact-us" element = {<ContactPage />}/> */}
     <Route path = "news" element = {<NewsPage />} />
     <Route path = "*" element = {<NotFound />} /> 
     </Routes>

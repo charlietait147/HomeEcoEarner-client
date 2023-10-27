@@ -27,36 +27,41 @@ function MainBodyContent() {
 
   return (
     <section className="main-body">
-      <div className="main-body__wrapper">
-        <header className="header-section">
-          <div className="header-section__heading-container">
-            <h1 className="header-section__heading">
-              Convert Your Renewable Energy Costs Into Income
-            </h1>
-            <p className="header-section__tag-line">
-              To make money from renewable energy, join the Home EcoEarner
-              System, your gate-way to cost-free, income-generating renewable
-              energy.
-            </p>
-            {/* <button
+      {/* <div className="main-body__wrapper"> */}
+      <header className="header-section">
+        <div className="main-body__section-wrapper">
+          <div className="header-section__container">
+            <div className="header-section__heading-container">
+              <h1 className="header-section__heading">
+                Convert Your Renewable Energy Costs Into Income
+              </h1>
+              <p className="header-section__tag-line">
+                To make money from renewable energy, join the Home EcoEarner
+                System, your gate-way to cost-free, income-generating renewable
+                energy.
+              </p>
+              {/* <button
               onClick={showModal}
               className="header-section__waiting-list-button"
             >
               JOIN WAITING LIST
             </button> */}
-            {/* When isModalClicked is true, return the WaitingListForm component*/}
-            {/* {isModalClicked && <WaitingListForm onClose={hideModal} />} */}
+              {/* When isModalClicked is true, return the WaitingListForm component*/}
+              {/* {isModalClicked && <WaitingListForm onClose={hideModal} />} */}
+            </div>
+            <div className="header-section__image-container">
+              <img
+                src={renewableHouse}
+                alt="Happy family on green grass "
+                className="header-section__image"
+              />
+            </div>
           </div>
-          <div className="header-section__image-container">
-            <img
-              src={renewableHouse}
-              alt="Happy family on green grass "
-              className="header-section__image"
-            />
-          </div>
-        </header>
-        <WaitingListForm />
-        <section className="benefits">
+        </div>
+      </header>
+      <WaitingListForm />
+      <section className="benefits">
+        <div className="main-body__section-wrapper">
           <h2 className="benefits__header">What's in it for you?</h2>
           <div className="benefits__card-container">
             <article className="benefits__card">
@@ -123,8 +128,10 @@ function MainBodyContent() {
               Freepik
             </a>
           </p>
-        </section>
-        <section className="join-waiting-list">
+        </div>
+      </section>
+      <section className="join-waiting-list">
+        <div className="main-body__section-wrapper">
           <div className="join-waiting-list-claimer-container">
             <h3 className="join-waiting-list__claimer">
               By joining our waiting list, you'll be first to hear about our
@@ -134,7 +141,7 @@ function MainBodyContent() {
               Benefit from early access as installations will be limited at
               launch.
             </h3>
-            <h3 className="join-waiting-list__claimer">
+            <h3 className="join-waiting-list__claimer join-waiting-list__claimer--modified">
               <span className="join-waiting-list__claimer--bold">PLUS</span>,
               you will get priority ranking for the cost-free upgrade as soon as
               its available.
@@ -146,41 +153,46 @@ function MainBodyContent() {
           >
             JOIN WAITING LIST
           </button> */}
-        </section>
-        <section className="trusted-provider">
-          <div className="trusted-provider__home-image-container">
-            <img
-              src={familyPhoto}
-              alt="house with renewable energy"
-              className="trusted-provider__home-image"
-            />
+        </div>
+      </section>
+      <section className="trusted-provider">
+        <div className="main-body__section-wrapper">
+          <div className="trusted-provider__container">
+            <div className="trusted-provider__home-image-container">
+              <img
+                src={familyPhoto}
+                alt="house with renewable energy"
+                className="trusted-provider__home-image"
+              />
+            </div>
+            <div className="trusted-provider__text-container">
+              <h4 className="trusted-provider__headline">
+                We are your{" "}
+                <span className="trusted-provider__headline--highlighted">
+                  Trusted Provider
+                </span>{" "}
+                of Green Energy Innovation
+              </h4>
+              <p className="trusted-provider__details">
+                We understand the complete spectrum of clean green renewable
+                energy technologies from solar through to nuclear fusion.{" "}
+                <span className="trusted-provider__details--underlined">
+                  {" "}
+                  Our comprehensive expertise{" "}
+                </span>{" "}
+                allows us to provide you with the most effective and efficient
+                energy solutions tailored to your needs.
+              </p>
+              <p className="trusted-provider__details">
+                We are not only committed to advancing clean technology and
+                renewable energy, but also to empowering you to become a part of
+                the sustainable energy revolution.
+              </p>
+            </div>
           </div>
-          <div className="trusted-provider__text-container">
-            <h4 className="trusted-provider__headline">
-              We are your{" "}
-              <span className="trusted-provider__headline--highlighted">
-                Trusted Provider
-              </span>{" "}
-              of Green Energy Innovation
-            </h4>
-            <p className="trusted-provider__details">
-              We understand the complete spectrum of clean green renewable
-              energy technologies from solar through to nuclear fusion.{" "}
-              <span className="trusted-provider__details--underlined">
-                {" "}
-                Our comprehensive expertise{" "}
-              </span>{" "}
-              allows us to provide you with the most effective and efficient
-              energy solutions tailored to your needs.
-            </p>
-            <p className="trusted-provider__details">
-              We are not only committed to advancing clean technology and
-              renewable energy, but also to empowering you to become a part of
-              the sustainable energy revolution.
-            </p>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      {/* </div> */}
     </section>
   );
 }

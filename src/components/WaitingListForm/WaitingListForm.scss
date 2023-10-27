@@ -5,9 +5,15 @@
   // @include modal;
 
   &__wrapper {
-    padding: 3rem 0;
+    padding: 3rem $padding-mobile;
     @include large-mobile{
-      padding: 5rem 0;
+      padding: 5rem $padding-mobile;
+    }
+    @include tablet{
+      padding: 5rem $padding-tablet
+    }
+    @include desktop{
+      @include max-width;
     }
   //   padding: 2rem;
   //   position: relative;
@@ -35,9 +41,9 @@
     // }
   }
 
-  &__banner {
-    padding-bottom: 1.5rem;
-  }
+  // &__banner {
+  //   padding-bottom: 1.5rem;
+  // }
 
   &__main-form-container {
     @include tablet {
@@ -49,6 +55,7 @@
   &__image-container {
     display: flex;
     justify-content: center;
+    padding: 1rem 0;
     @include tablet {
       flex-basis: 50%;
       align-items: center;

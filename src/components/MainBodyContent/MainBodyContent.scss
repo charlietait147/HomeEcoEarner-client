@@ -2,10 +2,10 @@
 @use "../../styles/partials/mixins" as *;
 
 .main-body{
-    &__wrapper{
-        padding: 0rem $padding-mobile;
+    &__section-wrapper{
+        padding: 2rem $padding-mobile;
         @include tablet{
-            padding: 0rem $padding-tablet;
+            padding: 2rem $padding-tablet;
         }
         @include desktop{
            @include max-width;
@@ -14,8 +14,12 @@
 }
 
 .header-section{
-    @include tablet{
-        display: flex;
+    background-color: #f3f3f1;
+
+    &__container{
+        @include tablet{
+            display: flex;
+        }
     }
 
     &__heading-container{
@@ -159,8 +163,9 @@
 }
 
 .join-waiting-list{
+    background-color: #fdfbfb;
     text-align:center;
-    border-top: 1px solid $primary-main;
+    // border-top: 1px solid $primary-main;
 
     &__claimer-container{
         background-color: #f3f3f1;
@@ -168,11 +173,16 @@
 
     &__claimer{
         padding: 3rem 1rem;
-        border-bottom: 1px solid $primary-main;
         font-size: 1.8rem;
+        margin-bottom: 0;
+        border-top: 1px solid $primary-main;
 
         &--bold{
             font-weight: 700;
+        }
+
+        &--modified{
+            border-bottom: 1px solid $primary-main;
         }
     }
 
@@ -196,8 +206,13 @@
 
 .trusted-provider{
     padding: 3rem 0;
-    @include tablet{
-        display: flex;
+    background-color: #abffab;
+    
+
+    &__container{
+        @include tablet{
+            display: flex;
+        }
     }
     &__home-image-container{
         display: flex;
