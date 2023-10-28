@@ -80,14 +80,14 @@
     }
 
     &--mobile{
-      @include tablet{
+      @include large-mobile{
         display: none;
       }
     }
 
-    &--tablet{
+    &--large-mobile{
       display: none;
-      @include tablet{
+      @include large-mobile{
         display: flex;
       }
     }
@@ -108,7 +108,7 @@
     color: $link-text;
     font-size: 1.2rem;
     // padding-bottom: 1rem;
-    @include tablet{
+    @include large-mobile{
         font-size: 1.4rem;
         margin-right: 3rem;
     }
@@ -122,6 +122,9 @@
     text-decoration: none;
     color: $link-text;
     font-size: 1.4rem;
+    @include large-mobile{
+      margin-right: 3rem;
+    }
 
   }
 
@@ -129,22 +132,35 @@
     color: $primary-main;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.4rem;
+    @include large-mobile{
+      margin-right: 3rem;
+    }
 
   }
 
   &__link:hover{
     color: $primary-main;
+    border-bottom: 1px solid $primary-main;
   }
 
   &__email-link{
     font-size: 1.4rem;
     text-decoration: none;
+    color: #2F3749;
     @include tablet{
       font-size: 1.4rem;
+    }
+
+    &--large-mobile{
+      @include large-mobile{
+      color: blue;
+      }
     }
   }
 
   &__email-link:hover{
     border-bottom: 1px solid blue;
+    color: blue;
   }
 }
