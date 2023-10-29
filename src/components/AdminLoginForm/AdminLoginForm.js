@@ -1,5 +1,5 @@
 import "./AdminLoginForm.scss";
-import logo from "../../assets/images/homeecoearner-logo.png";
+import logo from "../../assets/images/HomeEcoEarner-edited-logo.png"
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";

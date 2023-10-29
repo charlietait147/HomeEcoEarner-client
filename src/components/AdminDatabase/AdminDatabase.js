@@ -1,4 +1,4 @@
-import logo from "../../assets/images/homeecoearner-logo.png";
+import logo from "../../assets/images/HomeEcoEarner-edited-logo.png";
 import searchIcon from "../../assets/icons/search-24px.svg";
 import errorIcon from "../../assets/icons/error-24px.png";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
