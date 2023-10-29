@@ -136,13 +136,13 @@ function AdminDatabase() {
                                 <div className="admin-database__item">
                                     <span className="admin-database__categories">NUMBER</span>
                                     <p className="admin-database__user-content">
-                                        {/* {user.first_name} */}
+                                        {user.number}
                                     </p>
                                 </div>
                                 <div className="admin-database__item--right">
                                     <span className="admin-database__categories">ADDRESS</span>
                                     <p className="admin-database__user-content">
-                                        {/* {user.postcode} */}
+                                        {user.address}
                                     </p>
                                 </div>
                             </div>

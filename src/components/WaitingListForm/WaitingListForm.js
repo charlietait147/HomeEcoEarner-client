@@ -114,6 +114,8 @@ function WaitingListForm() {
             first_name: name,
             email: email,
             postcode: postcode,
+            number: number,
+            address: address
           })
           .then(() => {
             setIsFormSubmitted(true);
