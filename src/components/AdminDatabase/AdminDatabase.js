@@ -45,9 +45,13 @@ function AdminDatabase() {
     };
 
     useEffect(() => {
-        getAuthorisation();
         getUsersAll();
     }, []);
+
+    useEffect(() => {
+        getAuthorisation();
+    });
+
 
     
 
