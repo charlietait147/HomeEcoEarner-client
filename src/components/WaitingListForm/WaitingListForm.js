@@ -1,10 +1,10 @@
 import {
-  CProgress,
-  CProgressBar,
+  // CProgress,
+  // CProgressBar,
   CForm,
   CFormInput,
   CFormLabel,
-  CCloseButton,
+  // CCloseButton,
 } from "@coreui/react/";
 import peopleTick from "../../assets/images/people-tick.png";
 import "./WaitingListForm.scss";
@@ -14,7 +14,7 @@ import SuccessResponse from "../SuccessResponse/SuccessResponse";
 
 
 function WaitingListForm() {
-  const [isModalClicked, setIsModalClicked] = useState(false);
+  // const [isModalClicked, setIsModalClicked] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   // const showModal = () => {

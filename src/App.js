@@ -2,7 +2,7 @@ import './App.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import AdminLoginPage from "./pages/AdminLoginPage/AdminLoginPage";
-import ContactPage from "./pages/ContactPage/ContactPage";
+// import ContactPage from "./pages/ContactPage/ContactPage";
 import NewsPage from "./pages/NewsPage/NewsPage";
 import NotFound from "./pages/NotFound/NotFound";
 import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';

@@ -7,9 +7,9 @@ function NewsContent() {
     const [defaultNewsList, setDefaultNewsList] = useState([]);
     const [inputValue, setInputValue] = useState("");
 
-    const handleChange = (event) => {
-        setInputValue(event.target.value);
-    }
+    // const handleChange = (event) => {
+    //     setInputValue(event.target.value);
+    // }
 
     const getNewsList = async () => {
         try {
