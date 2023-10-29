@@ -49,6 +49,8 @@ function AdminDatabase() {
         getUsersAll();
     }, []);
 
+    
+
     const handleLogout = () => {
         localStorage.removeItem("token");
         navigate("/admin/login");

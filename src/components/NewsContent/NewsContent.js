@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 function NewsContent() {
     const [newsList, setNewsList] = useState([]);
-    const [defaultNewsList, setDefaultNewsList] = useState([]);
-    const [inputValue, setInputValue] = useState("");
+    // const [defaultNewsList, setDefaultNewsList] = useState([]);
+    // const [inputValue, setInputValue] = useState("");
 
     // const handleChange = (event) => {
     //     setInputValue(event.target.value);
@@ -16,7 +16,7 @@ function NewsContent() {
             const response = await axios(`${process.env.REACT_APP_API_URL}/news`);
             const fetchNews = response.data
             setNewsList(fetchNews)
-            setDefaultNewsList(fetchNews);
+            // setDefaultNewsList(fetchNews);
         } catch (error) {
             console.log("Unable to retrieve users" + error);
         }
@@ -25,22 +25,22 @@ function NewsContent() {
         getNewsList();
     }, [])
 
-    const clickHandler = () => {
+    // const clickHandler = () => {
 
-        const filteredNewsList = newsList.filter((news) => {
-            return news.release_date.includes(inputValue) || news.title.includes(inputValue)
-        })
+    //     const filteredNewsList = newsList.filter((news) => {
+    //         return news.release_date.includes(inputValue) || news.title.includes(inputValue)
+    //     })
 
-        setNewsList(filteredNewsList)
+    //     setNewsList(filteredNewsList)
 
-        if (inputValue === "") {
-            setNewsList(defaultNewsList);
-        }
-    }
+    //     if (inputValue === "") {
+    //         setNewsList(defaultNewsList);
+    //     }
+    // }
 
-    useEffect(() => {
-        clickHandler();
-    }, [inputValue])
+    // useEffect(() => {
+    //     clickHandler();
+    // }, [inputValue])
 
     return (
         <section className="news-content">
