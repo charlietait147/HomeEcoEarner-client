@@ -27,11 +27,11 @@ function NavBar() {
                             <div></div>
                             <ul className="nav-bar__dropdown-list">
                                 <a href="/" className={location.pathname === "/" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>HOME</a>
-                                <a href="" className="nav-bar__dropdown-link">PRODUCTS</a>
-                                <a href="" className="nav-bar__dropdown-link">SERVICES</a>
-                                <a href="" className="nav-bar__dropdown-link">PARTNERSHIPS</a>
-                                <a href="" className="nav-bar__dropdown-link">NEWS</a>
-                                <a href="" className="nav-bar__dropdown-link">FAQs</a>
+                                <a href="/" className="nav-bar__dropdown-link">PRODUCTS</a>
+                                <a href="/" className="nav-bar__dropdown-link">SERVICES</a>
+                                <a href="/" className="nav-bar__dropdown-link">PARTNERSHIPS</a>
+                                <a href="/news" className="nav-bar__dropdown-link">NEWS</a>
+                                <a href="/" className="nav-bar__dropdown-link">FAQs</a>
                             </ul>
                         </button>
 
@@ -41,11 +41,11 @@ function NavBar() {
                         
                         {/* <li className="nav-bar__item"><NavLink to = "/contact-us" className = {location.pathname === "/contact-us" ? "nav-bar__link-active" : "nav-bar__link"}>Contact Us</NavLink></li> */}
                         {/* <NavLink to="mailto:rory.tait@homeecoearner.com" className="nav-bar__email-link nav-bar__email-link--large-mobile">rory.tait@homeecoearner.com</NavLink> */}
-                        <NavLink to="" className="nav-bar__link">Products</NavLink>
-                        <NavLink to="" className="nav-bar__link">Services</NavLink>
-                        <NavLink to="" className="nav-bar__link">Partnerships</NavLink>
+                        <NavLink to="#" className="nav-bar__link">Products</NavLink>
+                        <NavLink to="#" className="nav-bar__link">Services</NavLink>
+                        <NavLink to="#" className="nav-bar__link">Partnerships</NavLink>
                         <NavLink to="/news" className={location.pathname === "/news" ? "nav-bar__link-active" : "nav-bar__link"}>News</NavLink>
-                        <NavLink to="" className="nav-bar__link">FAQS</NavLink>
+                        <NavLink to="#" className="nav-bar__link">FAQS</NavLink>
                     </ul>
                 </div>
                 {/* <ul className="nav-bar__list nav-bar__list--mobile">
