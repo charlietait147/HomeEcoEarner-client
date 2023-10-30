@@ -73,7 +73,8 @@
     }
   }
 
-  &__menu{
+  &__menu,
+  &__close{
     display: inline-block;
     border: none;
     background: none;
@@ -86,19 +87,20 @@
 
   }
 
-  &__menu:hover div:first-child{
+  &__close:hover div:first-child{
     transform: rotate(45deg) translate(2px, 9.25px);
   }
 
-  &__menu:hover div:nth-child(2) {
+  &__close:hover div:nth-child(2) {
     opacity: 0;
   }
 
-  &__menu:hover div:nth-child(3){
+  &__close:hover div:nth-child(3){
     transform: rotate(-45deg) translate(2px, -9.25px);
   }
 
-  &__menu div{
+  &__menu div,
+  &__close div{
     width: 35px;
     height: 3px;
     background-color: green;

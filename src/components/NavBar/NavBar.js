@@ -1,19 +1,19 @@
 import "./NavBar.scss";
 import logo from "../../assets/images/HomeEcoEarner-edited-logo.png"
 import { Link, NavLink, useLocation } from "react-router-dom";
-// import { useState } from "react";
+import { useState } from "react";
 // import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 // import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
 function NavBar() {
     const location = useLocation();
-    // const [isMenuOpen, setIsMenuOpen] = useState(false);
-    // const [menuClass, SetMenuClass] = useState("nav-bar__menu")
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [menuClass, SetMenuClass] = useState("nav-bar__menu");
 
 
-    // const toggleMenu = () => {
-    //     setIsMenuOpen(!isMenuOpen);
-    //     SetMenuClass( isMenuOpen ? "nav-bar__menu" : "nav-bar__close")
-    // }
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        SetMenuClass( isMenuOpen ? "nav-bar__menu" : "nav-bar__close")
+    }
     return (
         <nav className="nav-bar">
             <div className="nav-bar__wrapper">
@@ -21,18 +21,18 @@ function NavBar() {
                     <Link to="/" className="nav-bar__logo-link"><img src={logo} alt="Home Eco Earner logo" className="nav-bar__logo" /></Link>
                     {/* <p className="nav-bar__tagline" >Trusted Provider <span className="nav-bar__tagline--green">of Green Energy</span></p> */}
                     <div className="nav-bar__menu-container">
-                        <button className="nav-bar__menu">
+                        <button className={menuClass} onClick={toggleMenu}>
                             <div></div>
                             <div></div>
                             <div></div>
-                            <ul className="nav-bar__dropdown-list">
+                            {isMenuOpen && (<ul className="nav-bar__dropdown-list">
                                 <a href="/" className={location.pathname === "/" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>HOME</a>
                                 <a href="/" className="nav-bar__dropdown-link">PRODUCTS</a>
                                 <a href="/" className="nav-bar__dropdown-link">SERVICES</a>
                                 <a href="/" className="nav-bar__dropdown-link">PARTNERSHIPS</a>
                                 <a href="/news" className="nav-bar__dropdown-link">NEWS</a>
                                 <a href="/" className="nav-bar__dropdown-link">FAQs</a>
-                            </ul>
+                            </ul>)}
                         </button>
 
                         {/* <label className="nav-bar__menu-label">Menu</label> */}
