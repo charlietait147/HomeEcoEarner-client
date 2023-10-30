@@ -33,13 +33,14 @@ function MainBodyContent() {
           <div className="header-section__container">
             <div className="header-section__heading-container">
               <h1 className="header-section__heading">
-                Convert Your Renewable Energy Costs Into Income
+                Want a Chance to Convert Your Electricity From A Cost Into Earnings?
               </h1>
-              <p className="header-section__tag-line">
+              <div className="header-section__arrow">&darr;</div>
+              {/* <p className="header-section__tag-line">
                 To make money from renewable energy, join the Home EcoEarner
                 System, your gate-way to cost-free, income-generating renewable
                 energy.
-              </p>
+              </p> */}
               {/* <button
               onClick={showModal}
               className="header-section__waiting-list-button"
