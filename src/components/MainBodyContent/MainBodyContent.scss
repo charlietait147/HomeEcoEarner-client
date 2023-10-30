@@ -45,6 +45,9 @@
         text-align: center;
         font-size: 4rem;
         font-weight: 500;
+        @include tablet{
+            display: none;
+        }
     }
 
     &__tag-line{
@@ -91,83 +94,108 @@
 
 }
 
-.benefits {
-    &__header {
+.problem-statement{
+    background-color: green;
+    &__banner-text{
+        padding: 2rem;
+        margin: 2rem 0;
+        text-align: center;
         font-size: 2rem;
-        line-height: 3.2rem;
-        color: $primary-main;
-        padding-bottom: 2rem;
-        text-align: center;
+        line-height: 3rem;
+        color: white;
+        font-weight: 500;
+        border: 1px solid white;
     }
-
-    &__card-container{
-        padding-bottom: 2rem;
-        @include tablet{
-            display: flex;
-            flex-wrap: wrap;
-        }
-    }
-
-    &__card {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
-        border: 2px dotted $secondary-main;
-        border-radius: 4px;
-        padding: 1.5rem;
-        @include tablet{
-            width: 50%;
-            border: none;
-        }
-       
-    }
-
-    &__card:hover {
-        border: 2px solid $primary-main;
-    }
-
-    &__card-title{
-        font-size: 1.6rem;
-        color: $primary-main;
-        @include tablet{
-            text-align: center;
-        }
-    }
-
-    &__card-icon{
-        height: 5rem;
-        width: 5rem;
-        align-self: center;
-        margin-bottom: 1rem;
-        @include tablet{
-            margin-bottom: 2rem;
-        }
-        &--modified{
-            height: 4rem;
-            width: 4rem;
-            @include tablet{
-                margin-top: 1rem;
-            }
-        }
-    }
-
-    &__card-description{
-       font-size: 1.2rem;
-       padding-top: 0.5rem;
-       @include tablet{
-        text-align: center;
-       }
-    }
-
-    &__icon-attribution{
-        font-size: 1.2rem;
-        @include tablet{
-            text-align: right;
-        }
-    }
-
-
 }
+
+.benefits{
+    &__header{
+        text-decoration: underline;
+        text-underline-position: under;
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 700;
+        padding: 2rem 0;
+    }
+}
+
+// .benefits {
+//     &__header {
+//         font-size: 2rem;
+//         line-height: 3.2rem;
+//         color: $primary-main;
+//         padding-bottom: 2rem;
+//         text-align: center;
+//     }
+
+//     &__card-container{
+//         padding-bottom: 2rem;
+//         @include tablet{
+//             display: flex;
+//             flex-wrap: wrap;
+//         }
+//     }
+
+//     &__card {
+//         display: flex;
+//         flex-direction: column;
+//         margin-bottom: 2rem;
+//         border: 2px dotted $secondary-main;
+//         border-radius: 4px;
+//         padding: 1.5rem;
+//         @include tablet{
+//             width: 50%;
+//             border: none;
+//         }
+       
+//     }
+
+//     &__card:hover {
+//         border: 2px solid $primary-main;
+//     }
+
+//     &__card-title{
+//         font-size: 1.6rem;
+//         color: $primary-main;
+//         @include tablet{
+//             text-align: center;
+//         }
+//     }
+
+//     &__card-icon{
+//         height: 5rem;
+//         width: 5rem;
+//         align-self: center;
+//         margin-bottom: 1rem;
+//         @include tablet{
+//             margin-bottom: 2rem;
+//         }
+//         &--modified{
+//             height: 4rem;
+//             width: 4rem;
+//             @include tablet{
+//                 margin-top: 1rem;
+//             }
+//         }
+//     }
+
+//     &__card-description{
+//        font-size: 1.2rem;
+//        padding-top: 0.5rem;
+//        @include tablet{
+//         text-align: center;
+//        }
+//     }
+
+//     &__icon-attribution{
+//         font-size: 1.2rem;
+//         @include tablet{
+//             text-align: right;
+//         }
+//     }
+
+
+// }
 
 .join-waiting-list{
     background-color: #fdfbfb;
@@ -183,6 +211,7 @@
         font-size: 1.8rem;
         margin-bottom: 0;
         border-top: 1px solid $primary-main;
+        text-align: center;
 
         &--bold{
             font-weight: 700;

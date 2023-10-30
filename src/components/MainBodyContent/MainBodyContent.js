@@ -1,9 +1,9 @@
 import renewableHouse from "../../assets/images/renewable-house.png";
 import familyPhoto from "../../assets/images/green-family-photo.png";
-import cutCostIcon from "../../assets/icons/cut-cost-icon.png";
-import electricityBillIcon from "../../assets/icons/electricity-bill-icon.png";
-import upgradeIcon from "../../assets/icons/upgrade-icon.svg";
-import saveMoneyIcon from "../../assets/icons/save-money.png";
+// import cutCostIcon from "../../assets/icons/cut-cost-icon.png";
+// import electricityBillIcon from "../../assets/icons/electricity-bill-icon.png";
+// import upgradeIcon from "../../assets/icons/upgrade-icon.svg";
+// import saveMoneyIcon from "../../assets/icons/save-money.png";
 import "./MainBodyContent.scss";
 import WaitingListForm from "../WaitingListForm/WaitingListForm";
 // import { useState } from "react";
@@ -60,8 +60,41 @@ function MainBodyContent() {
           </div>
         </div>
       </header>
-      <WaitingListForm />
+      <section className="problem-statement">
+        <div className="main-body__section-wrapper">
+          <h3 className="problem-statement__banner-text">Tired of soaring home electricity costs?</h3>
+          <h3 className="problem-statement__banner-text">Maybe you want the chance to make money from renewable energy like the electricity
+            companies do?</h3 >
+        </div>
+      </section>
       <section className="benefits">
+        <div className="main-body__section-wrapper">
+          <h2 className="benefits__header">What if you could?</h2>
+          <div className="join-waiting-list-claimer-container">
+            <h3 className="join-waiting-list__claimer">
+              Turn your home into a powerful source of renewable energy
+            </h3>
+            <h3 className="join-waiting-list__claimer">
+            <span className="join-waiting-list__claimer--bold">AND</span> create cost-free electricity
+            </h3>
+            <h3 className="join-waiting-list__claimer">
+            With the possibility to earn significant income
+            </h3>
+            <h3 className="join-waiting-list__claimer join-waiting-list__claimer--modified">
+              <span className="join-waiting-list__claimer--bold">ALL</span>,
+              without any upfront costs?
+            </h3>
+          </div>
+          {/* <button
+            onClick={showModal}
+            className="join-waiting-list__waiting-list-button"
+          >
+            JOIN WAITING LIST
+          </button> */}
+        </div>
+      </section>
+      <WaitingListForm />
+      {/* <section className="benefits">
         <div className="main-body__section-wrapper">
           <h2 className="benefits__header">What's in it for you?</h2>
           <div className="benefits__card-container">
@@ -130,7 +163,7 @@ function MainBodyContent() {
             </a>
           </p>
         </div>
-      </section>
+      </section> */}
       <section className="join-waiting-list">
         <div className="main-body__section-wrapper">
           <div className="join-waiting-list-claimer-container">
