@@ -74,7 +74,7 @@
   }
 
   &__menu,
-  &__close{
+  &__toggle{
     display: inline-block;
     border: none;
     background: none;
@@ -87,20 +87,20 @@
 
   }
 
-  &__close:hover div:first-child{
+  &__toggle:hover div:first-child{
     transform: rotate(45deg) translate(2px, 9.25px);
   }
 
-  &__close:hover div:nth-child(2) {
+  &__toggle:hover div:nth-child(2) {
     opacity: 0;
   }
 
-  &__close:hover div:nth-child(3){
+  &__toggle:hover div:nth-child(3){
     transform: rotate(-45deg) translate(2px, -9.25px);
   }
 
   &__menu div,
-  &__close div{
+  &__toggle div{
     width: 35px;
     height: 3px;
     background-color: green;
@@ -118,6 +118,7 @@
     background-color: green;
     padding-bottom: 2rem;
     padding-top: 2rem;
+    padding-left: 0;
     top: 100%;
     
   }

@@ -12,7 +12,7 @@ function NavBar() {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-        SetMenuClass( isMenuOpen ? "nav-bar__menu" : "nav-bar__close")
+        SetMenuClass( isMenuOpen ? "nav-bar__menu" : "nav-bar__toggle")
     }
     return (
         <nav className="nav-bar">
