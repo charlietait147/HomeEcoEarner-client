@@ -6,16 +6,18 @@
   // position: sticky;
   // top: 0rem;
   // z-index: 3;
+  position: relative;
 
   &__wrapper {
-    padding: $padding-mobile $padding-mobile 1rem;
-    display: flex;
-    justify-content: space-between;
+    padding: $padding-mobile $padding-mobile 0rem;
+    // display: flex;
+    // justify-content: space-between;
     @include large-mobile{
-        display: flex;
-        padding: 2rem 1.6rem;
+        // display: flex;
+        padding: 2rem 1.6rem 0rem;
     }
     @include tablet{
+        display: flex;
         padding: 2rem $padding-tablet;
     }
     @include desktop{
@@ -25,7 +27,7 @@
 
   &__logo-tagline-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     @include tablet {
       justify-content: flex-start;
       flex-basis: 100%;
@@ -56,27 +58,107 @@
     }
   }
   &__logo {
+    display: block;
     height: 4rem;
+    margin-bottom: 1rem;
     @include tablet{
     padding: 0;
     }
   }
 
-  &__list {
+  &__menu-container{
     display: flex;
-    // padding-top: 1rem;
-    justify-content: space-evenly;
-    display: flex;
-    // padding-left: 0;
-    margin-bottom: 0;
-    @include large-mobile{
-      flex-basis: 100%;
-      justify-content: flex-end;
-    }
     @include tablet{
+      display: none;
+    }
+  }
+
+  &__menu{
+    display: inline-block;
+    border: none;
+    background: none;
+    padding-bottom: 1rem;
+
+  }
+
+  &__menu div{
+    transition: .2s;
+
+  }
+
+  &__menu:hover div:first-child{
+    transform: rotate(45deg) translate(2px, 9.25px);
+  }
+
+  &__menu:hover div:nth-child(2) {
+    opacity: 0;
+  }
+
+  &__menu:hover div:nth-child(3){
+    transform: rotate(-45deg) translate(2px, -9.25px);
+  }
+
+  &__menu div{
+    width: 35px;
+    height: 3px;
+    background-color: green;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  &__dropdown-list{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    background-color: green;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    top: 100%;
+    
+  }
+
+  &__dropdown-link{
+    // display: block;
+    color: white;
+    padding: 1rem 0;
+    text-decoration: none;
+    &--active{
+      color: yellow;
+    }
+  }
+
+  &__dropdown-link:hover{
+    color: yellow;
+    text-decoration: underline;
+    text-underline-position: under;
+
+  }
+
+  
+  &__menu-container :hover &__dropdown-list{
+    display: flex;
+  }
+
+  &__list {
+    // display: flex;
+    // padding-top: 1rem;
+    // justify-content: space-evenly;
+    // display: flex;
+    // padding-left: 0;
+    // margin-bottom: 0;
+    display: none;
+    @include tablet{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 0;
         padding-left: 0;
         flex-basis: 40%;
         padding-top: 1rem;
+        flex-basis: 100%;
+        justify-content: flex-end;
     }
 
     &--mobile{
@@ -87,9 +169,9 @@
 
     &--large-mobile{
       display: none;
-      @include large-mobile{
-        display: flex;
-      }
+      // @include large-mobile{
+      //   display: flex;
+      // }
     }
   }
 
