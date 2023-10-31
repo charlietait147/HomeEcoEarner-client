@@ -1,5 +1,5 @@
 import renewableHouse from "../../assets/images/renewable-house.png";
-import familyPhoto from "../../assets/images/green-family-photo.png";
+// import familyPhoto from "../../assets/images/green-family-photo.png";
 // import cutCostIcon from "../../assets/icons/cut-cost-icon.png";
 // import electricityBillIcon from "../../assets/icons/electricity-bill-icon.png";
 // import upgradeIcon from "../../assets/icons/upgrade-icon.svg";
@@ -69,16 +69,16 @@ function MainBodyContent() {
       </section>
       <section className="benefits">
         <div className="main-body__section-wrapper">
-          <h2 className="benefits__header">What if you could?</h2>
+          <h2 className="benefits__header">What if you could</h2>
           <div className="join-waiting-list-claimer-container">
             <h3 className="join-waiting-list__claimer">
               Turn your home into a powerful source of renewable energy
             </h3>
             <h3 className="join-waiting-list__claimer">
-            <span className="join-waiting-list__claimer--bold">AND</span> create cost-free electricity
+              <span className="join-waiting-list__claimer--bold">AND</span> create cost-free electricity
             </h3>
             <h3 className="join-waiting-list__claimer">
-            With the possibility to earn significant income
+              With the possibility to earn significant income
             </h3>
             <h3 className="join-waiting-list__claimer join-waiting-list__claimer--modified">
               <span className="join-waiting-list__claimer--bold">ALL</span>,
@@ -91,6 +91,22 @@ function MainBodyContent() {
           >
             JOIN WAITING LIST
           </button> */}
+        </div>
+      </section>
+      <section className="solution">
+        <div className="main-body__section-wrapper">
+          <h2 className="solution__header">The solution</h2>
+          <div className="solution__card-container">
+            <article className="solution__card">
+              <h3 className="solution__card-title">Home EcoEarner Power System</h3>
+              <p className="solution__card-description">Your gateway to your own cost-free electricity.</p>
+            </article>
+            <article className="solution__card solution__card--edited">
+              <h3 className="solution__card-title">Home EcoEarner Power Booster</h3>
+              <p className="solution__card-description">Your gateway to potential conversion of your electricity
+                costs into earnings.</p>
+            </article>
+          </div>
         </div>
       </section>
       <WaitingListForm />
@@ -164,7 +180,7 @@ function MainBodyContent() {
           </p>
         </div>
       </section> */}
-      <section className="join-waiting-list">
+      {/* <section className="join-waiting-list">
         <div className="main-body__section-wrapper">
           <div className="join-waiting-list-claimer-container">
             <h3 className="join-waiting-list__claimer">
@@ -181,12 +197,12 @@ function MainBodyContent() {
               its available.
             </h3>
           </div>
-          {/* <button
+          <button
             onClick={showModal}
             className="join-waiting-list__waiting-list-button"
           >
             JOIN WAITING LIST
-          </button> */}
+          </button>
         </div>
       </section>
       <section className="trusted-provider">
@@ -227,7 +243,7 @@ function MainBodyContent() {
         </div>
       </section>
       {/* </div> */}
-    </section>
+    </section> 
   );
 }
 

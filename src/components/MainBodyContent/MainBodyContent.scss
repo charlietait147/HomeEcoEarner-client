@@ -14,19 +14,17 @@
 }
 
 .header-section{
-    background-color: #fff;
-
-    &__container{
-        @include tablet{
-            display: flex;
-        }
-    }
+background-color: #fff;
+    // &__container{
+    //     @include tablet{
+    //         display: flex;
+    //     }
+    // }
 
     &__heading-container{
         padding-top: 2rem;
         @include tablet{
-        flex-basis: 50%;
-        padding-top: 8rem;
+        padding-top: 3rem;
         }
     }
     &__heading,
@@ -39,6 +37,12 @@
         line-height: 4.2rem;
         font-weight: 700;
         text-align: center;
+        @include desktop{
+            font-size: 4rem;
+            line-height: 6rem;
+            // text-align: left;
+            // width: 75%;
+        }
     }
 
     &__arrow{
@@ -46,7 +50,7 @@
         font-size: 4rem;
         font-weight: 500;
         @include tablet{
-            display: none;
+            font-size: 5rem;
         }
     }
 
@@ -78,7 +82,7 @@
         padding: 1rem 0;
         @include tablet{
             height: 30rem;
-            flex-basis: 50%;
+            // justify-content: flex-start;
             padding-top:3rem;
         }
     }
@@ -88,17 +92,24 @@
         width: 100%;
         border-radius: 20px;
         @include tablet{
-            width: 100%;
+            width: auto;
         }
     }
 
 }
 
 .problem-statement{
-    background-color: green;
+    background: url("../../assets/images/money-costs.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    @include tablet{
+        padding: 3rem 0;
+    }
     &__banner-text{
+        background-color: green;
         padding: 2rem;
-        margin: 2rem 0;
+        margin: 3rem 0;
         text-align: center;
         font-size: 2rem;
         line-height: 3rem;
@@ -109,6 +120,7 @@
 }
 
 .benefits{
+    background-color: #fdfbfb;
     &__header{
         text-decoration: underline;
         text-underline-position: under;
@@ -116,6 +128,35 @@
         font-size: 2.8rem;
         font-weight: 700;
         padding: 2rem 0;
+    }
+}
+
+.solution{
+    &__header{
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+
+
+    &__card{
+        margin: 4rem 0;
+        // text-align: center;
+
+        &--edited{
+            margin-bottom: 0;
+        }
+    }
+
+    &__card-title{
+        font-size: 1.8rem;
+    }
+
+    &__card-description{
+        font-size: 1.5rem;
+        color: darkgreen;
     }
 }
 
