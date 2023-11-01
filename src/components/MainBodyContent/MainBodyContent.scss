@@ -14,7 +14,11 @@
 }
 
 .header-section{
-background-color: #fff;
+background:linear-gradient( rgb(0,80,4), green);
+border-radius: 80% 0% / 5% 0%;
+@include tablet{
+    border-radius: 80% 0% / 10% 0%;
+}
     // &__container{
     //     @include tablet{
     //         display: flex;
@@ -29,7 +33,7 @@ background-color: #fff;
     }
     &__heading,
     &__tag-line{
-        color: $link-text;
+        color: white;
     }
 
     &__heading{
@@ -49,6 +53,7 @@ background-color: #fff;
         text-align: center;
         font-size: 4rem;
         font-weight: 500;
+        color: white;
         @include tablet{
             font-size: 5rem;
         }
@@ -107,7 +112,7 @@ background-color: #fff;
         padding: 3rem 0;
     }
     &__banner-text{
-        background-color: green;
+        background:linear-gradient( rgb(0,80,4), green);
         padding: 2rem;
         margin: 3rem 0;
         text-align: center;
@@ -132,21 +137,27 @@ background-color: #fff;
 }
 
 .solution{
+    border-radius: 80% 80% / 10% 10%;
+    background: linear-gradient(rgb(0,80,4), green);
     &__header{
         text-align: center;
         font-size: 2.8rem;
         font-weight: 700;
         text-decoration: underline;
         text-underline-position: under;
+        color: white;
     }
 
 
     &__card{
         margin: 4rem 0;
+        background: #fff;
+        text-align: center;
+        padding: 3rem
         // text-align: center;
 
         &--edited{
-            margin-bottom: 0;
+            margin-bottom: 2rem;
         }
     }
 

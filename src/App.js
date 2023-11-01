@@ -6,6 +6,7 @@ import AdminLoginPage from "./pages/AdminLoginPage/AdminLoginPage";
 import NewsPage from "./pages/NewsPage/NewsPage";
 import NotFound from "./pages/NotFound/NotFound";
 import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';
+import AboutPage from './pages/AboutPage/AboutPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     {/* <Route path = "contact-us" element = {<ContactPage />}/> */}
     <Route path = "news" element = {<NewsPage />} />
     <Route path = "*" element = {<NotFound />} /> 
+    <Route path = "about" element = {<AboutPage /> } />
     </Routes>
     </BrowserRouter>
     </>

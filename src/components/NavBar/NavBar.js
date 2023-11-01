@@ -33,6 +33,7 @@ function NavBar() {
                                 <a href="/" className="nav-bar__dropdown-link">PARTNERSHIPS</a>
                                 <a href="/news" className="nav-bar__dropdown-link">NEWS</a>
                                 <a href="/" className="nav-bar__dropdown-link">FAQs</a>
+                                <a href="/" className="nav-bar__dropdown-link">EMAIL</a>
                             </ul>)}
                         </button>
 

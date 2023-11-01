@@ -1,0 +1,26 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+.about-content{
+    &__banner{
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(110deg, #0d741b 50%, #3ba335 60%);
+        @include tablet{
+            height: 15rem;
+        }
+        @include desktop{
+            height: 20rem;
+        }
+    }
+
+    &__header{
+        letter-spacing: 0.3rem;
+        font-weight: 300;
+        color: $contrast;
+        @include tablet{
+            font-size: 4.8rem;
+        }
+    }
+}
