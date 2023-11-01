@@ -115,25 +115,28 @@
     width: 100%;
     left: 0;
     position: absolute;
-    background: linear-gradient(rgb(0, 80, 4), green);
+    background-color:  #f3f3f1;
     padding: 2rem 1rem;
     top: 100%;
+
+    
     
   }
 
   &__dropdown-link{
     // display: block;
-    color: white;
+    color: black;
     padding: 1.5rem 0;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    // border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid darkgreen;
     &--active{
-      color: yellow;
+      color: darkgreen;
     }
   }
 
   &__dropdown-link:hover{
-    color: yellow;
+    color: darkgreen;
     text-decoration: underline;
     text-underline-position: under;
 
