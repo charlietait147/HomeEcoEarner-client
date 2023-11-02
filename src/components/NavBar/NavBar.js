@@ -43,7 +43,7 @@ function NavBar() {
                         
                         {/* <li className="nav-bar__item"><NavLink to = "/contact-us" className = {location.pathname === "/contact-us" ? "nav-bar__link-active" : "nav-bar__link"}>Contact Us</NavLink></li> */}
                         {/* <NavLink to="mailto:rory.tait@homeecoearner.com" className="nav-bar__email-link nav-bar__email-link--large-mobile">rory.tait@homeecoearner.com</NavLink> */}
-                        <NavLink to="#" className="nav-bar__link">About</NavLink>
+                        <NavLink to="/about" className={location.pathname === "/about" ? "nav-bar__link-active" : "nav-bar__link"}>About</NavLink>
                         <NavLink to="#" className="nav-bar__link">Products</NavLink>
                         <NavLink to="#" className="nav-bar__link">Services</NavLink>
                         <NavLink to="#" className="nav-bar__link">Partnerships</NavLink>
