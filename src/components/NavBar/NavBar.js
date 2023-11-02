@@ -27,7 +27,7 @@ function NavBar() {
                             <div></div>
                             {isMenuOpen && (<ul className="nav-bar__dropdown-list">
                                 <a href="/" className={location.pathname === "/" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>HOME</a>
-                                <a href="/about" className="nav-bar__dropdown-link">ABOUT</a>
+                                <a href="/about" className={location.pathname === "/about" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>ABOUT</a>
                                 <a href="/" className="nav-bar__dropdown-link">PRODUCTS</a>
                                 <a href="/" className="nav-bar__dropdown-link">SERVICES</a>
                                 <a href="/" className="nav-bar__dropdown-link">PARTNERSHIPS</a>
