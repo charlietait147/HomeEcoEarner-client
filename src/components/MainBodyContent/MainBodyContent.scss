@@ -16,6 +16,7 @@
 .header-section{
 background:linear-gradient( rgb(0,80,4), green);
 border-radius: 80% 0% / 5% 0%;
+
 @include tablet{
     border-radius: 80% 0% / 10% 0%;
 }
