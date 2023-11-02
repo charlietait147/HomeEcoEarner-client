@@ -46,19 +46,19 @@ function AboutContent() {
                 <h2 className="about-content__section-heading">How Do We Do It?</h2>
             </div>
             <div className="about-content__banner-proposition">
-                Our Customer Value Proposition = give yourself a chance to convert your home electricity
+                Our Customer Value Proposition = Give yourself a chance to convert your home electricity
                 from a cost into an income.
             </div>
             <div className="about-content__wrapper">
-                <h3 className="about-content__section-subheading">If you choose our HomeEco Earner Power System</h3>
+                <h3 className="about-content__section-subheading">If you choose our HomeEco Earner Power System:</h3>
                 <ul className="about-content__list">
-                    <li className="about-content__item">We will install our Home EcoEarner Power Booster when released</li>
-                    <li className="about-content__item">Current projected timing - 24 months</li>
-                    <li className="about-content__item">At no cost to you</li>
+                    <li className="about-content__item">We will install our Home EcoEarner Power Booster when released.</li>
+                    <li className="about-content__item">Current projected timing - 24 months.</li>
+                    <li className="about-content__item">At no cost to you.</li>
                     <li className="about-content__item">We will then buy excess electricity from you</li>
-                    <li className="about-content__item">No more monthly electricity bills for you</li>
-                    <li className="about-content__item">Nothing more to pay</li>
-                    <li className="about-content__item">Instead of you paying us, we will be paying you</li>
+                    <li className="about-content__item">No more monthly electricity bills for you.</li>
+                    <li className="about-content__item">Nothing more to pay.</li>
+                    <li className="about-content__item">Instead of you paying us, we will be paying you.</li>
                     <li className="about-content__item">You will have converted your home electricity from a cost into an income.</li>
 
                 </ul>
