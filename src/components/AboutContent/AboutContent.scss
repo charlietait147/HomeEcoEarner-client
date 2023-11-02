@@ -81,7 +81,7 @@
     @include tablet {
       flex-basis: 50%;
       padding-left: 5rem;
-      padding-top: 5rem;
+      padding-top: 2rem;
     }
   }
   &__houses-image {
@@ -104,6 +104,7 @@
 
   &__item {
     font-size: 1.4rem;
+    padding-bottom: 1rem;
     @include tablet{
         font-size: 1.6rem;
     }
