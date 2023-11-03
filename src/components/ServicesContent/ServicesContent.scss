@@ -1,0 +1,70 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+.services {
+  &__banner {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(110deg, #0d741b 50%, #3ba335 60%);
+    @include tablet {
+      height: 15rem;
+    }
+    @include desktop {
+      height: 20rem;
+    }
+  }
+
+  &__wrapper {
+    padding: $padding-mobile;
+    @include tablet {
+      padding: 2rem $padding-tablet;
+    }
+    @include desktop {
+      @include max-width;
+      padding: 2rem 0;
+    }
+  }
+
+  &__header {
+    font-size: 2.8rem;
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+    color: $contrast;
+    @include tablet {
+      font-size: 4.8rem;
+    }
+  }
+
+  &__section-heading{
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 1rem;
+    @include tablet{
+        font-size: 3.2rem;
+    }
+}
+
+&__list{
+    list-style-type: disc;
+    padding-top: 1rem;
+    padding-left: 3rem;
+}
+
+&__item{
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+&__section-subheading{
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+&__list-heading{
+    font-size: 1.6rem;
+}
+
+
+}

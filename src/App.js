@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ProductsPage from './pages/ProductsPage/ProductsPage';
+import ServicesPage from './pages/ServicesPage/ServicesPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="news" element={<NewsPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="products" element={<ProductsPage />} />
+          <Route path="services" element={<ServicesPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
