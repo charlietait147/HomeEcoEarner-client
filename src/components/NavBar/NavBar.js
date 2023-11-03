@@ -28,7 +28,7 @@ function NavBar() {
                             {isMenuOpen && (<ul className="nav-bar__dropdown-list">
                                 <a href="/" className={location.pathname === "/" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>HOME</a>
                                 <a href="/about" className={location.pathname === "/about" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>ABOUT</a>
-                                <a href="/" className="nav-bar__dropdown-link">PRODUCTS</a>
+                                <a href="/products" className={location.pathname === "/products" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>PRODUCTS</a>
                                 <a href="/" className="nav-bar__dropdown-link">SERVICES</a>
                                 <a href="/" className="nav-bar__dropdown-link">PARTNERSHIPS</a>
                                 <a href="/news" className="nav-bar__dropdown-link">NEWS</a>
@@ -44,7 +44,7 @@ function NavBar() {
                         {/* <li className="nav-bar__item"><NavLink to = "/contact-us" className = {location.pathname === "/contact-us" ? "nav-bar__link-active" : "nav-bar__link"}>Contact Us</NavLink></li> */}
                         {/* <NavLink to="mailto:rory.tait@homeecoearner.com" className="nav-bar__email-link nav-bar__email-link--large-mobile">rory.tait@homeecoearner.com</NavLink> */}
                         <NavLink to="/about" className={location.pathname === "/about" ? "nav-bar__link-active" : "nav-bar__link"}>About</NavLink>
-                        <NavLink to="#" className="nav-bar__link">Products</NavLink>
+                        <NavLink to="/products"className={location.pathname === "/products" ? "nav-bar__link-active" : "nav-bar__link"}>Products</NavLink>
                         <NavLink to="#" className="nav-bar__link">Services</NavLink>
                         <NavLink to="#" className="nav-bar__link">Partnerships</NavLink>
                         <NavLink to="/news" className={location.pathname === "/news" ? "nav-bar__link-active" : "nav-bar__link"}>News</NavLink>

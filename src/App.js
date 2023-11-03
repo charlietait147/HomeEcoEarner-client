@@ -6,6 +6,7 @@ import NewsPage from "./pages/NewsPage/NewsPage";
 import NotFound from "./pages/NotFound/NotFound";
 import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';
 import AboutPage from './pages/AboutPage/AboutPage';
+import ProductsPage from './pages/ProductsPage/ProductsPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="admin/dashboard" element={<AdminDashboardPage />} />
           <Route path="news" element={<NewsPage />} />
           <Route path="about" element={<AboutPage />} />
+          <Route path="products" element={<ProductsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
