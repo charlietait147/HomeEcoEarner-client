@@ -12,7 +12,7 @@ function NavBar() {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-        SetMenuClass( isMenuOpen ? "nav-bar__menu" : "nav-bar__toggle")
+        SetMenuClass(isMenuOpen ? "nav-bar__menu" : "nav-bar__toggle")
     }
     return (
         <nav className="nav-bar">
@@ -20,8 +20,9 @@ function NavBar() {
                 <div className="nav-bar__logo-tagline-container">
                     <Link to="/" className="nav-bar__logo-link"><img src={logo} alt="Home Eco Earner logo" className="nav-bar__logo" /></Link>
                     {/* <p className="nav-bar__tagline" >Trusted Provider <span className="nav-bar__tagline--green">of Green Energy</span></p> */}
+
                     <div className="nav-bar__menu-container">
-                        <button className={menuClass} onClick={toggleMenu}>
+                        <button onClick={toggleMenu} className={menuClass} >
                             <div></div>
                             <div></div>
                             <div></div>
@@ -33,18 +34,14 @@ function NavBar() {
                                 <a href="/" className="nav-bar__dropdown-link">PARTNERSHIPS</a>
                                 <a href="/news" className="nav-bar__dropdown-link">NEWS</a>
                                 <a href="/faq" className={location.pathname === "/faq" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>FAQs</a>
-
                             </ul>)}
                         </button>
-
-                        {/* <label className="nav-bar__menu-label">Menu</label> */}
                     </div>
                     <ul className="nav-bar__list">
-                        
                         {/* <li className="nav-bar__item"><NavLink to = "/contact-us" className = {location.pathname === "/contact-us" ? "nav-bar__link-active" : "nav-bar__link"}>Contact Us</NavLink></li> */}
                         {/* <NavLink to="mailto:rory.tait@homeecoearner.com" className="nav-bar__email-link nav-bar__email-link--large-mobile">rory.tait@homeecoearner.com</NavLink> */}
                         <NavLink to="/about" className={location.pathname === "/about" ? "nav-bar__link-active" : "nav-bar__link"}>About</NavLink>
-                        <NavLink to="/products"className={location.pathname === "/products" ? "nav-bar__link-active" : "nav-bar__link"}>Products</NavLink>
+                        <NavLink to="/products" className={location.pathname === "/products" ? "nav-bar__link-active" : "nav-bar__link"}>Products</NavLink>
                         <NavLink to="/services" className={location.pathname === "/services" ? "nav-bar__link-active" : "nav-bar__link"}>Services</NavLink>
                         <NavLink to="#" className="nav-bar__link">Partnerships</NavLink>
                         <NavLink to="/news" className={location.pathname === "/news" ? "nav-bar__link-active" : "nav-bar__link"}>News</NavLink>
@@ -66,8 +63,6 @@ function NavBar() {
                         <NavLink to="mailto:rory.tait@homeecoearner.com" className="nav-bar__email-link">Email</NavLink>
                     </div>
                 </ul> */}
-
-
             </div>
         </nav>
     );

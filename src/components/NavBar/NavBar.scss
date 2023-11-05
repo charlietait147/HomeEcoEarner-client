@@ -12,16 +12,16 @@
     padding: $padding-mobile $padding-mobile 0rem;
     // display: flex;
     // justify-content: space-between;
-    @include large-mobile{
-        // display: flex;
-        padding: 2rem 1.6rem 0rem;
+    @include large-mobile {
+      // display: flex;
+      padding: 2rem 1.6rem 0rem;
     }
-    @include tablet{
-        display: flex;
-        padding: 2rem $padding-tablet;
+    @include tablet {
+      display: flex;
+      padding: 2rem $padding-tablet;
     }
-    @include desktop{
-        @include max-width;
+    @include desktop {
+      @include max-width;
     }
   }
 
@@ -39,13 +39,13 @@
     font-size: 1.3rem;
     color: $secondary-main;
     font-weight: 700;
-    
+
     padding-left: 1rem;
     padding-top: 1.5rem;
     text-align: center;
-    
+
     @include tablet {
-      display:block;
+      display: block;
       letter-spacing: 0.05rem;
       line-height: 1.4rem;
       font-size: 1.6rem;
@@ -61,33 +61,31 @@
     display: block;
     height: 4rem;
     margin-bottom: 1rem;
-    @include tablet{
-    padding: 0;
+    @include tablet {
+      padding: 0;
     }
   }
 
-  &__menu-container{
+  &__menu-container {
     display: flex;
-    @include tablet{
+    @include tablet {
       display: none;
     }
   }
 
   &__menu,
-  &__toggle{
+  &__toggle {
     display: inline-block;
     border: none;
     background: none;
     padding-bottom: 1rem;
-
   }
 
-  &__menu div{
-    transition: .2s;
-
+  &__menu div {
+    transition: 0.2s;
   }
 
-  &__toggle:hover div:first-child{
+  &__toggle:hover div:first-child {
     transform: rotate(45deg) translate(2px, 9.25px);
   }
 
@@ -95,12 +93,12 @@
     opacity: 0;
   }
 
-  &__toggle:hover div:nth-child(3){
+  &__toggle:hover div:nth-child(3) {
     transform: rotate(-45deg) translate(2px, -9.25px);
   }
 
   &__menu div,
-  &__toggle div{
+  &__toggle div {
     width: 35px;
     height: 3px;
     background-color: green;
@@ -108,71 +106,65 @@
     transition: 0.4s;
   }
 
-  &__dropdown-list{
+  &__dropdown-list {
     display: none;
     flex-direction: column;
     text-align: center;
     width: 100%;
     left: 0;
     position: absolute;
-    background-color:  #f3f3f1;
-    padding: 2rem 1rem;
+    // background-color:  #f3f3f1;
+    background-color: green;
+    padding: 0rem 1rem 1rem;
     top: 100%;
-
-    
-    
   }
 
-  &__dropdown-link{
+  &__dropdown-link {
     // display: block;
-    color: black;
+    // color: black;
+    color: white;
     padding: 1.5rem 0;
     text-decoration: none;
-    // border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid darkgreen;
-    &--active{
-      color: darkgreen;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    // border-bottom: 1px solid darkgreen;
+    // border-bottom: 1px solid white;
+    &--active {
+      // color: darkgreen;
+      color: yellow;
     }
   }
 
-  &__dropdown-link:hover{
-    color: darkgreen;
+  &__dropdown-link:hover {
+    // color: darkgreen;
+    color: yellow;
     text-decoration: underline;
     text-underline-position: under;
-
   }
 
-  
-  &__menu-container :hover &__dropdown-list{
+  &__menu-container :hover &__dropdown-list {
     display: flex;
   }
 
   &__list {
-    // display: flex;
-    // padding-top: 1rem;
-    // justify-content: space-evenly;
-    // display: flex;
-    // padding-left: 0;
-    // margin-bottom: 0;
     display: none;
-    @include tablet{
-        display: flex;
-        justify-content: space-evenly;
-        margin-bottom: 0;
-        padding-left: 0;
-        flex-basis: 40%;
-        padding-top: 1rem;
-        flex-basis: 100%;
-        justify-content: flex-end;
+    @include tablet {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 0;
+      padding-left: 0;
+      flex-basis: 40%;
+      padding-top: 1rem;
+      flex-basis: 100%;
+      justify-content: flex-end;
     }
 
-    &--mobile{
-      @include large-mobile{
+    &--mobile {
+      @include large-mobile {
         display: none;
       }
     }
 
-    &--large-mobile{
+    &--large-mobile {
       display: none;
       // @include large-mobile{
       //   display: flex;
@@ -180,13 +172,13 @@
     }
   }
 
-  &__item-container{
+  &__item-container {
     display: flex;
     flex-direction: column;
     margin-right: 3rem;
   }
 
-  &__icon{
+  &__icon {
     font-size: 2.5rem;
     align-self: center;
   }
@@ -195,9 +187,9 @@
     color: $link-text;
     font-size: 1.2rem;
     // padding-bottom: 1rem;
-    @include large-mobile{
-        font-size: 1.4rem;
-        margin-right: 3rem;
+    @include large-mobile {
+      font-size: 1.4rem;
+      margin-right: 3rem;
     }
   }
 
@@ -209,45 +201,22 @@
     text-decoration: none;
     color: $link-text;
     font-size: 1.4rem;
-    @include large-mobile{
+    @include large-mobile {
       margin-right: 3rem;
     }
-
   }
 
-  &__link-active{
+  &__link-active {
     color: $primary-main;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.4rem;
-    @include large-mobile{
+    @include large-mobile {
       margin-right: 3rem;
     }
-
   }
 
-  &__link:hover{
-    color: $primary-main;
-    border-bottom: 1px solid $primary-main;
-  }
-
-  &__email-link{
-    font-size: 1.4rem;
-    text-decoration: none;
-    color: #2F3749;
-    @include tablet{
-      font-size: 1.4rem;
-    }
-
-    &--large-mobile{
-      @include large-mobile{
-      color: blue;
-      }
-    }
-  }
-
-  &__email-link:hover{
-    border-bottom: 1px solid blue;
-    color: blue;
+  &__link:hover {
+    color: green;
   }
 }
