@@ -44,8 +44,10 @@
         color: $contrast;
         margin: 1rem 0;
         font-size: 1.3rem;
+        padding-bottom: 1rem;
         @include tablet{
             padding-right: 3rem;
+            padding-bottom: 0;
         }
     }
 
