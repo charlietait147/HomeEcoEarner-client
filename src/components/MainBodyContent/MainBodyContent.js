@@ -8,6 +8,7 @@ import "./MainBodyContent.scss";
 import WaitingListForm from "../WaitingListForm/WaitingListForm";
 // import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function MainBodyContent() {
   useEffect(() => {
@@ -26,7 +27,7 @@ function MainBodyContent() {
   // };
 
   return (
-    <section className="main-body">
+    <main className="main-body">
       {/* <div className="main-body__wrapper"> */}
       <header className="header-section">
         <div className="main-body__section-wrapper">
@@ -62,9 +63,9 @@ function MainBodyContent() {
       </header>
       <section className="problem-statement">
         <div className="main-body__section-wrapper">
-          <h3 className="problem-statement__banner-text">Tired of soaring home electricity costs?</h3>
-          <h3 className="problem-statement__banner-text">Maybe you want the chance to make money from renewable energy like the electricity
-            companies do?</h3 >
+          <h3 className="problem-statement__banner-text">Want to reduce high electricity bills?</h3>
+          <h3 className="problem-statement__banner-text">Want to profit from renewable energy like the big companies?
+          </h3 >
         </div>
       </section>
       <section className="benefits">
@@ -243,7 +244,19 @@ function MainBodyContent() {
         </div>
       </section>
       {/* </div> */}
-    </section> 
+      <aside className="email-us">
+
+        <div className="main-body__section-wrapper main-body__section-wrapper--flex" >
+          <h2>Email us at: </h2>
+          <div className="email-us__link-container">
+            <h3><Link to="mailto:info@homeecoearner.com" className="email-us__link">info@home-ecoearner.com</Link></h3>
+            <div className="email-us__button-container">
+              <a href="mailto:info@homeecoearner.com" className="email-us__button">Email us</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
   );
 }
 

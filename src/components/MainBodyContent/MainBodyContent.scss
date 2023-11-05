@@ -10,11 +10,20 @@
         @include desktop{
            @include max-width;
         }
+        &--flex{
+            padding-bottom: 4rem;
+            @include tablet{
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
+   
 }
 
 .header-section{
-background:linear-gradient( rgb(0,80,4), green);
+// background:linear-gradient( rgb(0,80,4), green);
+background-color: green;
 border-radius: 80% 0% / 5% 0%;
 
 @include tablet{
@@ -105,15 +114,20 @@ border-radius: 80% 0% / 5% 0%;
 }
 
 .problem-statement{
-    background: url("../../assets/images/money-costs.jpg");
+    background: url("../../assets/images/wind-turbine-hill.jpg");
     background-size: cover;
     background-position: center;
+    // border-radius: 40% 0% / 87% 5%; 
+    border-radius: 40% 0%/15% 5%;
     
     @include tablet{
         padding: 3rem 0;
+        background-position: initial;
+    }
+    @include desktop{
+        padding: 5rem 0;
     }
     &__banner-text{
-        background:linear-gradient( rgb(0,80,4), green);
         padding: 2rem;
         margin: 3rem 0;
         text-align: center;
@@ -122,6 +136,8 @@ border-radius: 80% 0% / 5% 0%;
         color: white;
         font-weight: 500;
         border: 1px solid white;
+        border-radius: 4px;
+        background-color: green;
     }
 }
 
@@ -139,7 +155,8 @@ border-radius: 80% 0% / 5% 0%;
 
 .solution{
     border-radius: 80% 80% / 10% 10%;
-    background: linear-gradient(rgb(0,80,4), green);
+    // background: linear-gradient(rgb(0,80,4), green);
+    background-color: green;
     &__header{
         text-align: center;
         font-size: 2.8rem;
@@ -155,6 +172,7 @@ border-radius: 80% 0% / 5% 0%;
         background: #fff;
         text-align: center;
         padding: 3rem;
+        border-radius: 10px;
         // text-align: center;
 
         &--edited{
@@ -356,6 +374,63 @@ border-radius: 80% 0% / 5% 0%;
         }
     }
 }
+
+.email-us{
+    h2{
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 700;
+        padding-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    h3{
+        font-size: 1.8rem;
+        padding-top: 2rem;
+    }
+
+    h3:hover{
+        text-decoration: none;
+    }
+
+    &__link-container{
+        @include tablet{
+            padding-left: 3rem;
+        }
+    }
+
+    &__link{
+        color: green;
+    }
+
+    &__link:hover{
+        text-decoration: none;
+    }
+
+    &__button{
+        // width: 20rem;
+        width: 10rem;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 2rem;
+        padding: 1rem 0;
+        background-color: white;
+        border-radius: 4px;
+        border: 2px solid black;
+        color: black;
+    }
+
+    &__button:hover{
+        background-color: black;
+        border: 2px solid white;
+        color: white;
+        
+    }
+}
+
+
+
 
 .disable-scroll{
     overflow: hidden;

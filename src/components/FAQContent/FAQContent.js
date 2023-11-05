@@ -2,7 +2,7 @@ import "./FAQContent.scss";
 import { useState } from "react";
 import plus from "../../assets/icons/plus.svg";
 
-// LANDING PAGE PROBLEM STATEMENT :     border-radius: 40% 0% / 87% 5%; border-radius: 4px
+
 function FAQContent() {
   const [faqs, setFaqs] = useState([
     {
@@ -123,7 +123,7 @@ function FAQContent() {
 
   const [faqData, setFaqData] = useState([
     {
-      id: 1,
+      id: 12,
       question: "What is it?",
       answer: [
         "Home EcoEarner Power Booster is a proprietary energy generation system designed to enable a significant increase in power output from a domestic power generation system.",
@@ -138,13 +138,13 @@ function FAQContent() {
       ],
     },
     {
-      id: 2,
+      id: 13,
       question: "What does it do?",
       answer:
         "Home EcoEarner Power Booster is designed to enable a significant increase in power output from a domestic power generation system such as to enable to the homeowner to generate enough excess power as to convert a cost into a meaningful income.",
     },
     {
-      id: 3,
+      id: 14,
       question: "What’s in it for me?",
       answer: [
         "Cost-Free Upgrade",
@@ -160,7 +160,7 @@ function FAQContent() {
       ],
     },
     {
-      id: 4,
+      id: 15,
       question: "How long before Home EcoEarner Power Booster is available?",
       answer: [
         "Current target date for release is Q1 2026.",
@@ -168,13 +168,13 @@ function FAQContent() {
       ],
     },
     {
-      id: 5,
+      id: 16,
       question: "Do I need planning permission?",
       answer:
         "There should be no extra planning permission needed for Home EcoEarner Power Booster.",
     },
     {
-      id: 6,
+      id: 17,
       question: "What is a PPA?",
       answer: [
         "A Power Purchase Agreement (PPA) is an agreement under which we will purchase the excess power from you.",
@@ -185,7 +185,7 @@ function FAQContent() {
       ],
     },
     {
-      id: 7,
+      id: 18,
       question: "How do I earn income from it?",
       answer: [
         "Under the PPA, we pay you for the excess electricity that your Home EcoEarner Power Booster system produces.",
@@ -195,7 +195,7 @@ function FAQContent() {
       ],
     },
     {
-        id: 8,
+        id: 19,
         question: "Can I still charge my electric vehicle at home?",
         answer:
           ["Yes.", "You can still charge your electric vehicle at home.", "Home EcoEarner Power Booster will be designed to provide all the power you need to charge your EV.", "We intend to offer a heavily discounted rate for any EV charging that takes you up over the average UK daily power usage rate of 10.3 kWh / day.", "We may offer an even lower rate for any night-time EV charging.", "Even if you go over the average UK daily power consumption rate of 10.3 kWh / day, and tap into the excess power produced by Home EcoEarner Power Booster, that should still provide cost savings for you.", "It should be significantly cheaper than charging it under your current electricity arrangements.", "It should be significantly cheaper than charging it at motorway charging stations."],
