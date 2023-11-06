@@ -110,7 +110,7 @@ function WaitingListForm() {
       .get(`https://api.postcodes.io/postcodes/${postcode}`)
       .then(() => {
         axios
-          .post(`${process.env.REACT_APP_API_URL}/users/add-user`, {
+          .post(`https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/users/add-user`, {
             first_name: name,
             email: email,
             postcode: postcode,

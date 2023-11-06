@@ -33,7 +33,7 @@ function AdminDatabase() {
     const getUsersAll = async () => {
         try {
             const response = await axios(
-                `${process.env.REACT_APP_API_URL}/users`,
+                `https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/users`,
                 {}
             );
             const fetchUsers = response.data;

@@ -13,7 +13,7 @@ function NewsContent() {
 
     const getNewsList = async () => {
         try {
-            const response = await axios(`${process.env.REACT_APP_API_URL}/news`);
+            const response = await axios(`https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/news`);
             const fetchNews = response.data
             setNewsList(fetchNews)
             // setDefaultNewsList(fetchNews);
