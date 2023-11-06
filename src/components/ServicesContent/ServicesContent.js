@@ -8,7 +8,7 @@ import manage from "../../assets/images/manage-power.jpg";
 import incomeGenerator from "../../assets/images/income-generator.jpg";
 import { useState } from "react";
 function ServicesContent() {
-    const [slides, setSlides] = useState([
+    const [slides] = useState([
         {
             url: design,
             title: "Design",
@@ -54,7 +54,7 @@ function ServicesContent() {
     };
     const currentSlide = slides[currentIndex];
 
-    const [slideData, setSlideData] = useState([
+    const [slideData] = useState([
         {
             url: incomeGenerator,
             title: "Income Generator",
