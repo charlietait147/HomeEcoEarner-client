@@ -10,6 +10,7 @@ import WaitingListForm from "../WaitingListForm/WaitingListForm";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+
 function MainBodyContent() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -101,12 +102,24 @@ function MainBodyContent() {
             <article className="solution__card">
               <h3 className="solution__card-title">Home EcoEarner Power System</h3>
               <p className="solution__card-description">Your gateway to your own cost-free electricity.</p>
+              <div className="solution__button-container">
+                <Link to= "/services#power-system"className="solution__button">
+                  Find out more &rarr;
+                </Link>
+              </div>
             </article>
+
             <article className="solution__card solution__card--edited">
               <h3 className="solution__card-title">Home EcoEarner Power Booster</h3>
               <p className="solution__card-description">Your gateway to potential conversion of your electricity
                 costs into earnings.</p>
+              <div className="solution__button-container">
+                <Link to="/services#power-booster" className="solution__button">
+                  Find out more &rarr;
+                </Link>
+              </div>
             </article>
+
           </div>
         </div>
       </section>

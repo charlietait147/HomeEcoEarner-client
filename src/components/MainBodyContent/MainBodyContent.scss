@@ -166,6 +166,21 @@ border-radius: 80% 0% / 5% 0%;
         color: white;
     }
 
+    &__card-container{
+        @include large-mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include tablet{
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+
 
     &__card{
         margin: 4rem 0;
@@ -174,10 +189,16 @@ border-radius: 80% 0% / 5% 0%;
         padding: 3rem;
         border-radius: 10px;
         // text-align: center;
-
-        &--edited{
-            margin-bottom: 2rem;
+        @include large-mobile{
+            max-width: 40rem;
         }
+        @include tablet{
+            max-width: 30rem;
+        }
+
+        // &--edited{
+        //     margin-bottom: 2rem;
+        // }
     }
 
     &__card-title{
@@ -187,6 +208,24 @@ border-radius: 80% 0% / 5% 0%;
     &__card-description{
         font-size: 1.5rem;
         color: darkgreen;
+    }
+
+    &__button-container{
+        padding-top: 1rem;
+    }
+
+    &__button{
+        border: none;
+        background-color: green;
+        border-radius: 4px;
+        padding: 0.75rem 1rem;
+        font-size: 1.4rem;
+        color: white;
+        text-decoration: none;
+    }
+
+    &__button:hover{
+        opacity: 0.75;
     }
 }
 

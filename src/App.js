@@ -9,11 +9,14 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import ProductsPage from './pages/ProductsPage/ProductsPage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
 import FAQPage from './pages/FAQPage/FAQPage';
+import ScrollToAnchor from './components/ScrollToAnchor/ScrollToAnchor';
+
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToAnchor />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="admin/login" element={<AdminLoginPage />} />

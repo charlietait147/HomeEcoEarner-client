@@ -8,6 +8,8 @@ import manage from "../../assets/images/manage-power.jpg";
 import incomeGenerator from "../../assets/images/income-generator.jpg";
 import { useState } from "react";
 function ServicesContent() {
+
+
     const [slides] = useState([
         {
             url: design,
@@ -114,11 +116,11 @@ function ServicesContent() {
             </div>
             <div className="services__wrapper">
                 <h2 className="services__section-heading">What Are Our Services?</h2>
-                <h3 className="services__section-subheading">
+                <h3 className="services__section-subheading" >
                     Home EcoEarner Power System
                 </h3>
 
-                <div className="services__slider">
+                <div id ="power-system" className="services__slider">
                     <div className="services__slider-content">
                         <h3 className="services__slider-title">{currentSlide.title}</h3>
                         <div className="services__image-container">
@@ -151,10 +153,10 @@ function ServicesContent() {
                         </button>
                     </div>
                 </div>
-                <h3 className="services__section-subheading services__section-subheading--bottom">
+                <h3 id="power-booster" className="services__section-subheading services__section-subheading--bottom" >
                     Home EcoEarner Power Booster
                 </h3>
-                <div className="services__slider">
+                <div id="power-booster" className="services__slider">
                     <div className="services__slider-content">
                         <h3 className="services__slider-title">{currentSlideData.title}</h3>
                         <div className="services__image-container">
