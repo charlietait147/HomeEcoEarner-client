@@ -29,19 +29,19 @@ function AboutContent() {
                 </div>
             </div>
             <div className="about-content__container">
-                <div className="about-content__wrapper">
-                    <h3 className="about-content__section-subheading about-content__section-subheading--contrast">So they can:</h3>
-                    <ol className="about-content__numbered-list">
-                        <li className="about-content__numbered-item">Generate their own electricity.</li>
-                        <li className="about-content__numbered-item">Free themselves from electricity bills.</li>
-                        <li className="about-content__numbered-item">Free themselves from future electricity price increases.</li>
-                        <li className="about-content__numbered-item">Potentially earn a meaningful income from their home electricity generation.</li>
-                        <li className="about-content__numbered-item">All with no up-front cost.</li>
-                        <li className="about-content__numbered-item">While doing their bit to help the planet get to Net Zero.</li>
-                    </ol>
+                    <div className="about-content__wrapper">
+                        <h3 className="about-content__section-subheading about-content__section-subheading--contrast">So they can:</h3>
+                        <ol className="about-content__numbered-list">
+                            <li className="about-content__numbered-item">Generate their own electricity.</li>
+                            <li className="about-content__numbered-item">Free themselves from electricity bills.</li>
+                            <li className="about-content__numbered-item">Free themselves from future electricity price increases.</li>
+                            <li className="about-content__numbered-item">Potentially earn a meaningful income from their home electricity generation.</li>
+                            <li className="about-content__numbered-item">All with no up-front cost.</li>
+                            <li className="about-content__numbered-item">While doing their bit to help the planet get to Net Zero.</li>
+                        </ol>
                 </div>
             </div>
-            <img src={world} alt="world electricity" className="about-content__world-electricity-image" />
+            {/* <img src={world} alt="world electricity" className="about-content__world-electricity-image" /> */}
             <div className="about-content__wrapper">
                 <h2 className="about-content__section-heading">How Do We Do It?</h2>
             </div>
