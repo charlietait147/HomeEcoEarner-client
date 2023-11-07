@@ -19,7 +19,9 @@ function AdminDatabase() {
             return (
                 user.first_name.includes(inputValue) ||
                 user.postcode.includes(inputValue) ||
-                user.email.includes(inputValue)
+                user.email.includes(inputValue) ||
+                user.number.includes(inputValue) ||
+                user.address.includes(inputValue)
             );
         });
 
@@ -72,8 +74,7 @@ function AdminDatabase() {
                     Authorization: `Bearer ${token}`,
                 },
             })
-            .then((response) => {
-                console.log(response.data);
+            .then(() => {
             })
             .catch((error) => {
                 console.error(error);
