@@ -116,11 +116,11 @@ function ServicesContent() {
             </div>
             <div className="services__wrapper">
                 <h2 className="services__section-heading">What Are Our Services?</h2>
-                <h3 className="services__section-subheading" >
+                <h3 id ="power-system"  className="services__section-subheading" >
                     Home EcoEarner Power System
                 </h3>
 
-                <div id ="power-system" className="services__slider">
+                <div className="services__slider">
                     <div className="services__slider-content">
                         <h3 className="services__slider-title">{currentSlide.title}</h3>
                         <div className="services__image-container">
@@ -156,7 +156,7 @@ function ServicesContent() {
                 <h3 id="power-booster" className="services__section-subheading services__section-subheading--bottom" >
                     Home EcoEarner Power Booster
                 </h3>
-                <div id="power-booster" className="services__slider">
+                <div className="services__slider">
                     <div className="services__slider-content">
                         <h3 className="services__slider-title">{currentSlideData.title}</h3>
                         <div className="services__image-container">
