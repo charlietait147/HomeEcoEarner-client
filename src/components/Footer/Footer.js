@@ -18,9 +18,9 @@ function Footer() {
                     <li className="footer-section__item">
                     <Link to = "/services" className = "footer-section__link">Services
                     </Link></li>
-                    <li className="footer-section__item">
+                    {/* <li className="footer-section__item">
                     <Link to = "/" className = "footer-section__link">Partnerships
-                    </Link></li>
+                    </Link></li> */}
                     <li className="footer-section__item">
                     <Link to = "/news" className = "footer-section__link">News
                     </Link></li>
