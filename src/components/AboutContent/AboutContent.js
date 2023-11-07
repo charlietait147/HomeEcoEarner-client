@@ -1,6 +1,6 @@
 import "./AboutContent.scss";
 import houses from "../../assets/images/houses.jpg";
-import world from "../../assets/images/world-electricity.jpg";
+// import world from "../../assets/images/world-electricity.jpg";
 function AboutContent() {
     return (
         <main className="about-content">
