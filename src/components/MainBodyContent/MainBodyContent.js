@@ -1,4 +1,4 @@
-import renewableHouse from "../../assets/images/renewable-house.png";
+import renewableHouse from "../../assets/images/home-ecoearner-snippet.jpg";
 // import familyPhoto from "../../assets/images/green-family-photo.png";
 // import cutCostIcon from "../../assets/icons/cut-cost-icon.png";
 // import electricityBillIcon from "../../assets/icons/electricity-bill-icon.png";
@@ -262,7 +262,7 @@ function MainBodyContent() {
         <div className="main-body__section-wrapper main-body__section-wrapper--flex" >
           <h2>Email us at: </h2>
           <div className="email-us__link-container">
-            <h3><Link to="mailto:info@homeecoearner.com" className="email-us__link">info@home-ecoearner.com</Link></h3>
+            <h3><Link to="mailto:info@homeecoearner.com" className="email-us__link">info@homeecoearner.com</Link></h3>
             <div className="email-us__button-container">
               <a href="mailto:info@homeecoearner.com" className="email-us__button">Email us</a>
             </div>
