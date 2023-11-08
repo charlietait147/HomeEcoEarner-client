@@ -1,6 +1,8 @@
 
 # HomeEcoEarner
 
+This is the development stage of HomeEcoEarner.
+
 It is a development landing page and website of a renewal energy installation company that helps individuals to acquire renewable energy assets at low or no cost like solar panels and batteries. 
 
 To join the waiting list at HomeEcoEarner, in advance of the company being launched, a user a directed to a waiting list form where they input their first name, email and postcode. This information is added to a database, which can be viewed through logging in on the admin login page. The admin signs in with their correct username and password and in turn receives a JWT token to access the dashboard of users.
