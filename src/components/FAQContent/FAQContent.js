@@ -285,7 +285,7 @@ function FAQContent() {
                   onClick={() => toggleFAQData(singleFaq.id)}
                 >
                   <p className="faq__question-text">{singleFaq.question}</p>
-                  <div className="faq__icon-container">
+                  <div className="faq__icon-container faq__icon-container--unfill">
                     <img
                       src={plus}
                       alt="plus"

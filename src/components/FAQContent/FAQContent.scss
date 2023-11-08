@@ -108,6 +108,9 @@
         align-self: center;
         background-color: lightgreen;
         margin-right: 1.6rem;
+        &--unfill{
+            background-color: transparent;
+        }
     }
 
     &__icon-container:hover{
