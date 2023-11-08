@@ -1,5 +1,5 @@
 import "./NavBar.scss";
-import logo from "../../assets/images/HomeEcoEarner-edited-logo.png"
+import logo from "../../assets/images/Home-EcoEarner-logo.png"
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 // import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
