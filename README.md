@@ -1,7 +1,6 @@
 
 # HomeEcoEarner
 
-**This is the development stage of HomeEcoEarner**
 
 It is a development landing page and website of a renewal energy installation company that helps individuals to acquire renewable energy assets at low or no cost like solar panels and batteries. 
 
