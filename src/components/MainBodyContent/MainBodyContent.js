@@ -257,7 +257,7 @@ function MainBodyContent() {
         </div>
       </section>
       {/* </div> */}
-      <aside className="email-us">
+      {/* <aside className="email-us">
 
         <div className="main-body__section-wrapper main-body__section-wrapper--flex" >
           <h2>Email us at: </h2>
@@ -268,7 +268,7 @@ function MainBodyContent() {
             </div>
           </div>
         </div>
-      </aside>
+      </aside> */}
     </main>
   );
 }
