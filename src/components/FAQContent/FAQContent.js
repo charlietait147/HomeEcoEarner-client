@@ -1,10 +1,10 @@
 import "./FAQContent.scss";
 import { useState } from "react";
-import plus from "../../assets/icons/plus.svg";
+// import plus from "../../assets/icons/plus.svg";
 
 
 function FAQContent() {
-  const [faqs, setFaqs] = useState([
+  const [faqs] = useState([
     {
       id: 1,
       question: "What is it?",
@@ -121,7 +121,7 @@ function FAQContent() {
     },
   ]);
 
-  const [faqData, setFaqData] = useState([
+  const [faqData] = useState([
     {
       id: 12,
       question: "What is it?",
@@ -195,31 +195,31 @@ function FAQContent() {
       ],
     },
     {
-        id: 19,
-        question: "Can I still charge my electric vehicle at home?",
-        answer:
-          ["Yes.", "You can still charge your electric vehicle at home.", "Home EcoEarner Power Booster will be designed to provide all the power you need to charge your EV.", "We intend to offer a heavily discounted rate for any EV charging that takes you up over the average UK daily power usage rate of 10.3 kWh / day.", "We may offer an even lower rate for any night-time EV charging.", "Even if you go over the average UK daily power consumption rate of 10.3 kWh / day, and tap into the excess power produced by Home EcoEarner Power Booster, that should still provide cost savings for you.", "It should be significantly cheaper than charging it under your current electricity arrangements.", "It should be significantly cheaper than charging it at motorway charging stations."],
-      },
+      id: 19,
+      question: "Can I still charge my electric vehicle at home?",
+      answer:
+        ["Yes.", "You can still charge your electric vehicle at home.", "Home EcoEarner Power Booster will be designed to provide all the power you need to charge your EV.", "We intend to offer a heavily discounted rate for any EV charging that takes you up over the average UK daily power usage rate of 10.3 kWh / day.", "We may offer an even lower rate for any night-time EV charging.", "Even if you go over the average UK daily power consumption rate of 10.3 kWh / day, and tap into the excess power produced by Home EcoEarner Power Booster, that should still provide cost savings for you.", "It should be significantly cheaper than charging it under your current electricity arrangements.", "It should be significantly cheaper than charging it at motorway charging stations."],
+    },
 
   ]);
 
-  const toggleFAQ = (id) => {
-    setFaqs((prevFaqs) =>
-      prevFaqs.map((faq) =>
-        faq.id === id ? { ...faq, expanded: !faq.expanded } : faq
-      )
-    );
-  };
+  // const toggleFAQ = (id) => {
+  //   setFaqs((prevFaqs) =>
+  //     prevFaqs.map((faq) =>
+  //       faq.id === id ? { ...faq, expanded: !faq.expanded } : faq
+  //     )
+  //   );
+  // };
 
-  const toggleFAQData = (id) => {
-    setFaqData((prevFaqData) =>
-      prevFaqData.map((singleFaq) =>
-        singleFaq.id === id
-          ? { ...singleFaq, expanded: !singleFaq.expanded }
-          : singleFaq
-      )
-    );
-  };
+  // const toggleFAQData = (id) => {
+  //   setFaqData((prevFaqData) =>
+  //     prevFaqData.map((singleFaq) =>
+  //       singleFaq.id === id
+  //         ? { ...singleFaq, expanded: !singleFaq.expanded }
+  //         : singleFaq
+  //     )
+  //   );
+  // };
   return (
     <main className="faq">
       <div className="faq__banner">
@@ -232,14 +232,11 @@ function FAQContent() {
             return (
               <div className="faq__item" key={faq.id}>
                 <div
-                  className={`faq__question-box ${
-                    faq.expanded ? "expanded" : ""
-                  }`}
-                  onClick={() => toggleFAQ(faq.id)}
+                  className="faq__question-box"
                 >
                   <p className="faq__question-text">{faq.question}</p>
                   <div className="faq__icon-container">
-                    <img
+                    {/* <img
                       src={plus}
                       alt="plus"
                       className={
@@ -247,26 +244,24 @@ function FAQContent() {
                           ? "faq__icon faq__icon--cross"
                           : "faq__icon"
                       }
-                    />
+                    /> */}
                   </div>
                 </div>
-                {faq.expanded && (
-                  <div className="faq__answer">
-                    {Array.isArray(faq.answer) ? (
-                      <ul className="faq__list">
-                        {faq.answer.map((item, index) => (
-                          <li className="faq__list-item" key={index}>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <ul className="faq__list">
-                        <li className="faq__list-item">{faq.answer}</li>
-                      </ul>
-                    )}
-                  </div>
-                )}
+                <div className="faq__answer">
+                  {Array.isArray(faq.answer) ? (
+                    <ul className="faq__list">
+                      {faq.answer.map((item, index) => (
+                        <li className="faq__list-item" key={index}>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <ul className="faq__list">
+                      <li className="faq__list-item">{faq.answer}</li>
+                    </ul>
+                  )}
+                </div>
               </div>
             );
           })}
@@ -279,14 +274,12 @@ function FAQContent() {
             return (
               <div className="faq__item" key={singleFaq.id}>
                 <div
-                  className={`faq__question-box faq__question-box--bottom ${
-                    singleFaq.expanded ? "expanded" : ""
-                  }`}
-                  onClick={() => toggleFAQData(singleFaq.id)}
+                  className="faq__question-box faq__question-box--bottom"
+                // onClick={() => toggleFAQData(singleFaq.id)}
                 >
                   <p className="faq__question-text">{singleFaq.question}</p>
                   <div className="faq__icon-container faq__icon-container--unfill">
-                    <img
+                    {/* <img
                       src={plus}
                       alt="plus"
                       className={
@@ -294,31 +287,30 @@ function FAQContent() {
                           ? "faq__icon faq__icon--cross"
                           : "faq__icon"
                       }
-                    />
+                    /> */}
                   </div>
                 </div>
-                {singleFaq.expanded && (
-                  <div className="faq__answer faq__answer--bottom">
-                    {Array.isArray(singleFaq.answer) ? (
-                      <ul className="faq__list">
-                        {singleFaq.answer.map((item, index) => (
-                          <li
-                            className="faq__list-item faq__list-item--bottom"
-                            key={index}
-                          >
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <ul className="faq__list">
-                        <li className="faq__list-item faq__list-item--bottom">
-                          {singleFaq.answer}
+                <div className="faq__answer faq__answer--bottom">
+                  {Array.isArray(singleFaq.answer) ? (
+                    <ul className="faq__list">
+                      {singleFaq.answer.map((item, index) => (
+                        <li
+                          className="faq__list-item faq__list-item--bottom"
+                          key={index}
+                        >
+                          {item}
                         </li>
-                      </ul>
-                    )}
-                  </div>
-                )}
+                      ))}
+                    </ul>
+                  ) : (
+                    <ul className="faq__list">
+                      <li className="faq__list-item faq__list-item--bottom">
+                        {singleFaq.answer}
+                      </li>
+                    </ul>
+                  )}
+                </div>
+
               </div>
             );
           })}
