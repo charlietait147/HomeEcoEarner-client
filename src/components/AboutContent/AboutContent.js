@@ -1,5 +1,7 @@
 import "./AboutContent.scss";
 import houses from "../../assets/images/houses.jpg";
+import trees from "../../assets/images/trees.jpg";
+
 // import world from "../../assets/images/world-electricity.jpg";
 function AboutContent() {
     return (
@@ -21,15 +23,12 @@ function AboutContent() {
                             <li className="about-content__item">Social housing associations</li>
                             <li className="about-content__item">Landlords</li>
                             <li className="about-content__item">Councils</li>
-                            <li className="about-content__item">Pensioners</li>
-                            <li className="about-content__item">Retirees</li>
-                            <li className="about-content__item">Mortgage prisoners</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div className="about-content__container">
-                    <div className="about-content__wrapper">
+                    <div className="about-content__wrapper about-content__wrapper--margin-left">
                         <h3 className="about-content__section-subheading about-content__section-subheading--contrast">So they can:</h3>
                         <ol className="about-content__numbered-list">
                             <li className="about-content__numbered-item">Generate their own electricity.</li>
@@ -39,6 +38,9 @@ function AboutContent() {
                             <li className="about-content__numbered-item">All with no up-front cost.</li>
                             <li className="about-content__numbered-item">While doing their bit to help the planet get to Net Zero.</li>
                         </ol>
+                </div>
+                <div className="about-content__background-image-container">
+                    <img src={trees} alt="trees" className="about-content__background-image"></img>
                 </div>
             </div>
             {/* <img src={world} alt="world electricity" className="about-content__world-electricity-image" /> */}
