@@ -44,9 +44,9 @@ function NewsContent() {
 
     return (
         <section className="news-content">
-            <div className="news-content__banner">
+            {/* <div className="news-content__banner">
                 <span className="news-content__header">NEWS</span>
-            </div>
+            </div> */}
             <div className="news-content__wrapper">
                 <div className="news-content__news-article-container">
                     {/* <p className="news-content__search-title">FILTER/SEARCH:</p>

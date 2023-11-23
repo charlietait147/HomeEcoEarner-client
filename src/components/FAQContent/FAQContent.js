@@ -222,9 +222,9 @@ function FAQContent() {
   // };
   return (
     <main className="faq">
-      <div className="faq__banner">
+      {/* <div className="faq__banner">
         <span className="faq__header">FAQs</span>
-      </div>
+      </div> */}
       <div className="faq__wrapper">
         <h2 className="faq__section-heading">Home EcoEarner Power System</h2>
         <div className="faq__container">

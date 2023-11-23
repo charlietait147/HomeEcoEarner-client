@@ -44,10 +44,20 @@
         padding: 1rem;
         @include tablet{
             font-size: 3.2rem;
+            padding-top: 2rem;
+        }
+        @include desktop{
+            padding-top: 3rem;
         }
         &--bottom{
             padding-top: 2rem;
             color: darkgreen;
+            @include tablet{
+                padding-top: 3rem;
+            }
+            @include desktop{
+                padding-top: 4rem;
+            }
         }
     }
 
