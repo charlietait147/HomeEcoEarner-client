@@ -62,9 +62,58 @@
         font-size: 3.2rem;
     }
     @include desktop{
-      font-size: 3.8rem;
+        font-size: 3.8rem;
     }
   }
+
+  &__bio-container{
+    @include tablet{
+      display: flex;
+      justify-content: space-evenly;
+      padding: 3rem 0;
+    }
+  }
+
+  &__bio{
+    padding-top: 2rem;
+  }
+
+  &__bio-image-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__bio-image{
+    @include large-mobile{
+      height: 20rem;
+    }
+    &--modified{
+      width: 25rem;
+      @include large-mobile{
+        height: 20rem;
+        width: 35rem;
+      }
+      @include tablet{
+        height: auto;
+      }
+    }
+  }
+
+  &__bio-name{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+  }
+
+&__bio-description{
+  text-align: center;
+  // padding-top: 1rem;
+  font-size: 1.4rem;
+  padding: 1rem;
+  @include tablet{
+    padding: 1rem 3rem;
+  }
+}
 
   &__section-subheading {
     font-size: 2rem;
@@ -169,11 +218,6 @@
     height: 35rem;
     width: 35rem;
   }
-
-
-
-
-
 
   &__world-electricity-image {
     width: 100%;
