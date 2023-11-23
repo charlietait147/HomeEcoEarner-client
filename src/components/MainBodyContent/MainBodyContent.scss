@@ -25,30 +25,44 @@
     display: none;
     @include tablet{
     display: block;
+    height: 60rem;
     position: absolute;
     z-index: -1;
     width: 100%;
     }
     &__container{
         @include tablet{
-        height: 30rem;
+        height: 60rem;
         display: flex;
         justify-content: center;
         background-color: black;
         }
-        @include desktop{
-            height: 40rem;
-        }
+        // @include desktop{
+        //     height: 40rem;
+        // }
     }
     
     &__image{
         width: 100%;
-        transition: opacity 0.5s ease-in-out;
+        transition: 0.3s opacity ease-in-out;
+        animation: fadeIn 1s;
         @include tablet{
             height: 60rem;
         }
+
+        @keyframes fadeIn {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
     }
+
+
 }
+
 
 .header-section{
 // background:linear-gradient( rgb(0,80,4), green);

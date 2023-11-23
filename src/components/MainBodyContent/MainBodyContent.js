@@ -22,7 +22,7 @@ function MainBodyContent() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slideShowImages.length);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(timer);
 
@@ -42,7 +42,7 @@ function MainBodyContent() {
             />
             )
           })} */}
-          <img src={slideShowImages[currentIndex]} alt="" className="slideshow__image" />
+          <img key = {currentIndex} src={slideShowImages[currentIndex]} alt="" className="slideshow__image" />
         </div>
       </header>
       <header className="header-section">
