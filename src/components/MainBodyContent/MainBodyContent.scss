@@ -21,14 +21,48 @@
    
 }
 
+.slideshow{
+    display: none;
+    @include tablet{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    }
+    &__container{
+        @include tablet{
+        height: 30rem;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        }
+        @include desktop{
+            height: 40rem;
+        }
+    }
+    
+    &__image{
+        width: 100%;
+        transition: opacity 0.5s ease-in-out;
+        @include tablet{
+            height: 60rem;
+        }
+    }
+}
+
 .header-section{
 // background:linear-gradient( rgb(0,80,4), green);
 background-color: green;
 border-radius: 80% 0% / 5% 0%;
-
 @include tablet{
-    border-radius: 80% 0% / 10% 0%;
+    background-color: rgb(0,0,0,0.5);
+    height: 60rem;
+    border-radius: 0%;
 }
+
+// @include tablet{
+//     border-radius: 80% 0% / 10% 0%;
+// }
     // &__container{
     //     @include tablet{
     //         display: flex;

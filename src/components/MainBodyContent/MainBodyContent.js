@@ -1,35 +1,50 @@
 import renewableHouse from "../../assets/images/home-ecoearner-snippet.jpg";
-// import familyPhoto from "../../assets/images/green-family-photo.png";
-// import cutCostIcon from "../../assets/icons/cut-cost-icon.png";
-// import electricityBillIcon from "../../assets/icons/electricity-bill-icon.png";
-// import upgradeIcon from "../../assets/icons/upgrade-icon.svg";
-// import saveMoneyIcon from "../../assets/icons/save-money.png";
+import windTurbine from "../../assets/images/wind-turbine-farm.jpg";
+import battery from "../../assets/images/energy-storage.jpg";
+import inverter from "../../assets/images/inverter.jpg";
+import solarPanels from "../../assets/images/solar-panels.jpg";
 import "./MainBodyContent.scss";
 import WaitingListForm from "../WaitingListForm/WaitingListForm";
-// import { useState } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
 function MainBodyContent() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const slideShowImages = [
+    windTurbine, battery, inverter, solarPanels
+  ]
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  // const [isModalClicked, setIsModalClicked] = useState(false);
 
-  // const showModal = () => {
-  //   setIsModalClicked(true);
-  //   document.body.classList.add("disable-scroll");
-  // };
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slideShowImages.length);
+    }, 3000);
 
-  // const hideModal = () => {
-  //   setIsModalClicked(false);
-  //   document.body.classList.remove("disable-scroll");
-  // };
+    return () => clearInterval(timer);
+
+  }, [currentIndex, slideShowImages.length])
 
   return (
     <main className="main-body">
       {/* <div className="main-body__wrapper"> */}
+      <header className="slideshow">
+        <div className="slideshow__container">
+          {/* {slideShowImages.map((slideShowImage, index) => {
+            return (
+            <img key = {index}
+            src= {slideShowImage}
+            alt = "slideshow"
+            className={index === currentIndex ? "slideshow__image" : "slideshow__image slideshow__image--hidden"}
+            />
+            )
+          })} */}
+          <img src={slideShowImages[currentIndex]} alt="" className="slideshow__image" />
+        </div>
+      </header>
       <header className="header-section">
         <div className="main-body__section-wrapper">
           <div className="header-section__container">
@@ -69,7 +84,7 @@ function MainBodyContent() {
           </h3 >
         </div>
       </section>
-      <section className="benefits">
+      {/* <section className="benefits">
         <div className="main-body__section-wrapper">
           <h2 className="benefits__header">What if you could</h2>
           <div className="join-waiting-list-claimer-container">
@@ -87,15 +102,15 @@ function MainBodyContent() {
               without any upfront costs?
             </h3>
           </div>
-          {/* <button
+          <button
             onClick={showModal}
             className="join-waiting-list__waiting-list-button"
           >
             JOIN WAITING LIST
-          </button> */}
+          </button>
         </div>
-      </section>
-      <section className="solution">
+      </section> */}
+      {/* <section className="solution">
         <div className="main-body__section-wrapper">
           <h2 className="solution__header">The solution</h2>
           <div className="solution__card-container">
@@ -122,7 +137,7 @@ function MainBodyContent() {
 
           </div>
         </div>
-      </section>
+      </section> */}
       <WaitingListForm />
       {/* <section className="benefits">
         <div className="main-body__section-wrapper">
@@ -257,7 +272,7 @@ function MainBodyContent() {
         </div>
       </section>
       {/* </div> */}
-      {/* <aside className="email-us">
+      <aside className="email-us">
 
         <div className="main-body__section-wrapper main-body__section-wrapper--flex" >
           <h2>Email us at: </h2>
@@ -268,7 +283,7 @@ function MainBodyContent() {
             </div>
           </div>
         </div>
-      </aside> */}
+      </aside>
     </main>
   );
 }
