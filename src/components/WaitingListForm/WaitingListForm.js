@@ -30,13 +30,13 @@ function WaitingListForm() {
 
 
   const [name, setName] = useState("");
-  const [postcode, setPostcode] = useState("");
+  // const [postcode, setPostcode] = useState("");
   const [email, setEmail] = useState("");
-  const [number, setNumber] = useState("");
-  const [address, setAddress] = useState("");
+  // const [number, setNumber] = useState("");
+  // const [address, setAddress] = useState("");
   const [emailError, setEmailError] = useState("");
-  const [postcodeError, setPostcodeError] = useState("");
-  const [numberError, setNumberError] = useState("");
+  // const [postcodeError, setPostcodeError] = useState("");
+  // const [numberError, setNumberError] = useState("");
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingText, setLoadingText] = useState("JOINING");
@@ -45,24 +45,24 @@ function WaitingListForm() {
     setName(event.target.value);
   };
 
-  const handleChangePostcode = (event) => {
-    setPostcode(event.target.value);
-    setPostcodeError("");
-  };
+  // const handleChangePostcode = (event) => {
+  //   setPostcode(event.target.value);
+  //   setPostcodeError("");
+  // };
 
   const handleChangeEmail = (event) => {
     setEmail(event.target.value);
     setEmailError("");
   };
 
-  const handleChangeNumber = (event) => {
-    setNumber(event.target.value)
-    setNumberError("");
-  }
+  // const handleChangeNumber = (event) => {
+  //   setNumber(event.target.value)
+  //   setNumberError("");
+  // }
 
-  const handleChangeAddress  = (event) => {
-    setAddress(event.target.value)
-  }
+  // const handleChangeAddress  = (event) => {
+  //   setAddress(event.target.value)
+  // }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -73,24 +73,24 @@ function WaitingListForm() {
       return;
     }
 
-    if (
-      (postcode.length !== 6 &&
-        postcode.length !== 7 &&
-        postcode.length !== 8) ||
-      !postcode.includes(" ") ||
-      /[a-z]/.test(postcode)
-    ) {
-      setPostcodeError("Please enter a valid UK postcode.");
-      setIsLoading(false);
-      return;
-    }
+    // if (
+    //   (postcode.length !== 6 &&
+    //     postcode.length !== 7 &&
+    //     postcode.length !== 8) ||
+    //   !postcode.includes(" ") ||
+    //   /[a-z]/.test(postcode)
+    // ) {
+    //   setPostcodeError("Please enter a valid UK postcode.");
+    //   setIsLoading(false);
+    //   return;
+    // }
 
-    if (number.length === 11 || number.length === 12)  {
-        setNumberError("")
-    } else {
-      setNumberError("Please enter a valid number")
-      setIsLoading(false)
-    }
+    // if (number.length === 11 || number.length === 12)  {
+    //     setNumberError("")
+    // } else {
+    //   setNumberError("Please enter a valid number")
+    //   setIsLoading(false)
+    // }
 
     // axios
     //   .get(
@@ -106,16 +106,16 @@ function WaitingListForm() {
     //     animateLoading();
     //     console.log(response.data);
 
-    axios
-      .get(`https://api.postcodes.io/postcodes/${postcode}`)
-      .then(() => {
+    // axios
+    //   .get(`https://api.postcodes.io/postcodes/${postcode}`)
+    //   .then(() => {
         axios
           .post(`https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/users/add-user`, {
             first_name: name,
             email: email,
-            postcode: postcode,
-            number: number,
-            address: address
+            // postcode: postcode,
+            // number: number,
+            // address: address
           })
           .then(() => {
             setIsFormSubmitted(true);
@@ -124,21 +124,21 @@ function WaitingListForm() {
             console.log("Unable to add user " + error);
           });
 
-        console.log("Postcode valid: " + postcode);
+        // console.log("Postcode valid: " + postcode);
         setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log("Error validating postcode " + error);
-        setPostcodeError("Please enter a valid postcode");
-      });
+      // })
+      // .catch((error) => {
+      //   console.log("Error validating postcode " + error);
+      //   setPostcodeError("Please enter a valid postcode");
+      // });
 
     setIsLoading(false);
     setShowModal(true);
     setName("");
     setEmail("");
-    setNumber("");
-    setPostcode("")
-    setAddress("")
+    // setNumber("");
+    // setPostcode("");
+    // setAddress("");
     // })
     // .catch((error) => {
     //   console.log(error);
@@ -173,7 +173,7 @@ function WaitingListForm() {
   };
 
   const isButtonDisabled =
-    name.trim() === "" || postcode.trim() === "" || email.trim() === "" || number.trim() === "" || address.trim() === "";
+    name.trim() === "" || email.trim() === "";
 
   return (
     <aside className="waiting-list">
@@ -232,7 +232,7 @@ function WaitingListForm() {
               {emailError && (
                 <p className="waiting-list__error-message">{emailError}</p>
               )}
-              <CFormLabel
+              {/* <CFormLabel
                 className="waiting-list__form-label"
                 htmlFor="number"
               >
@@ -285,7 +285,7 @@ function WaitingListForm() {
               />
               {postcodeError && (
                 <p className="waiting-list__error-message">{postcodeError}</p>
-              )}
+              )} */}
               <button
                 onClick={handleClick}
                 disabled={isButtonDisabled}

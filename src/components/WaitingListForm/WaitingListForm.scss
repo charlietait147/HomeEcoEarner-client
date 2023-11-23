@@ -70,10 +70,10 @@
       height: 20rem;
       width: 20rem;
     }
-    @include desktop{
-      height: 25rem;
-      width: 25rem;
-    }
+    // @include desktop{
+    //   height: 25rem;
+    //   width: 25rem;
+    // }
   }
 
   &__progress-bar {
