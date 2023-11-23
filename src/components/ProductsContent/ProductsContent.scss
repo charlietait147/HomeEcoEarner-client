@@ -37,13 +37,87 @@
         }
     }
 
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        @include tablet{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+        }
+    }
+
+    &__image{
+        width: 100%;
+        height: auto;
+        @include large-mobile{
+          display: block;
+          width: 50%;
+          height: 15rem;
+        }
+        @include tablet{
+          display: block;
+          width: 100%;
+          height: 20rem;
+        }
+      }
+
+    &__card{
+        border-radius: 10px;
+        background-color: green;
+        &--bottom{
+          background-color: #f3f3f1;
+        }
+        @include large-mobile{
+          display: flex;
+      
+        }
+        @include tablet{
+          display: flex;
+          flex-direction: column;
+          width: 40%;
+        }
+      }
+      
+      &__text-container{
+        padding: 1rem;
+      }
+      
+      &__title{
+        color: white;
+        font-size: 1.4rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid white;
+        &--contrast{
+          color: black;
+          border-bottom: 1px solid black;
+        }
+        @include tablet{
+          font-size: 1.8rem
+        }
+      }
+      
+      &__description{
+        font-size: 1.2rem;
+        color: white;
+        &--contrast{
+          color: black;
+        }
+        @include tablet{
+          font-size: 1.4rem;
+        }
+      }
+
     &__section-heading{
         font-size: 2.8rem;
         text-align: center;
         font-weight: 600;
-        padding-top: 1rem;
+        padding: 2rem 0;
         @include tablet{
-            font-size: 3.2rem;
+            // font-size: 3.2rem;
+            display: none;
         }
     }
 
@@ -64,15 +138,15 @@
         }
     }
 
-    &__image{
-        width: 50%;
-        height: 12.5rem;
-        @include large-mobile{
-            height: 20rem;
-        }
-        @include tablet{
-        height: 30rem;
+    // &__image{
+    //     width: 50%;
+    //     height: 12.5rem;
+    //     @include large-mobile{
+    //         height: 20rem;
+    //     }
+    //     @include tablet{
+    //     height: 30rem;
         
-        }
-    }
+    //     }
+    // }
 }
