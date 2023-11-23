@@ -5,10 +5,6 @@ function Footer() {
         <footer className = "footer-section">
             <div className="footer-section__wrapper">
                 <ul className="footer-section__list">
-                    {/* <li className="footer-section__item ">
-                    <Link to = "mailto:rory.tait@homeecoearner.com" className = "footer-section__email-link ">rory.tait@homeecoearner.com
-                    </Link></li> */}
-                    {/* </a> */}
                     <li className="footer-section__item">
                     <Link to = "/about" className = "footer-section__link">About
                     </Link></li>
@@ -27,6 +23,9 @@ function Footer() {
                     <li className="footer-section__item">
                     <Link to = "/faq" className = "footer-section__link">FAQs
                     </Link></li>
+                    <li className="footer-section__item">
+                    <Link to = "mailto:info@homeecoearner.com" className = "footer-section__link footer-section__link--underlined" >info@homeecoearner.com</Link>
+                    </li>
                 </ul>
                 <div className="footer-section__copyright-container">
                     <small className="footer-section__copyright">© 2023 Home EcoEarner Limited, All Rights Reserved</small>
