@@ -35,7 +35,7 @@
         height: 60rem;
         display: flex;
         justify-content: center;
-        background-color: black;
+        // background-color: black;
         }
         // @include desktop{
         //     height: 40rem;
@@ -45,7 +45,7 @@
     &__image{
         width: 100%;
         transition: 0.3s opacity ease-in-out;
-        animation: fadeIn 1s;
+        animation: fadeIn 2s;
         @include tablet{
             height: 60rem;
         }
