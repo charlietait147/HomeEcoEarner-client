@@ -1,8 +1,13 @@
 import renewableHouse from "../../assets/images/home-ecoearner-snippet.jpg";
-import windTurbine from "../../assets/images/wind-turbine-farm.jpg";
-import battery from "../../assets/images/energy-storage.jpg";
-import inverter from "../../assets/images/inverter.jpg";
-import solarPanels from "../../assets/images/solar-panels.jpg";
+// import windTurbine from "../../assets/images/wind-turbine-farm.jpg";
+// import battery from "../../assets/images/energy-storage.jpg";
+// import inverter from "../../assets/images/inverter.jpg";
+// import solarPanels from "../../assets/images/solar-panels.jpg";
+import slideShowImage1 from "../../assets/images/slideShowImage1.png";
+import slideShowImage2 from "../../assets/images/slideShowImage2.png";
+import slideShowImage3 from "../../assets/images/slideShowImage3.jpg";
+import slideShowImage4 from "../../assets/images/slideShowImage4.jpg";
+import energyStorage from "../../assets/images/energystorage.png"
 import "./MainBodyContent.scss";
 import WaitingListForm from "../WaitingListForm/WaitingListForm";
 import { useState } from "react";
@@ -13,7 +18,7 @@ import { Link } from "react-router-dom";
 function MainBodyContent() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slideShowImages = [
-    windTurbine, battery, inverter, solarPanels
+    slideShowImage1, slideShowImage2, slideShowImage3, slideShowImage4, renewableHouse
   ]
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -42,7 +47,7 @@ function MainBodyContent() {
             />
             )
           })} */}
-          <img key = {currentIndex} src={slideShowImages[currentIndex]} alt="" className="slideshow__image" />
+          <img key={currentIndex} src={slideShowImages[currentIndex]} alt="" className="slideshow__image" />
         </div>
       </header>
       <header className="header-section">
@@ -50,9 +55,9 @@ function MainBodyContent() {
           <div className="header-section__container">
             <div className="header-section__heading-container">
               <h1 className="header-section__heading">
-                Want a Chance to Convert Your Electricity From A Cost Into Earnings?
+                Ready to transform your electricity expenses into earnings, all with zero upfront costs? Join us today!
               </h1>
-              <div className="header-section__arrow">&darr;</div>
+              {/* <div className="header-section__arrow">&darr;</div> */}
               {/* <p className="header-section__tag-line">
                 To make money from renewable energy, join the Home EcoEarner
                 System, your gate-way to cost-free, income-generating renewable
@@ -67,23 +72,42 @@ function MainBodyContent() {
               {/* When isModalClicked is true, return the WaitingListForm component*/}
               {/* {isModalClicked && <WaitingListForm onClose={hideModal} />} */}
             </div>
-            <div className="header-section__image-container">
+            {/* <div className="header-section__image-container">
               <img
                 src={renewableHouse}
                 alt="Happy family on green grass "
                 className="header-section__image"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </header>
-      <section className="problem-statement">
+      <section className="sign-up">
+        <div className="sign-up__wrapper">
+          <div className="sign-up__image-container">
+            <img src={energyStorage} alt="energy storage unit" className="sign-up__image" />
+          </div>
+          <div className="sign-up__text-container">
+            <h3 className="sign-up__title">Sign up for our Home EcoEarner Power System today and experience the future of renewable energy:</h3>
+            <ul className="sign-up__list">
+              <li className="sign-up__item">We promise to install our Home EcoEarner Power Booster upon release.</li>
+              <li className="sign-up__item">You pay nothing upfront.</li>
+              <li className="sign-up__item">We buy excess electricity from you, putting money back into your pocket.</li>
+              <li className="sign-up__item">Say goodbye to out-of-pocket expenses.</li>
+              <li className="sign-up__item">And when possible, we pay you instead of the other way around.</li>
+            </ul>
+            <span>Join us in this exciting journey towards sustainable and income-generating energy solutions.</span>
+            <small>*Disclaimer: Not all installations may qualify for payments</small>
+          </div>
+        </div>
+      </section>
+      {/* <section className="problem-statement">
         <div className="main-body__section-wrapper">
           <h3 className="problem-statement__banner-text">Want to reduce high electricity bills?</h3>
           <h3 className="problem-statement__banner-text">Want to profit from renewable energy like the big companies?
           </h3 >
         </div>
-      </section>
+      </section> */}
       {/* <section className="benefits">
         <div className="main-body__section-wrapper">
           <h2 className="benefits__header">What if you could</h2>
