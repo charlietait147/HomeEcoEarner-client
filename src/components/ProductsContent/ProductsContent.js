@@ -4,6 +4,7 @@ import "./ProductsContent.scss";
 import inverter from "../../assets/images/Inverter-1.png";
 // import solarPanels from "../../assets/images/solar-panels.jpg";
 import batteryEnergyStorage from "../../assets/images/slideShowImage1.png";
+import { Link } from "react-router-dom";
 
 function ProductsContent() {
     return (
@@ -12,7 +13,7 @@ function ProductsContent() {
                 <h2 className="products__section-heading">Our Products</h2>
                 <div className="products__container">
                     <article className="products__card">
-                        <img src={batteryEnergyStorage} alt="battery energy storage system" className="products__image" />
+                    <Link to = "/products/battery-energy-storage-system"><img src={batteryEnergyStorage} alt="battery energy storage system" className="products__image" /></Link>
                         <div className="products__text-container">
                             <h3 className="products__title">Battery Energy Storage System</h3>
                             {/* <p className="products__description"><b>Our Lithium Battery Energy Storage System (BESS)</b> is a comprehensive solution tailored for various
@@ -21,12 +22,12 @@ function ProductsContent() {
                                 also extends to specialized scenarios like data center power storage and emergency backup,
                                 providing customers with targeted, all-encompassing system solutions.</p> */}
                             <div className="products__link-container">
-                                <p className="products__link">Find out more &rarr;</p>
+                            <Link to = "/products/battery-energy-storage-system" className="products__link">Find out more &rarr;</Link>
                             </div>
                         </div>
                     </article>
                     <article className="products__card">
-                        <img src={inverter} alt="HF-H Series Inverter" className="products__image" />
+                        <Link to = "/products/HF-H-series-inverter"><img src={inverter} alt="HF-H Series Inverter" className="products__image" /></Link>
                         <div className="products__text-container">
                             <h3 className="products__title">HF-H Series Inverter: A Comprehensive Solar Energy Solution</h3>
                             {/* <p className="products__description"><b>Our HF-H series</b> represents a new era in solar energy management, combining the functionalities of
@@ -34,7 +35,7 @@ function ProductsContent() {
                                 sophisticated all-in-one machine. Designed with versatility in mind, it&#39;s the perfect fit for a range of
                                 applications, from residential to industrial.</p> */}
                             <div className="products__link-container">
-                                <p className="products__link">Find out more &rarr;</p>
+                                <Link to = "/products/HF-H-series-inverter" className="products__link">Find out more &rarr;</Link>
                             </div>
                         </div>
                     </article>

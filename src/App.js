@@ -10,6 +10,8 @@ import ProductsPage from './pages/ProductsPage/ProductsPage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
 import FAQPage from './pages/FAQPage/FAQPage';
 import ScrollToAnchor from './components/ScrollToAnchor/ScrollToAnchor';
+import BatteryStorage from './pages/BatteryStorage/BatteryStorage';
+import Inverter from './pages/Inverter/Inverter';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="news" element={<NewsPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="products" element={<ProductsPage />} />
+          <Route path="products/battery-energy-storage-system" element={ <BatteryStorage/>} />
+          <Route path="products/HF-H-series-inverter" element={ <Inverter />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="faq" element={<FAQPage />} />
           <Route path="*" element={<NotFound />} />
