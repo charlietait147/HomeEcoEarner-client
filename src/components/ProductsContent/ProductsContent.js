@@ -20,6 +20,9 @@ function ProductsContent() {
                                 network storage, microgrid storage, as well as industrial, commercial, and household applications. It
                                 also extends to specialized scenarios like data center power storage and emergency backup,
                                 providing customers with targeted, all-encompassing system solutions.</p> */}
+                            <div className="products__link-container">
+                                <p className="products__link">Find out more &rarr;</p>
+                            </div>
                         </div>
                     </article>
                     <article className="products__card">
@@ -30,6 +33,9 @@ function ProductsContent() {
                                 solar energy storage, municipal power charge storage, and AC sine wave output into one
                                 sophisticated all-in-one machine. Designed with versatility in mind, it&#39;s the perfect fit for a range of
                                 applications, from residential to industrial.</p> */}
+                            <div className="products__link-container">
+                                <p className="products__link">Find out more &rarr;</p>
+                            </div>
                         </div>
                     </article>
                     {/* <article className="products__card">
