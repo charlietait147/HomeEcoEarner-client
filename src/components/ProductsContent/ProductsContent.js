@@ -1,8 +1,9 @@
 import "./ProductsContent.scss";
-import windTurbine from "../../assets/images/wind-turbine-farm.jpg";
-import battery from "../../assets/images/energy-storage.jpg";
-// import inverter from "../../assets/images/inverter.jpg";
-import solarPanels from "../../assets/images/solar-panels.jpg";
+// import windTurbine from "../../assets/images/wind-turbine-farm.jpg";
+// import battery from "../../assets/images/energy-storage.jpg";
+import inverter from "../../assets/images/Inverter-1.png";
+// import solarPanels from "../../assets/images/solar-panels.jpg";
+import batteryEnergyStorage from "../../assets/images/slideShowImage1.png";
 
 function ProductsContent() {
     return (
@@ -11,6 +12,27 @@ function ProductsContent() {
                 <h2 className="products__section-heading">Our Products</h2>
                 <div className="products__container">
                     <article className="products__card">
+                        <img src={batteryEnergyStorage} alt="battery energy storage system" className="products__image" />
+                        <div className="products__text-container">
+                            <h3 className="products__title">Battery Energy Storage System</h3>
+                            {/* <p className="products__description"><b>Our Lithium Battery Energy Storage System (BESS)</b> is a comprehensive solution tailored for various
+                                energy storage needs. This system is versatile, suitable for large-scale energy storage, distribution
+                                network storage, microgrid storage, as well as industrial, commercial, and household applications. It
+                                also extends to specialized scenarios like data center power storage and emergency backup,
+                                providing customers with targeted, all-encompassing system solutions.</p> */}
+                        </div>
+                    </article>
+                    <article className="products__card">
+                        <img src={inverter} alt="HF-H Series Inverter" className="products__image" />
+                        <div className="products__text-container">
+                            <h3 className="products__title">HF-H Series Inverter: A Comprehensive Solar Energy Solution</h3>
+                            {/* <p className="products__description"><b>Our HF-H series</b> represents a new era in solar energy management, combining the functionalities of
+                                solar energy storage, municipal power charge storage, and AC sine wave output into one
+                                sophisticated all-in-one machine. Designed with versatility in mind, it&#39;s the perfect fit for a range of
+                                applications, from residential to industrial.</p> */}
+                        </div>
+                    </article>
+                    {/* <article className="products__card">
                         <img src={solarPanels} alt="solar panels" className="products__image" />
                         <div className="products__text-container">
                             <h3 className="services__title">Solar Power</h3>
@@ -32,12 +54,12 @@ function ProductsContent() {
                         </div>
                     </article>
                     <article className="products__card">
-                        {/* <img src="" alt="" className="products__image" /> */}
+                        <img src="" alt="" className="products__image" />
                         <div className="products__text-container">
                             <h3 className="services__title">Power Booster</h3>
                             <p className="services__description">Coming soon.</p>
                         </div>
-                    </article>
+                    </article> */}
                 </div>
                 {/* <h2 className="products__section-heading">
                     Home EcoEarner Power System
