@@ -5,6 +5,7 @@ function Inverter() {
     return ( 
         <>
         <NavBar />
+        
         <Footer />
         </>
      );
