@@ -1,7 +1,7 @@
 import "./AboutContent.scss";
 import houses from "../../assets/images/houses.jpg";
 import trees from "../../assets/images/trees.jpg";
-import davidBio from "../../assets/images/david-bio.png";
+import davidBio from "../../assets/images/David-Sheldon-bw.jpg";
 import roryBio from "../../assets/images/rory-bio.png";
 // import world from "../../assets/images/world-electricity.jpg";
 function AboutContent() {

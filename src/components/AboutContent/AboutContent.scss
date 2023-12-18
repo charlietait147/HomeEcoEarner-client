@@ -88,13 +88,9 @@
       height: 20rem;
     }
     &--modified{
-      width: 25rem;
+      width: 20rem;
       @include large-mobile{
         height: 20rem;
-        width: 35rem;
-      }
-      @include tablet{
-        height: auto;
       }
     }
   }
@@ -107,11 +103,10 @@
 
 &__bio-description{
   text-align: center;
-  // padding-top: 1rem;
   font-size: 1.4rem;
   padding: 1rem;
   @include tablet{
-    padding: 1rem 3rem;
+    padding: 1rem 5rem;
   }
 }
 
