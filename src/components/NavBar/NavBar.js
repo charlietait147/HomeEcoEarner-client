@@ -32,7 +32,8 @@ function NavBar() {
                                 <a href="/products" className={location.pathname === "/products" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>PRODUCTS</a>
                                 <a href="/services" className={location.pathname === "/services" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>SERVICES</a>
                                 {/* <a href="/" className="nav-bar__dropdown-link">PARTNERSHIPS</a> */}
-                                <a href="/news"  className={location.pathname === "/ndsz" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>NEWS</a>
+                                <a href="/news"  className={location.pathname === "/news" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>NEWS</a>
+                                <a href="/contact"  className={location.pathname === "/contact" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>CONTACT</a>
                                 <a href="/faq" className={location.pathname === "/faq" ? "nav-bar__dropdown-link nav-bar__dropdown-link--active" : "nav-bar__dropdown-link"}>FAQs</a>
                             </ul>)}
                         </button>
@@ -45,6 +46,7 @@ function NavBar() {
                         <NavLink to="/services" className={location.pathname === "/services" ? "nav-bar__link-active" : "nav-bar__link"}>Services</NavLink>
                         {/* <NavLink to="#" className="nav-bar__link">Partnerships</NavLink> */}
                         <NavLink to="/news" className={location.pathname === "/news" ? "nav-bar__link-active" : "nav-bar__link"}>News</NavLink>
+                        <NavLink to="/contact" className={location.pathname === "/contact" ? "nav-bar__link-active" : "nav-bar__link"}>Contact</NavLink>
                         <NavLink to="/faq" className={location.pathname === "/faq" ? "nav-bar__link-active" : "nav-bar__link"}>FAQs</NavLink>
                     </ul>
                 </div>
