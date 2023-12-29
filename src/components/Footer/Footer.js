@@ -21,6 +21,9 @@ function Footer() {
                     <Link to = "/news" className = "footer-section__link">News
                     </Link></li>
                     <li className="footer-section__item">
+                    <Link to = "/contact" className = "footer-section__link">Contact
+                    </Link></li>
+                    <li className="footer-section__item">
                     <Link to = "/faq" className = "footer-section__link">FAQs
                     </Link></li>
                     <li className="footer-section__item">
