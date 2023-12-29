@@ -26,9 +26,9 @@ function ContactForm() {
 
   return (
     <section className="contact-form">
-      <div className="contact-form__banner">
+      {/* <div className="contact-form__banner">
         <span className="contact-form__header">CONTACT US</span>
-      </div>
+      </div> */}
       <div className="contact-form__wrapper">
         <div className="contact-form__title-container">
           <p className="contact-form__title">
