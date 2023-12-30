@@ -8,7 +8,7 @@ function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
-  
+
   const handleChangeName = (event) => {
     setName(event.target.value);
   };
@@ -25,19 +25,22 @@ function ContactForm() {
   const isButtonDisabled = name.trim() === "" || email.trim() === "" || description.trim() === "";
 
   const submitHandler = (event) => {
-      event.preventDefault();
+    event.preventDefault();
 
-      const formData = {
-        name: name,
-        email: email,
-        description: description
-      }
+    const formData = {
+      name: name,
+      email: email,
+      description: description
+    }
 
-      axios.post("https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/contact", formData)
-        .then(response => {
-          console.log(response.data);
-        })
-        .catch(error => console.error(error))
+    axios.post("https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/contact", formData)
+      .then(response => {
+        console.log(response.data);
+        setIsLoading(false);
+      })
+      .catch(error => {
+        console.error(error)
+      })
   }
 
   return (
@@ -54,7 +57,7 @@ function ContactForm() {
         </div>
         <div className="contact-form__form-container">
           {/* <CForm action="https://formsubmit.co/charlietait1@gmail.com" method="POST" className="contact-form__form" > */}
-          <CForm submit={submitHandler} className="contact-form__form" >
+          <CForm onSubmit={submitHandler} className="contact-form__form" >
             <CFormLabel className="contact-form__form-label" htmlFor="name">
               First name*
             </CFormLabel>
@@ -101,12 +104,13 @@ function ContactForm() {
             <div className="contact-form__submit-button-container">
               <button
                 type="submit"
-                className= { isButtonDisabled ? "contact-form__submit-button contact-form__submit-button--disabled" : "contact-form__submit-button"}
+                className={isButtonDisabled ? "contact-form__submit-button contact-form__submit-button--disabled" : "contact-form__submit-button"}
                 onClick={() => setIsLoading(true)}
-                disabled = {isButtonDisabled}
+                disabled={isButtonDisabled}
               > {isLoading ? "Loading..." : "Submit"}</button>
             </div>
           </CForm>
+
         </div>
       </div>
     </section>
