@@ -33,10 +33,10 @@
       display: flex;
       justify-content: center;
     }
-    @include tablet {
-      flex-basis: 50%;
-      padding: 3.5rem 0;
-    }
+    // @include tablet {
+    //   flex-basis: 50%;
+    //   padding: 3.5rem 0;
+    // }
   }
 
   &__image {
@@ -47,7 +47,7 @@
       width: 55%;
     }
     @include tablet {
-      width: 100%;
+      // width: 100%;
       height: 40rem;
     }
   }
@@ -55,18 +55,19 @@
   &__description {
     font-size: 1.4rem;
     line-height: 1.6;
-    border: 3px solid green;
     @include tablet {
       font-size: 1.6rem;
       line-height: 1.8;
       margin: 2rem;
-      padding: 1rem;
       flex-basis: 50%;
+    }
+    @include desktop{
+      padding: 1rem 3rem;
     }
   }
 
   &__section-title {
-    padding-top: 1rem;
+    padding-top: 2rem;
     @include tablet {
       font-size: 2rem;
       padding-top: 3rem;
@@ -89,7 +90,9 @@
     font-size: 1.4rem;
     padding-top: 1rem;
     text-decoration: underline;
-    text-underline-offset: 8px;
+    @include large-mobile{
+      text-underline-offset: 8px;
+    }
     @include tablet {
       font-size: 1.6rem;
     }

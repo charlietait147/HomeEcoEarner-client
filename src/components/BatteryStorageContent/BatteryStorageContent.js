@@ -5,16 +5,14 @@ function BatteryStorageContent() {
         <section className="battery-storage">
             <div className="battery-storage__wrapper">
                 <h1 className="battery-storage__title">Battery Energy Storage System (BESS)</h1>
-                <div className="battery-storage__container">
-                    <div className="battery-storage__image-container">
-                        <img src={batteryEnergyStorage} alt="battery storage" className="battery-storage__image" />
-                    </div>
-                    <p className="battery-storage__description">Our Lithium Battery Energy Storage System (BESS) is a comprehensive solution tailored for various
-                        energy storage needs. <br /><br /> This system is versatile, suitable for large-scale energy storage, distribution
-                        network storage, microgrid storage, as well as industrial, commercial, and household applications. <br /><br /> It
-                        also extends to specialized scenarios like data center power storage and emergency backup,
-                        providing customers with targeted, all-encompassing system solutions.</p>
+                <div className="battery-storage__image-container">
+                    <img src={batteryEnergyStorage} alt="battery storage" className="battery-storage__image" />
                 </div>
+                <p className="battery-storage__description">Our Lithium Battery Energy Storage System (BESS) is a <b>comprehensive solution</b> tailored for various
+                    energy storage needs. <br /><br /> <b>This system is versatile</b>, suitable for large-scale energy storage, distribution
+                    network storage, microgrid storage, as well as industrial, commercial, and household applications. <br /><br /> It
+                    also <b>extends to specialized scenarios</b> like data center power storage and emergency backup,
+                    providing customers with targeted, all-encompassing system solutions.</p>
                 <h3 className="battery-storage__section-title">Key Features of Our BESS</h3>
                 <ol className="battery-storage__numbered-list">
                     <li className="battery-storage__numbered-item">Advanced Battery Management Technology</li>
