@@ -38,7 +38,7 @@ function ProductsContent() {
                         </div>
                     </article>
                     <article className="products__card">
-                        <Link to = "/products/HF-H-series-inverter"><img src={solarPanels} alt="SR-182 series solar panels" className="products__image" /></Link>
+                        <Link to = "/products/SR-182-solar-panels"><img src={solarPanels} alt="SR-182 series solar panels" className="products__image" /></Link>
                         <div className="products__text-container">
                             <h3 className="products__title">SR-182 Series Solar Panels</h3>
                             {/* <p className="products__description"><b>Our HF-H series</b> represents a new era in solar energy management, combining the functionalities of
@@ -46,7 +46,7 @@ function ProductsContent() {
                                 sophisticated all-in-one machine. Designed with versatility in mind, it&#39;s the perfect fit for a range of
                                 applications, from residential to industrial.</p> */}
                             <div className="products__link-container">
-                                <Link to = "/products/HF-H-series-inverter" className="products__link">Find out more &rarr;</Link>
+                                <Link to = "/products/SR-182-solar-panels" className="products__link">Find out more &rarr;</Link>
                             </div>
                         </div>
                     </article>
