@@ -13,7 +13,7 @@ function BatteryStorageContent() {
                     network storage, microgrid storage, as well as industrial, commercial, and household applications. <br /><br /> It
                     also <b>extends to specialized scenarios</b> like data center power storage and emergency backup,
                     providing customers with targeted, all-encompassing system solutions.</p>
-                <h3 className="battery-storage__section-title">Key Features of Our BESS</h3>
+                <h3 className="battery-storage__section-title">Key Features of Our BESS:</h3>
                 <ol className="battery-storage__numbered-list">
                     <li className="battery-storage__numbered-item">Advanced Battery Management Technology</li>
                     <ul className="battery-storage__list">
