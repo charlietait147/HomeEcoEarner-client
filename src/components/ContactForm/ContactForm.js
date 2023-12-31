@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ContactForm.scss";
 import { CForm, CFormInput, CFormTextarea, CFormLabel } from "@coreui/react";
-import axios from "axios";
+// import axios from "axios";
 
 function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -24,24 +24,24 @@ function ContactForm() {
 
   const isButtonDisabled = name.trim() === "" || email.trim() === "" || description.trim() === "";
 
-  const submitHandler = (event) => {
-    event.preventDefault();
+  // const submitHandler = (event) => {
+  //   event.preventDefault();
 
-    const formData = {
-      name: name,
-      email: email,
-      description: description
-    }
+  //   const formData = {
+  //     name: name,
+  //     email: email,
+  //     description: description
+  //   }
 
-    axios.post("https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/contact", formData)
-      .then(response => {
-        console.log(response.data);
-        setIsLoading(false);
-      })
-      .catch(error => {
-        console.error(error)
-      })
-  }
+  //   axios.post("https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/contact", formData)
+  //     .then(response => {
+  //       console.log(response.data);
+  //       setIsLoading(false);
+  //     })
+  //     .catch(error => {
+  //       console.error(error)
+  //     })
+  // }
 
   return (
     <section className="contact-form">
@@ -56,8 +56,8 @@ function ContactForm() {
           </p>
         </div>
         <div className="contact-form__form-container">
-          {/* <CForm action="https://formsubmit.co/charlietait1@gmail.com" method="POST" className="contact-form__form" > */}
-          <CForm onSubmit={submitHandler} className="contact-form__form" >
+          <CForm action="https://formsubmit.co/info@homeecoearner.com" method="POST" className="contact-form__form" >
+          {/* <CForm onSubmit={submitHandler} className="contact-form__form" > */}
             <CFormLabel className="contact-form__form-label" htmlFor="name">
               First name*
             </CFormLabel>
