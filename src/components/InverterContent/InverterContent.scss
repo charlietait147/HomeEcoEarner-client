@@ -21,10 +21,16 @@
     }
 
     &__title{
+        font-size: 2.6rem;
+        font-weight: 600;
         text-align: center;
         padding-top: 1rem;
         @include tablet{
             padding-top: 2rem;
+            font-size: 3.2rem;
+        }
+        @include desktop{
+            font-size: 3.8rem;
         }
     }
 
@@ -61,8 +67,6 @@
     &__description{
         font-size: 1.4rem;
         line-height: 1.6;
-        border: 3px solid green;
-        padding: 1rem;
         @include tablet{
             font-size: 1.6rem;
             line-height: 1.8;
@@ -73,10 +77,15 @@
 
     &__section-title{
         padding-top: 1rem;
+        font-size: 1.8rem;
+        font-weight: 700;
         @include tablet{
             font-size: 2rem;
             padding-top: 3rem;
         }
+        @include desktop{
+            font-size: 2.2rem;
+          }
     }
 
     &__numbered-list{
@@ -140,7 +149,6 @@
         margin-bottom: 0;
         @include tablet{
             font-size: 1.8rem;
-            line-height: 2.4;
             padding: 3rem;
         }
         

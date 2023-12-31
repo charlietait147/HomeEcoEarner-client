@@ -12,9 +12,9 @@ function InverterContent() {
                     <img src={inverter} alt="inverter" className="inverter-content__image" />
                     <img src={inverterDiagram} alt="inverter diagram" className="inverter-content__image" />
                 </div>
-                <p className="inverter-content__description">Our HF-H series represents a new era in solar energy management, combining the functionalities of
+                <p className="inverter-content__description">Our HF-H series <b>represents a new era in solar energy management</b>, combining the functionalities of
                     solar energy storage, municipal power charge storage, and AC sine wave output into one
-                    sophisticated all-in-one machine. <br /><br />Designed with versatility in mind, it&#39;s the perfect fit for a range of
+                    sophisticated all-in-one machine. <br /><br /><b>Designed with versatility in mind</b>, it&#39;s the perfect fit for a range of
                     applications, from residential to industrial.</p>
                 <h3 className="inverter-content__section-title">Key Features of the HF-H Series Inverter: </h3>
                 <ol className="inverter-content__numbered-list">
