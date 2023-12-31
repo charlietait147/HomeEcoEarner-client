@@ -1,8 +1,6 @@
 import "./ProductsContent.scss";
-// import windTurbine from "../../assets/images/wind-turbine-farm.jpg";
-// import battery from "../../assets/images/energy-storage.jpg";
 import inverter from "../../assets/images/Inverter-1.png";
-// import solarPanels from "../../assets/images/solar-panels.jpg";
+import solarPanels from "../../assets/images/hee-solar-panels.jpg";
 import batteryEnergyStorage from "../../assets/images/slideShowImage1.png";
 import { Link } from "react-router-dom";
 
@@ -30,6 +28,19 @@ function ProductsContent() {
                         <Link to = "/products/HF-H-series-inverter"><img src={inverter} alt="HF-H Series Inverter" className="products__image" /></Link>
                         <div className="products__text-container">
                             <h3 className="products__title">HF-H Series Inverter: A Comprehensive Solar Energy Solution</h3>
+                            {/* <p className="products__description"><b>Our HF-H series</b> represents a new era in solar energy management, combining the functionalities of
+                                solar energy storage, municipal power charge storage, and AC sine wave output into one
+                                sophisticated all-in-one machine. Designed with versatility in mind, it&#39;s the perfect fit for a range of
+                                applications, from residential to industrial.</p> */}
+                            <div className="products__link-container">
+                                <Link to = "/products/HF-H-series-inverter" className="products__link">Find out more &rarr;</Link>
+                            </div>
+                        </div>
+                    </article>
+                    <article className="products__card">
+                        <Link to = "/products/HF-H-series-inverter"><img src={solarPanels} alt="SR-182 series solar panels" className="products__image" /></Link>
+                        <div className="products__text-container">
+                            <h3 className="products__title">SR-182 Series Solar Panels</h3>
                             {/* <p className="products__description"><b>Our HF-H series</b> represents a new era in solar energy management, combining the functionalities of
                                 solar energy storage, municipal power charge storage, and AC sine wave output into one
                                 sophisticated all-in-one machine. Designed with versatility in mind, it&#39;s the perfect fit for a range of
