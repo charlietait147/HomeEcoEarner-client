@@ -15,10 +15,16 @@
 
 
       &__title {
+        font-size: 2.8rem;
+        font-weight: 600;
         text-align: center;
         padding: 1rem 0;
         @include tablet {
           padding: 2rem 0;
+          font-size: 3.2rem;
+        }
+        @include desktop{
+          font-size: 3.8rem;
         }
       }
 
@@ -55,5 +61,12 @@
         font-size: 1.8rem;
         padding-bottom: 1rem;
         font-weight: 700;
+        padding-top: 2rem;
+        @include tablet{
+          font-size: 2rem;
+        }
+        @include desktop{
+          font-size: 2.2rem;
+        }
       }
 }
