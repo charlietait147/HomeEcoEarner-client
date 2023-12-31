@@ -91,6 +91,7 @@
       width: 20rem;
       @include large-mobile{
         height: 20rem;
+        width: auto;
       }
     }
   }
