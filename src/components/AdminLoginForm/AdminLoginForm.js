@@ -3,6 +3,7 @@ import logo from "../../assets/images/HomeEcoEarner-edited-logo.png"
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../config/Config";
 
 
 function AdminLoginForm() {
@@ -47,7 +48,7 @@ function AdminLoginForm() {
 
 
         try {
-            await axios.post(`https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/auth/login`, {
+            await axios.post(`${API_URL}/auth/login`, {
                 username: username,
                 password: password
             })

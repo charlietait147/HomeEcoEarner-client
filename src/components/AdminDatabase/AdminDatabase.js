@@ -6,6 +6,7 @@ import "./AdminDatabase.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../config/Config";
 
 function AdminDatabase() {
     const [userList, setUserList] = useState([]);
@@ -35,7 +36,7 @@ function AdminDatabase() {
     const getUsersAll = async () => {
         try {
             const response = await axios(
-                `https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/users`,
+                `${API_URL}/users`,
                 {}
             );
             const fetchUsers = response.data;

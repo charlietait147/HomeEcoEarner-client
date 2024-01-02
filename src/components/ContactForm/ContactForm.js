@@ -33,7 +33,7 @@ function ContactForm() {
   //     description: description
   //   }
 
-  //   axios.post("https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/contact", formData)
+  //   axios.post(`${API_URL}/contact`, formData)
   //     .then(response => {
   //       console.log(response.data);
   //       setIsLoading(false);

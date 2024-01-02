@@ -1,6 +1,7 @@
 import "./NewsContent.scss"
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { API_URL } from "../../config/Config";
 
 function NewsContent() {
     const [newsList, setNewsList] = useState([]);
@@ -13,7 +14,7 @@ function NewsContent() {
 
     const getNewsList = async () => {
         try {
-            const response = await axios(`https://mysql-deploy-home-ecoearner-561d764b7523.herokuapp.com/news`);
+            const response = await axios(`${API_URL}/news`);
             const fetchNews = response.data
             setNewsList(fetchNews)
             // setDefaultNewsList(fetchNews);
