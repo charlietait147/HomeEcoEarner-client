@@ -8,7 +8,7 @@ function BlogContent() {
                 <div className="blog-content__image-container">
                     <img src={sunshineImage} alt="" className="blog-content__image" />
                 </div>
-                <div className="blog-content__text-section">
+                <div className="blog-content__text-section blog-content__text-section--edited">
                     <p className="blog-content__text">In a world where energy costs are soaring and environmental concerns are
                         at the forefront, imagine a solution that not only benefits your wallet but
                         also contributes to a greener planet.</p>

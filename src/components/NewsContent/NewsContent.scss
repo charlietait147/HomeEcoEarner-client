@@ -87,6 +87,10 @@
 
     &__article-image{
         width: 100%;
+        @include small-mobile{
+        width: 30rem;
+        height: 30rem;
+        }
         @include desktop{
             height: 25rem;
         }
@@ -118,6 +122,9 @@
     }
 
     &__article-title{
+        @include small-mobile{
+            width: 30rem;
+        }
         font-size: 2.2rem;
         padding-bottom: 1.5rem;
         border-bottom: 2px solid $secondary-main;

@@ -1,5 +1,11 @@
 @use "./variables" as *;
 
+@mixin small-mobile {
+  @media screen and (min-width: 350px) {
+    @content;
+  }
+}
+
 @mixin large-mobile {
     @media screen and (min-width: 500px) {
     @content;

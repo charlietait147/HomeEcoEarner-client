@@ -1,0 +1,73 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.blog-content{
+        &__wrapper{
+            padding: $padding-mobile;
+            @include tablet{
+                padding: 2rem $padding-tablet;
+            }
+            @include desktop{
+                @include max-width;
+                padding: 2rem 0;
+            }
+        }
+
+        &__image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__image{
+            width: 30rem;
+        }
+
+        &__title {
+            font-size: 2.8rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 1rem 0;
+            @include tablet {
+              padding: 2rem 0;
+              font-size: 3.2rem;
+            }
+            @include desktop{
+              font-size: 3.8rem;
+            }
+          }
+
+          &__text-section{
+            padding: 1rem 0;
+            &--edited{
+                @include large-mobile{
+                    padding-top: 2rem;
+                }
+            }
+          }
+
+          &__text{
+            font-size: 1.4rem;
+            line-height: 1.6;
+            @include tablet{
+                font-size: 1.6rem;
+                line-height: 1.8;
+            }
+          }
+
+          &__subtitle{
+            font-size: 2rem;
+            @include tablet{
+                font-size: 2.4rem;
+                padding-top: 2rem;
+            }
+          }
+          
+          &__numbered-list{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+
+          &__numbered-item{
+            padding-bottom: 0.5rem;
+          }
+}
