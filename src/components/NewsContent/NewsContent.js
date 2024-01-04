@@ -2,6 +2,9 @@ import "./NewsContent.scss"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../config/Config";
+import { Link } from "react-router-dom";
+import sunshineImage from "../../assets/images/sunshine.jpg";
+
 
 function NewsContent() {
     const [newsList, setNewsList] = useState([]);
@@ -45,9 +48,6 @@ function NewsContent() {
 
     return (
         <section className="news-content">
-            {/* <div className="news-content__banner">
-                <span className="news-content__header">NEWS</span>
-            </div> */}
             <div className="news-content__wrapper">
                 <div className="news-content__news-article-container">
                     {/* <p className="news-content__search-title">FILTER/SEARCH:</p>
@@ -57,11 +57,11 @@ function NewsContent() {
                     <div className="news-content__news-container" >
                         <p className="news-content__results"> ({newsList.length} Results) </p>
                         <div className="news-content__cards-container">
-                            {newsList.map((news) => {
+                            {/* {newsList.map((news) => {
                                 return (
                                     <div className="news-content__card-container" key={news.id}>
                                         <article className="news-content__card">
-                                            <img src={news.image} alt="" className="news-content__article-image" />
+                                            <Link to = {`/news/${news.id}`}><img src={news.image} alt="" className="news-content__article-image" /></Link>
                                             <p className="news-content__article-release-date">
                                                 {news.release_date}
                                             </p>
@@ -72,7 +72,14 @@ function NewsContent() {
                                     </div>
                                 )
                             }
-                            )}
+                            )} */}
+                            <div className="news-content__card-container">
+                                <article className="news-content__card">
+                                    <Link to = "unleash-the-power-of-your-home-turn-sunshine-into-cash-with-solar-and-battery-systems"><img src={sunshineImage} alt="" className="news-content__article-image" /></Link>
+                                    <p className="news-content__article-release-date">December 30, 2023</p>
+                                    <h3 className="news-content__article-title">Unleash the Power of Your Home: Turn Sunshine into Cash with Solar and Battery Systems!</h3>
+                                </article>
+                            </div>
                         </div>
                     </div>
                 </div>

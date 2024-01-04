@@ -14,6 +14,7 @@ import ScrollToAnchor from './components/ScrollToAnchor/ScrollToAnchor';
 import BatteryStorage from './pages/BatteryStorage/BatteryStorage';
 import Inverter from './pages/Inverter/Inverter';
 import SolarPanels from './pages/SolarPanels/SolarPanels';
+import BlogPage from './pages/BlogPage/BlogPage';
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="admin/login" element={<AdminLoginPage />} />
           <Route path="admin/dashboard" element={<AdminDashboardPage />} />
           <Route path="news" element={<NewsPage />} />
+          <Route path="news/unleash-the-power-of-your-home-turn-sunshine-into-cash-with-solar-and-battery-systems" element={<BlogPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="products" element={<ProductsPage />} />
           <Route path="products/battery-energy-storage-system" element={ <BatteryStorage/>} />
