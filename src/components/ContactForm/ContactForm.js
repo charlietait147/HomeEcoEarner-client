@@ -54,10 +54,11 @@ function ContactForm() {
             Need to get in touch with us? Fill out the form with your
             enquiry.
           </p>
+          <p className="contact-form__address">2 Brunel Place, Slough, SL1 1FQ, UK</p>
         </div>
         <div className="contact-form__form-container">
           <CForm action="https://formsubmit.co/info@homeecoearner.com" method="POST" className="contact-form__form" >
-          {/* <CForm onSubmit={submitHandler} className="contact-form__form" > */}
+            {/* <CForm onSubmit={submitHandler} className="contact-form__form" > */}
             <CFormLabel className="contact-form__form-label" htmlFor="name">
               First name*
             </CFormLabel>
@@ -110,7 +111,6 @@ function ContactForm() {
               > {isLoading ? "Loading..." : "Submit"}</button>
             </div>
           </CForm>
-
         </div>
       </div>
     </section>

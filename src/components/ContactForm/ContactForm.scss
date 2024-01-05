@@ -45,9 +45,11 @@
     }
 
     &__title{
-        padding: 1rem ;
+        padding: 1rem;
+        margin-bottom: 0;
         @include tablet{
             font-size: 2.4rem;
+            padding-bottom: 1rem;
             
         }
     }
@@ -103,6 +105,18 @@
         &--disabled{
             opacity: 0.5;
             pointer-events: none;
+        }
+
+        
+    }
+
+    &__address{
+        padding-top: 1rem;
+        font-size: 1.2rem;
+        color: darkgray;
+        padding: 0rem 1rem 1rem;
+        @include tablet{
+            font-size: 1.4rem;
         }
     }
 
