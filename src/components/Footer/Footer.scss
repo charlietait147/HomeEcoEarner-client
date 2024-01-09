@@ -15,9 +15,19 @@
         }
     }
 
-    &__list{
+    &__container{
+        @include large-mobile{
+        display:flex;
+        }
+        @include tablet{
+            justify-content: space-between;
+        }
+    }
+
+    &__page-list{
         padding-bottom: 0.5rem;
         padding-left: 0;
+        flex-basis: 50%;
 
         @include tablet{
             display: flex;
@@ -54,6 +64,17 @@
         @include tablet{
             padding-right: 3rem;
             padding-bottom: 0;
+        }
+    }
+
+    &__contact-list{
+        padding-left: 0;
+        padding-top: 1rem;
+        @include large-mobile{
+            padding-top: 0;
+        }
+        @include tablet{
+            padding-bottom: 2rem;
         }
     }
 
