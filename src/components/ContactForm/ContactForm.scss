@@ -26,11 +26,17 @@
     &__wrapper{
         padding: 1.6rem;
         @include tablet{
-            display: flex;
+            // display: flex;
             padding: 5rem $padding-tablet;
         }
         @include desktop{
             @include max-width;
+        }
+    }
+
+    &__section-container{
+        @include tablet{
+            display: flex;
         }
     }
 
@@ -110,11 +116,21 @@
         
     }
 
-    &__address{
+    &__contact-title{
+        padding-top: 2rem;
+    }
+
+    &__info-container{
+        padding: 1rem 0 2rem;
+    }
+
+    &__info{
         padding-top: 1rem;
         font-size: 1.2rem;
-        color: darkgray;
+        // color: darkgray;
         padding: 0rem 1rem 1rem;
+        margin: 0;
+        // font-weight: 700;
         @include tablet{
             font-size: 1.4rem;
         }
