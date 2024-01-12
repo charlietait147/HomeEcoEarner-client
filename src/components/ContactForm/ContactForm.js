@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./ContactForm.scss";
 import { CForm, CFormInput, CFormTextarea, CFormLabel } from "@coreui/react";
+import MapContainer from "../MapContainer/MapContainer";
 // import axios from "axios";
 
 function ContactForm() {
@@ -120,6 +121,7 @@ function ContactForm() {
             <p className="contact-form__info">Email: <b>info@homeecoearner.com</b></p>
             <p className="contact-form__info">Address:<b> 2 Brunel Place, Slough, SL1 1FQ, UK</b></p>
           </div>
+          <MapContainer />
       </div>
     </section>
   );
