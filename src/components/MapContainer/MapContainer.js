@@ -1,5 +1,6 @@
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api"
 import { useMemo } from "react";
+import "./MapContainer.scss";
 function MapContainer() {
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
@@ -8,21 +9,15 @@ function MapContainer() {
         lat: 51.51081,
         lng: -0.59356
     }), []);
-    const mapStyles = {
-        height: "400px",
-        width: "100%",
-    };
     return (
-        // <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}
-        // >
         <div className="map">
             {!isLoaded ? (
                 <h1>Loading...</h1>
             ) : (
                 <GoogleMap
-                    mapContainerStyle={mapStyles}
                     zoom={18}
                     center={center}
+                    mapContainerClassName="map__map"
                 >
                     <Marker key="marker_1" position={{
                         lat: 51.51072,

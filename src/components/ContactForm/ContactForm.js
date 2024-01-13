@@ -115,13 +115,17 @@ function ContactForm() {
             </CForm>
           </div>
         </div>
-        <p className="contact-form__title">Or get in touch with us:</p>
-          <div className="contact-form__info-container">
-            <p className="contact-form__info">Phone: <b>020 3286 5350</b></p>
-            <p className="contact-form__info">Email: <b>info@homeecoearner.com</b></p>
-            <p className="contact-form__info">Address:<b> 2 Brunel Place, Slough, SL1 1FQ, UK</b></p>
+        <div className="contact-form__section-container">
+          <div className="contact-form__contact-info-container">
+            <p className="contact-form__title contact-form__title--contact ">Or get in touch with us:</p>
+            <div className="contact-form__info-container">
+              <p className="contact-form__info">Phone: <b>020 3286 5350</b></p>
+              <p className="contact-form__info">Email: <b>info@homeecoearner.com</b></p>
+              <p className="contact-form__info">Address:<b> 2 Brunel Place, Slough, SL1 1FQ, UK</b></p>
+            </div>
           </div>
           <MapContainer />
+        </div>
       </div>
     </section>
   );

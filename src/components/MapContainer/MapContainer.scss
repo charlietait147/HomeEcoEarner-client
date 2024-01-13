@@ -1,0 +1,11 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+.map{
+    @include tablet{
+        flex-basis: 50%;
+    }
+    &__map{
+        height: 400px;
+        width: 100%;
+    }
+}
