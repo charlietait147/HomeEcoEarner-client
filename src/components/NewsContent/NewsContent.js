@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { API_URL } from "../../config/Config";
 import { Link } from "react-router-dom";
 import sunshineImage from "../../assets/images/sunshine.jpg";
+import homeEcoEarnerSnippet from "../../assets/images/home-ecoearner-snippet.jpg";
 
 
 function NewsContent() {
@@ -75,9 +76,20 @@ function NewsContent() {
                             )} */}
                             <div className="news-content__card-container">
                                 <article className="news-content__card">
-                                    <Link to = "unleash-the-power-of-your-home-turn-sunshine-into-cash-with-solar-and-battery-systems"><img src={sunshineImage} alt="" className="news-content__article-image" /></Link>
+                                    <div className="news-content__image-container">
+                                        <Link to="unleash-the-power-of-your-home-turn-sunshine-into-cash-with-solar-and-battery-systems"><img src={sunshineImage} alt="" className="news-content__article-image" /></Link>
+                                    </div>
                                     <p className="news-content__article-release-date">December 30, 2023</p>
                                     <h3 className="news-content__article-title">Unleash the Power of Your Home: Turn Sunshine into Cash with Solar and Battery Systems!</h3>
+                                </article>
+                            </div>
+                            <div className="news-content__card-container">
+                                <article className="news-content__card">
+                                    <div className="news-content__image-container">
+                                        <Link to="energy-freedom-at-your-fingertips"><img src={homeEcoEarnerSnippet} alt="" className="news-content__article-image" /></Link>
+                                    </div>
+                                    <p className="news-content__article-release-date">January 13, 2024</p>
+                                    <h3 className="news-content__article-title">Energy Freedom At Your Fingertips!</h3>
                                 </article>
                             </div>
                         </div>
