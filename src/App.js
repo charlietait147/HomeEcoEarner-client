@@ -15,6 +15,7 @@ import BatteryStorage from './pages/BatteryStorage/BatteryStorage';
 import Inverter from './pages/Inverter/Inverter';
 import SolarPanels from './pages/SolarPanels/SolarPanels';
 import BlogPage from './pages/BlogPage/BlogPage';
+import Pamphlet from './pages/Pamphlet/Pamphlet';
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="admin/dashboard" element={<AdminDashboardPage />} />
           <Route path="news" element={<NewsPage />} />
           <Route path="news/unleash-the-power-of-your-home-turn-sunshine-into-cash-with-solar-and-battery-systems" element={<BlogPage />} />
+          <Route path="news/energy-freedom-at-your-fingertips" element={<Pamphlet />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="products" element={<ProductsPage />} />
           <Route path="products/battery-energy-storage-system" element={ <BatteryStorage/>} />
