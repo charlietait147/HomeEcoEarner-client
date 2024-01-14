@@ -94,12 +94,17 @@
         display: flex;
         align-items: center;
         padding-left: 1.5rem;
+        @include tablet{
+        padding-top: 0;
+        padding-bottom: 0;
+        }
       }
     }
   }
 
     &__text {
       font-size: 1.4rem;
+      margin: 0;
       @include tablet {
         font-size: 1.6rem;
       }
@@ -138,13 +143,19 @@
 
     &__bio-image-label{
         position: absolute;
-        bottom: 0;
         background-color: #baaeae;
-        width: 15rem;
         padding: 0 0.5rem;
+        width: 15rem;
+        bottom: 17rem;
+        @include tablet{
+        bottom: 0;
+        }
         &--right{
-            right: 0rem;
+            bottom: 0;
             width: 14.75rem;
+            @include tablet{
+            right: 0rem;
+            }
         }
     }
 
