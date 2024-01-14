@@ -1,0 +1,157 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.pamphlet {
+  background-color: #ffe4d0;
+  &__wrapper {
+    padding: $padding-mobile;
+    @include tablet {
+      padding: 2rem $padding-tablet;
+    }
+    @include desktop {
+      @include max-width;
+      padding: 2rem 0;
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  &__image {
+    width: 100%;
+    @include large-mobile {
+      width: 40rem;
+    }
+    @include tablet {
+      width: 50rem;
+    }
+    @include desktop {
+      width: 60rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 0;
+    @include tablet {
+      padding: 2rem 0;
+      font-size: 3.2rem;
+    }
+    @include desktop {
+      font-size: 3.8rem;
+    }
+  }
+
+  &__claimer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2rem;
+    font-weight: 500;
+    color: darkcyan;
+    @include tablet {
+      font-size: 2.5rem;
+      padding: 1.5rem 0;
+    }
+  }
+
+  &__main-text-section {
+    padding-top: 1rem;
+    &--border {
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      margin: 3rem 0;
+    }
+  }
+
+  &__main-text {
+    font-size: 1.6rem;
+    @include tablet {
+      font-size: 2.2rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__subtitle {
+    color: darkcyan;
+    font-size: 2rem;
+    padding-top: 2rem;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__text-section {
+    padding: 1rem 0;
+    &--flex {
+      @include large-mobile {
+        display: flex;
+        align-items: center;
+        padding-left: 1.5rem;
+      }
+    }
+  }
+
+    &__text {
+      font-size: 1.4rem;
+      @include tablet {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__section-container {
+      @include large-mobile {
+        display: flex;
+      }
+    }
+
+    &__bio-image-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem 0;
+      @include tablet {
+        flex-direction: row;
+      }
+    }
+
+    &__bio-image {
+  
+      &--modified {
+        // width: 20rem;
+        height: 15rem;
+        width: 15rem;
+        // @include large-mobile {
+        //   height: 20rem;
+        //   width: auto;
+        // }
+      }
+    }
+
+    &__bio-image-label{
+        position: absolute;
+        bottom: 0;
+        background-color: #baaeae;
+        width: 15rem;
+        padding: 0 0.5rem;
+        &--right{
+            right: 0rem;
+            width: 14.75rem;
+        }
+    }
+
+    &__terms {
+      font-style: italic;
+      font-size: 1.3rem;
+      margin-top: 3rem;
+    }
+  }
+
