@@ -199,7 +199,10 @@
 
   &__background-image-container{
     display: flex;
+    // justify-content: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     @include tablet{
       align-items: center;
       padding: 0rem 3.2rem;
@@ -210,9 +213,15 @@
     }
   }
 
+
+
   &__background-image{
-    height: 35rem;
-    width: 35rem;
+    height: 30rem;
+    // width: 35rem;
+    width: 100%;
+    @include small-mobile{
+      width: 35rem;
+    }
   }
 
   &__world-electricity-image {
@@ -244,6 +253,19 @@
     }
     @include desktop {
       padding: 5rem;
+    }
+  }
+
+  &__logo-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo{
+    width: 100%;
+  
+    @include small-mobile{
+      width: 35rem;
     }
   }
 }

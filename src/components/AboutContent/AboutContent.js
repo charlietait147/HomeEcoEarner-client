@@ -3,6 +3,7 @@ import houses from "../../assets/images/houses.jpg";
 import trees from "../../assets/images/trees.jpg";
 import davidBio from "../../assets/images/David-Sheldon-bw.jpg";
 import roryBio from "../../assets/images/rory-bio.png";
+import wlcMemberLogo from "../../assets/images/WLC-Member-Logo.png";
 // import world from "../../assets/images/world-electricity.jpg";
 function AboutContent() {
     return (
@@ -66,8 +67,12 @@ function AboutContent() {
                 </div>
                 <div className="about-content__background-image-container">
                     <img src={trees} alt="trees" className="about-content__background-image"></img>
+                    <img src={wlcMemberLogo} alt="WLC member logo" className="about-content__logo"></img>
                 </div>
             </div>
+            {/* <div className="about-content__logo-container">
+               
+            </div> */}
 
             {/* <img src={world} alt="world electricity" className="about-content__world-electricity-image" /> */}
             {/* <div className="about-content__wrapper">
