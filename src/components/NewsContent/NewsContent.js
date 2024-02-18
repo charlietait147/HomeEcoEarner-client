@@ -86,7 +86,7 @@ function NewsContent() {
                             <div className="news-content__card-container">
                                 <article className="news-content__card">
                                     <div className="news-content__image-container">
-                                        <Link to="energy-freedom-at-your-fingertips"><img src={homeEcoEarnerSnippet} alt="" className="news-content__article-image" /></Link>
+                                        <Link to="energy-freedom-at-your-fingertips"><img src={homeEcoEarnerSnippet} alt="" className="news-content__article-image news-content__article-image--resized" /></Link>
                                     </div>
                                     <p className="news-content__article-release-date">January 13, 2024</p>
                                     <h3 className="news-content__article-title">Energy Freedom At Your Fingertips!</h3>
