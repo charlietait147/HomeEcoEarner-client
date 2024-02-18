@@ -17,6 +17,7 @@ function ServicesContent() {
                     <li className="services__item">We work with experienced designers to design our Home EcoEarner Power System to suit your home’s characteristics.</li>
                     <li className="services__item">We then supply our Home EcoEarner Power System at no upfront cost to you.</li>
                     <li className="services__item">We then send our team of experienced installers to install our Home EcoEarner Power System in your home at no cost to you.</li>
+                    <li className="services__item">We manage the grid connection issues for you, so you don’t have to deal with that.</li>
                 </ul>
                 {/* <div className="services__image-container">
                     <img src={design} alt = "design book" className = "services__image" />
