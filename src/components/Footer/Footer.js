@@ -13,6 +13,9 @@ function Footer() {
                             <Link to="/products" className="footer-section__link">Products
                             </Link></li>
                         <li className="footer-section__item">
+                            <Link to="/packages" className="footer-section__link">Packages
+                            </Link></li>   
+                        <li className="footer-section__item">
                             <Link to="/services" className="footer-section__link">Services
                             </Link></li>
                         <li className="footer-section__item">

@@ -16,6 +16,7 @@ import Inverter from './pages/Inverter/Inverter';
 import SolarPanels from './pages/SolarPanels/SolarPanels';
 import BlogPage from './pages/BlogPage/BlogPage';
 import Pamphlet from './pages/Pamphlet/Pamphlet';
+import Packages from './pages/PackagesPage/Packages';
 
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="products/battery-energy-storage-system" element={ <BatteryStorage/>} />
           <Route path="products/HF-H-series-inverter" element={ <Inverter />} />
           <Route path="products/SR-182-solar-panels" element={ <SolarPanels />} />
+          <Route path="packages" element={ <Packages />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="faq" element={<FAQPage />} />
