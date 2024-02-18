@@ -1,8 +1,15 @@
+import Footer from "../../components/Footer/Footer";
+import NavBar from "../../components/NavBar/NavBar";
+import PackagesContent from "../../components/PackagesContent/PackagesContent";
 import "./Packages.scss";
 function Packages() {
-    return ( 
-        <section>Packages</section>
-     );
+    return (
+        <>
+            <NavBar />
+            <PackagesContent />
+            <Footer />
+        </>
+    );
 }
 
 export default Packages;
