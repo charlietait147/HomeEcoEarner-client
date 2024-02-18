@@ -47,6 +47,7 @@
         animation: fadeIn 2s;
         @include tablet{
             height: 60rem;
+            max-width: 60%;
         }
 
         @keyframes fadeIn {
