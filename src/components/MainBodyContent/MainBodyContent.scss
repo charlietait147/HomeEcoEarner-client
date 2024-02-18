@@ -36,9 +36,6 @@
         display: flex;
         justify-content: center;
         }
-        // @include desktop{
-        //     height: 40rem;
-        // }
     }
     
     &__image{
@@ -47,6 +44,9 @@
         animation: fadeIn 2s;
         @include tablet{
             height: 60rem;
+            max-width: 75%;
+        }
+        @include desktop{
             max-width: 60%;
         }
 
@@ -176,13 +176,20 @@ border-radius: 80% 0% / 5% 0%;
     &__image-container{
         display: flex;
         justify-content: center;
+        align-items: center;
         padding-top: 2rem;
+        @include desktop{
+            width: 100%;
+        }
     }
 
     &__image{
         width: 30rem;
-        @include tablet{
-            width: 100%;
+        // @include tablet{
+        //     width: 100%;
+        // }
+        @include desktop{
+            width: 40rem;
         }
     }
 
@@ -210,9 +217,11 @@ border-radius: 80% 0% / 5% 0%;
         margin-bottom: 0.5rem;
     }
 
-    small{
+    &__disclaimer{
         display: block;
         padding-top: 1rem;
+        font-style: italic;
+        font-size: 1.3rem;
     }
 }
 

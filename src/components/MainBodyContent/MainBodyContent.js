@@ -55,7 +55,7 @@ function MainBodyContent() {
           <div className="header-section__container">
             <div className="header-section__heading-container">
               <h1 className="header-section__heading">
-                Ready to transform your electricity expenses into earnings, all with zero upfront costs? Join us today!
+                Ready to get your electricity costs under control and give your self the chance to transform your costs into income? Join us today!
               </h1>
               {/* <div className="header-section__arrow">&darr;</div> */}
               {/* <p className="header-section__tag-line">
@@ -90,14 +90,26 @@ function MainBodyContent() {
           <div className="sign-up__text-container">
             <h3 className="sign-up__title">Sign up for our Home EcoEarner Power System today and experience the future of renewable energy:</h3>
             <ul className="sign-up__list">
-              <li className="sign-up__item">We promise to install our Home EcoEarner Power Booster upon release.</li>
+              <li className="sign-up__item">Step 1 – get your electricity costs under control:</li>
+                <ul className="sign-up__list">
+                  <li className="sign-up__item">No up-front cost</li>
+                  <li className="sign-up__item">No more electricity bills</li>
+                  <li className="sign-up__item">No more electricity price hikes</li>
+                </ul>
+                <br />
+              <li className="sign-up__item">Step 2 – line yourself up for cost-free access to our new technologies as they come to market:</li>
+                <ul className="sign-up__list">
+                  <li className="sign-up__item">We promise to install our Home EcoEarner Power Booster upon release.</li>
+                </ul>
+                <br />
               <li className="sign-up__item">You pay nothing upfront.</li>
               <li className="sign-up__item">We buy excess electricity from you, putting money back into your pocket.</li>
               <li className="sign-up__item">Say goodbye to out-of-pocket expenses.</li>
               <li className="sign-up__item">And when possible, we pay you instead of the other way around.</li>
             </ul>
+            <span>Join our priority list today!</span>
             <span>Join us in this exciting journey towards sustainable and income-generating energy solutions.</span>
-            <small>*Disclaimer: Not all installations may qualify for payments</small>
+            <small className="sign-up__disclaimer">*Disclaimer: Not all installations may qualify for payments</small>
           </div>
         </div>
       </section>
