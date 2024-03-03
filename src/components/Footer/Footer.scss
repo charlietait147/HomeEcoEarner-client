@@ -24,6 +24,11 @@
         }
     }
 
+    &__top-container{
+        display: flex;
+        flex-direction: column;
+    }
+
     &__page-list{
         padding-bottom: 0.5rem;
         padding-left: 0;
@@ -32,6 +37,13 @@
         @include tablet{
             display: flex;
             flex-direction: row;
+        }
+    }
+
+    &__logo{
+        width: 100%;
+        @include small-mobile{
+            width: 35rem;
         }
     }
 
@@ -84,6 +96,7 @@
         padding-top: 2rem;
         border-top: 1px solid;
         border-image: $border-image; 
+        margin-top: 2rem;
 
     }
 

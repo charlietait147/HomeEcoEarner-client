@@ -1,33 +1,37 @@
 import "./Footer.scss";
 import { Link } from "react-router-dom";
+import wlcMemberLogo from "../../assets/images/WLC-Member-Logo.png";
 function Footer() {
     return (
         <footer className="footer-section">
             <div className="footer-section__wrapper">
                 <div className="footer-section__container">
-                    <ul className="footer-section__page-list">
-                        <li className="footer-section__item">
-                            <Link to="/about" className="footer-section__link">About
-                            </Link></li>
-                        <li className="footer-section__item">
-                            <Link to="/products" className="footer-section__link">Products
-                            </Link></li>
-                        <li className="footer-section__item">
-                            <Link to="/packages" className="footer-section__link">Packages
-                            </Link></li>   
-                        <li className="footer-section__item">
-                            <Link to="/services" className="footer-section__link">Services
-                            </Link></li>
-                        <li className="footer-section__item">
-                            <Link to="/news" className="footer-section__link">News
-                            </Link></li>
-                        <li className="footer-section__item">
-                            <Link to="/contact" className="footer-section__link">Contact
-                            </Link></li>
-                        <li className="footer-section__item">
-                            <Link to="/faq" className="footer-section__link">FAQs
-                            </Link></li>
-                    </ul>
+                    <div className="footer-section__top-container">
+                        <ul className="footer-section__page-list">
+                            <li className="footer-section__item">
+                                <Link to="/about" className="footer-section__link">About
+                                </Link></li>
+                            <li className="footer-section__item">
+                                <Link to="/products" className="footer-section__link">Products
+                                </Link></li>
+                            <li className="footer-section__item">
+                                <Link to="/packages" className="footer-section__link">Packages
+                                </Link></li>
+                            <li className="footer-section__item">
+                                <Link to="/services" className="footer-section__link">Services
+                                </Link></li>
+                            <li className="footer-section__item">
+                                <Link to="/news" className="footer-section__link">News
+                                </Link></li>
+                            <li className="footer-section__item">
+                                <Link to="/contact" className="footer-section__link">Contact
+                                </Link></li>
+                            <li className="footer-section__item">
+                                <Link to="/faq" className="footer-section__link">FAQs
+                                </Link></li>
+                        </ul>
+                        <img src={wlcMemberLogo} alt="WLC member logo" className="footer-section__logo"></img>
+                    </div>
                     <div className="footer-section__contact-container">
                         <ul className="footer-section__contact-list">
                             <li className="footer-section__item">2 Brunel Place, Slough, SL1 1FQ, UK</li>

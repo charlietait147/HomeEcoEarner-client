@@ -67,7 +67,7 @@ function AboutContent() {
                 </div>
                 <div className="about-content__background-image-container">
                     <img src={trees} alt="trees" className="about-content__background-image"></img>
-                    <img src={wlcMemberLogo} alt="WLC member logo" className="about-content__logo"></img>
+                    {/* <img src={wlcMemberLogo} alt="WLC member logo" className="about-content__logo"></img> */}
                 </div>
             </div>
             {/* <div className="about-content__logo-container">
