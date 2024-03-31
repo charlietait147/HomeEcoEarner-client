@@ -11,7 +11,7 @@ The front-end was built with
 - Create-react-app
 - SASS 
 - Material UI Icons
-- CoreUI progress bar, form and close button
+- CoreUI form
 
 
 ## Installation

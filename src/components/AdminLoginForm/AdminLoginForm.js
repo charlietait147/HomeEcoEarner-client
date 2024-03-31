@@ -1,9 +1,10 @@
 import "./AdminLoginForm.scss";
 import logo from "../../assets/images/HomeEcoEarner-edited-logo.png"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../../config/Config";
+
 
 
 function AdminLoginForm() {
@@ -24,10 +25,11 @@ function AdminLoginForm() {
         setPassword(event.target.value);
         setErrorMessage(false);
     }
-
+    useEffect(() => {
     if (directToDatabase) {
         navigate("/admin/dashboard");
     }
+    }, [directToDatabase, navigate])
 
     const submitHandler = async (event) => {
         event.preventDefault();

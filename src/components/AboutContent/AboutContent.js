@@ -3,14 +3,11 @@ import houses from "../../assets/images/houses.jpg";
 import trees from "../../assets/images/trees.jpg";
 import davidBio from "../../assets/images/David-Sheldon-bw.jpg";
 import roryBio from "../../assets/images/rory-bio.png";
-import wlcMemberLogo from "../../assets/images/WLC-Member-Logo.png";
+// import wlcMemberLogo from "../../assets/images/WLC-Member-Logo.png";
 // import world from "../../assets/images/world-electricity.jpg";
 function AboutContent() {
     return (
         <main className="about-content">
-            {/* <div className="about-content__banner">
-                <span className="about-content__header">ABOUT</span>
-            </div> */}
             <div className="about-content__wrapper">
                 <h2 className="about-content__section-heading">Our Team</h2>
                 <div className="about-content__bio-container">

@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./ContactForm.scss";
 import { CForm, CFormInput, CFormTextarea, CFormLabel } from "@coreui/react";
 import MapContainer from "../MapContainer/MapContainer";
+// import HubSpotForm from "react-hubspot-form";
 // import axios from "axios";
 
 function ContactForm() {
@@ -28,20 +29,22 @@ function ContactForm() {
   // const submitHandler = (event) => {
   //   event.preventDefault();
 
-  //   const formData = {
+  // hbspt.forms.create({
+  //   region: "eu1",
+  //   portalId: "144039795",
+  //   formId: "eee046ba-238a-4bbb-80b4-0d5e0ec42f85",
+  //   fields: {
   //     name: name,
   //     email: email,
   //     description: description
   //   }
+  // });
 
-  //   axios.post(`${API_URL}/contact`, formData)
-  //     .then(response => {
-  //       console.log(response.data);
-  //       setIsLoading(false);
-  //     })
-  //     .catch(error => {
-  //       console.error(error)
-  //     })
+  // setName("");
+  // setEmail("");
+  // setDescription("");
+
+
   // }
 
   return (
@@ -54,13 +57,13 @@ function ContactForm() {
           <div className="contact-form__title-container">
             <p className="contact-form__title">
               Need to get in touch with us? Fill out the form with your
-              enquiry.
+              details.
             </p>
 
           </div>
           <div className="contact-form__form-container">
             <CForm action="https://formsubmit.co/info@homeecoearner.com" method="POST" className="contact-form__form" >
-              {/* <CForm onSubmit={submitHandler} className="contact-form__form" > */}
+            {/* <CForm onSubmit={submitHandler} className="contact-form__form" > */}
               <CFormLabel className="contact-form__form-label" htmlFor="name">
                 First name*
               </CFormLabel>
@@ -115,6 +118,15 @@ function ContactForm() {
             </CForm>
           </div>
         </div>
+        {/* <div className="contact-form__container">
+          <HubSpotForm
+            region='eu1'
+            portalId='144039795'
+            formId='eee046ba-238a-4bbb-80b4-0d5e0ec42f85'
+            onSubmit={() => console.log('Submit!')}
+            onReady={(form) => console.log('Form ready!')}
+            loading={<div>Loading...</div>}
+          /></div> */}
         <div className="contact-form__section-container">
           <div className="contact-form__contact-info-container">
             <p className="contact-form__title contact-form__title--contact ">Or get in touch with us:</p>

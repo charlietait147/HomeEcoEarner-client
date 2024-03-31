@@ -37,7 +37,7 @@
     &__section-container{
         @include tablet{
             display: flex;
-            padding: 3rem 0;
+            padding-top: 3rem;
             justify-content: space-between;
         }
     }
